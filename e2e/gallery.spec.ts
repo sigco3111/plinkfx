@@ -35,7 +35,7 @@ test("loop sounds start on click and stop on the next", async ({ page }) => {
 test("the lede reads cleanly (no leftover template text)", async ({ page }) => {
   await page.goto("./");
   const lede = await page.locator(".lede").innerText();
-  expect(lede).toMatch(/^\d+ sounds in \d+ categories, CC0, a 3\.1\skB player, no audio files\.$/);
+  expect(lede).toMatch(/^\d+개 카테고리, 사운드 \d+개, CC0, 3\.1\skB 플레이어, 오디오 파일 없음\.$/);
 });
 
 test("search and category filter", async ({ page }) => {
@@ -89,7 +89,7 @@ test("keyboard: arrows move and play, number keys pick takes", async ({ page }) 
 test("knobs edit the sound and the code follows", async ({ page }) => {
   await page.goto("./#jump");
   await page.locator('input[name="pitch"]').fill("5");
-  await expect(page.locator("#v-pitch")).toHaveText("+5 st");
+  await expect(page.locator("#v-pitch")).toHaveText("+5 반음");
   await expect(page.locator("#p-edited")).toBeVisible();
   await expect(page.locator("#p-code")).toContainText("layers: [");
   await page.locator("#p-reset").click();
@@ -118,8 +118,8 @@ test("a tweak is written into the URL", async ({ page }) => {
 test("a shared tweak opens with a play banner", async ({ page }) => {
   await page.goto("./#coin?p=3&l=1.2&v=42");
   await expect(page.locator("#shared")).toBeVisible();
-  await expect(page.locator("#v-pitch")).toHaveText("+3 st");
-  await expect(page.locator("#p-seed")).toHaveText("take #42");
+  await expect(page.locator("#v-pitch")).toHaveText("+3 반음");
+  await expect(page.locator("#p-seed")).toHaveText("테이크 #42");
   await page.locator("#shared button").click();
   await expect(page.locator("#shared")).toBeHidden();
 });
@@ -144,11 +144,11 @@ test("share copies the sound's own page, with the tweak", async ({ page, context
 
 test("a sound page has its own card and lands in the gallery on that sound", async ({ page, request }) => {
   const html = await (await request.get("./s/coin/")).text();
-  expect(html).toContain("<title>coin · free CC0 game sound effect · plinkfx</title>");
-  expect(html).toContain('<meta property="og:url" content="https://maximilianfeix.github.io/plinkfx/s/coin/">');
-  expect(html).toContain('<meta property="og:image" content="https://maximilianfeix.github.io/plinkfx/s/coin/og.png">');
+  expect(html).toContain("<title>coin · 무료 CC0 게임 효과음 · plinkfx</title>");
+  expect(html).toContain('<meta property="og:url" content="https://sigco3111.github.io/plinkfx/s/coin/">');
+  expect(html).toContain('<meta property="og:image" content="https://sigco3111.github.io/plinkfx/s/coin/og.png">');
   expect(html).toContain('<meta name="twitter:card" content="summary_large_image">');
-  expect(html).toContain('<link rel="canonical" href="https://maximilianfeix.github.io/plinkfx/s/coin/">');
+  expect(html).toContain('<link rel="canonical" href="https://sigco3111.github.io/plinkfx/s/coin/">');
   const png = await request.get("./s/coin/og.png");
   expect(png.headers()["content-type"]).toBe("image/png");
   const body = await png.body();
@@ -159,7 +159,7 @@ test("a sound page has its own card and lands in the gallery on that sound", asy
   await expect(page.locator("#p-name")).toHaveText("coin");
   await page.goto("./s/coin/?p=3&v=42");
   await expect(page).toHaveURL(/\/#coin\?p=3&v=42$/);
-  await expect(page.locator("#v-pitch")).toHaveText("+3 st");
+  await expect(page.locator("#v-pitch")).toHaveText("+3 반음");
   await expect(page.locator("#shared")).toBeVisible();
 });
 
@@ -168,7 +168,7 @@ test("sitemap lists every sound page", async ({ page, request }) => {
   const total = Number(await page.locator("#total").textContent());
   const xml = await (await request.get("./sitemap.xml")).text();
   expect(xml.match(/\/s\/[a-z0-9-]+\/<\/loc>/g)).toHaveLength(total);
-  expect(await (await request.get("./robots.txt")).text()).toContain("Sitemap: https://maximilianfeix.github.io/plinkfx/sitemap.xml");
+  expect(await (await request.get("./robots.txt")).text()).toContain("Sitemap: https://sigco3111.github.io/plinkfx/sitemap.xml");
 });
 
 test("suggest a sound opens a prefilled issue form, from the panel and from an empty search", async ({ page }) => {
