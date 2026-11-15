@@ -232,10 +232,10 @@ function applyFilter() {
     t.hidden = !show;
     if (show) n++;
   });
-  $("#count").textContent = `${n} sound${n == 1 ? "" : "s"}`;
+  $("#count").textContent = `${n}개 사운드`;
   $("#empty").hidden = n > 0;
   if (!n) $<HTMLAnchorElement>("#empty-suggest").href = suggestUrl({ query: filter.q });
-  $("#empty-q").textContent = filter.q || catalog.categories[filter.cat as Cat]?.title.toLowerCase() || "";
+  $("#empty-q").textContent = filter.q || catalog.categories[filter.cat as Cat]?.title || "";
 }
 
 // ---------- panel ----------
@@ -262,7 +262,7 @@ function renderPanel() {
   $("#p-desc").textContent = it.desc;
   $("#p-meter").innerHTML = [`${fmt(it.m.lufsMax)} LUFS`, `peak ${fmt(it.m.truePeak)} dBTP`, `${fmt(it.m.duration, 2)} s`, `${(it.m.centroid / 1000).toFixed(1)} kHz`].map((x) => `<span>${x}</span>`).join("");
   for (const b of p.querySelectorAll<HTMLButtonElement>("[data-take]")) b.setAttribute("aria-pressed", String(+b.dataset.take! == seed));
-  $("#p-seed").textContent = seed > 3 ? `take #${seed}` : `take ${seed + 1} of 4`;
+  $("#p-seed").textContent = seed > 3 ? `테이크 #${seed}` : `테이크 ${seed + 1}/4`;
   for (const inp of p.querySelectorAll<HTMLInputElement>("input[type=range]")) {
     const k = inp.name as keyof Knobs;
     inp.value = String(knobs[k]);
@@ -278,7 +278,7 @@ function renderPanel() {
   drawWave($<HTMLCanvasElement>("#wave"), waveOf(edited(), seed, 180));
 }
 const label = (k: keyof Knobs, v: number) =>
-  k == "pitch" ? `${v > 0 ? "+" : ""}${v} st` : k == "length" ? `${v.toFixed(2)}×` : k == "tone" ? (v == 0 ? "0" : `${v > 0 ? "+" : ""}${v.toFixed(2)}`) : k == "space" ? (v == 0 ? "off" : `${Math.round(v * 100)}%`) : v >= 16 ? "off" : `${v} bit`;
+  k == "pitch" ? `${v > 0 ? "+" : ""}${v} 반음` : k == "length" ? `${v.toFixed(2)}×` : k == "tone" ? (v == 0 ? "0" : `${v > 0 ? "+" : ""}${v.toFixed(2)}`) : k == "space" ? (v == 0 ? "끔" : `${Math.round(v * 100)}%`) : v >= 16 ? "끔" : `${v} bit`;
 function code() {
   const id = current.id,
     opt = seed ? `, { variant: ${seed} }` : "";
@@ -306,13 +306,13 @@ const status = (msg: string) => {
   s.textContent = "";
   requestAnimationFrame(() => (s.textContent = msg));
 };
-async function copy(text: string, btn: HTMLElement, done = "copied") {
+async function copy(text: string, btn: HTMLElement, done = "복사됨") {
   try {
     await navigator.clipboard.writeText(text);
     flash(btn, done, true);
-    status(done[0].toUpperCase() + done.slice(1));
+    status(done);
   } catch {
-    flash(btn, "press ctrl+c", false);
+    flash(btn, "Ctrl+C로 복사", false);
   }
 }
 const flashTimers = new WeakMap<HTMLElement, number>();
@@ -339,7 +339,7 @@ function download() {
   a.download = `${current.name}${seed ? "-" + seed : ""}${isNeutral(knobs) ? "" : "-edit"}.wav`;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-  status(`Downloading ${a.download}`);
+  status(`${a.download} 다운로드 중`);
 }
 
 // ---------- signature: plink on the first tap that is not a sound ----------
@@ -529,7 +529,7 @@ function init() {
       playItem(current, seed);
     } else if (b.id == "p-copy") copy($("#p-code").textContent!, b);
     else if (b.id == "p-wav") download();
-    else if (b.id == "p-link") copy(shareUrl(), b, isNeutral(knobs) && !seed ? "link copied" : "link copied, it plays your tweak");
+    else if (b.id == "p-link") copy(shareUrl(), b, isNeutral(knobs) && !seed ? "링크 복사됨" : "링크 복사됨, 조정한 설정이 함께 재생됩니다");
     else if (b.id == "p-more") setSheet(!panel.classList.contains("open"));
   });
   let knobTimer = 0;

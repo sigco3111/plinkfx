@@ -4,7 +4,7 @@ import { def } from "./def.ts";
 const WOOD = [1, 2.32, 4.25, 6.63];
 
 export default def("farm", {
-  "axe-chop": ["Axe bites into a log", {
+  "axe-chop": ["도끼가 통나무를 내리찍음", {
     vary: 0.8,
     varyF: 2,
     varyG: 1.5,
@@ -16,7 +16,7 @@ export default def("farm", {
       { wave: "sine", freq: 120, to: 60, a: 0.001, d: 0.12, shape: -5, gain: 0.5 },
     ],
   }],
-  "tree-fall": ["Tree creaks, topples and crashes down", {
+  "tree-fall": ["나무가 삐걱거리며 쓰러져 쾅", {
     vary: 0.4,
     verb: [0.5, 0.25],
     layers: [
@@ -26,7 +26,7 @@ export default def("farm", {
       { wave: "sine", freq: 70, to: 30, at: 0.95, a: 0.001, d: 0.5, shape: -4, drive: 1.5 },
     ],
   }],
-  "pickaxe-mine": ["Pickaxe strikes rock", {
+  "pickaxe-mine": ["곡괭이가 바위를 침", {
     vary: 0.8,
     varyF: 2,
     varyG: 1.5,
@@ -39,7 +39,7 @@ export default def("farm", {
       ...[0.05, 0.09, 0.14].map((at) => ({ wave: "noise" as const, bp: 3500, q: 3, at, a: 0.001, d: 0.008, shape: -6, gain: 0.3 })),
     ],
   }],
-  dig: ["Shovel into soil", {
+  dig: ["삽으로 흙을 팜", {
     vary: 0.8,
     varyF: 3,
     varyG: 2,
@@ -49,7 +49,7 @@ export default def("farm", {
       ...[0.12, 0.17, 0.22].map((at) => ({ wave: "pink" as const, bp: 2000, q: 2, at, a: 0.001, d: 0.02, shape: -5, gain: 0.3 })),
     ],
   }],
-  "plant-seed": ["Pop a seed into the ground: soft pat and sprout chime", {
+  "plant-seed": ["땅에 씨앗 심기: 부드러운 톡과 싹틈 차임", {
     vary: 0.8,
     layers: [
       { wave: "pink", lp: 900, a: 0.001, d: 0.06, shape: -5 },
@@ -57,7 +57,7 @@ export default def("farm", {
       { wave: "sine", freq: 1760, fm: [3.5, 1, 0.08], at: 0.1, a: 0.002, d: 0.25, shape: -4, gain: 0.2 },
     ],
   }],
-  "watering-can": ["Watering can pours over the soil", {
+  "watering-can": ["물뿌리개가 흙 위로 물을 부음", {
     vary: 0.4,
     varyF: 2,
     layers: [
@@ -65,7 +65,7 @@ export default def("farm", {
       ...Array.from({ length: 10 }, (_, i) => ({ wave: "sine" as const, freq: 700 + (i * 137) % 600, to: 1600 + (i * 211) % 800, curve: 3, at: 0.08 + i * 0.07, a: 0.001, d: 0.03, shape: 3, gain: 0.25 })),
     ],
   }],
-  harvest: ["Pull up a crop: rustle, pluck and a happy pop", {
+  harvest: ["작물 뽑기: 부스럭, 뽑는 소리와 경쾌한 팝", {
     vary: 0.6,
     varyF: 2,
     layers: [
@@ -74,7 +74,7 @@ export default def("farm", {
       { wave: "triangle", freq: 1047, arp: [0, 7], arpRate: 0.05, at: 0.14, a: 0.002, d: 0.15, shape: -3, gain: 0.4 },
     ],
   }],
-  "fishing-cast": ["Cast a line: rod whip, reel whirr and a plop", {
+  "fishing-cast": ["낚싯줄 던지기: 채찍질, 릴 감기와 첨벙", {
     vary: 0.5,
     layers: [
       { wave: "noise", bp: 1500, bpTo: 5000, q: 2, a: 0.08, d: 0.05, shape: 1, gain: 0.7 },
@@ -83,7 +83,7 @@ export default def("farm", {
       { wave: "noise", lp: 2000, at: 0.5, a: 0.002, d: 0.12, shape: -4, gain: 0.3 },
     ],
   }],
-  "fish-bite": ["Bobber dips: something is biting!", {
+  "fish-bite": ["찌가 잠김: 입질이 왔다!", {
     vary: 0.3,
     layers: [
       { wave: "sine", freq: 700, to: 300, curve: 2, a: 0.002, d: 0.08, shape: -4 },

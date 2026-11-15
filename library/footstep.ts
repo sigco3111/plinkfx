@@ -7,7 +7,7 @@ const heel = (lp = 500, d = 0.09, gain = 1) => ({ wave: "pink" as const, lp, lpT
 const tail = (gain = 0.35) => ({ wave: "brown" as const, lp: 220, a: 0.002, d: 0.24, shape: -4, gain });
 
 export default def("footstep", {
-  "step-grass": ["Soft step on grass", {
+  "step-grass": ["풀 위 부드러운 발소리", {
     ...walk,
     layers: [
       heel(450, 0.08, 0.8),
@@ -17,7 +17,7 @@ export default def("footstep", {
       tail(0.3),
     ],
   }],
-  "step-stone": ["Hard sole on stone", {
+  "step-stone": ["돌 위 딱딱한 신발 발소리", {
     ...walk,
     layers: [
       heel(600, 0.07),
@@ -26,7 +26,7 @@ export default def("footstep", {
       tail(0.25),
     ],
   }],
-  "step-wood": ["Step on a wooden floor", {
+  "step-wood": ["나무 바닥 발소리", {
     vary: 1.5, varyF: 3, varyG: 1.2,
     layers: [
       { wave: "pink", lp: 500, lpTo: 250, a: 0.001, d: 0.08, shape: -6, drive: 0.5, gain: 0.8 },
@@ -36,7 +36,7 @@ export default def("footstep", {
       { wave: "brown", lp: 220, a: 0.002, d: 0.24, shape: -4, gain: 0.2 },
     ],
   }],
-  "step-metal": ["Step on a metal grate", {
+  "step-metal": ["금속 격자 위 발소리", {
     ...walk,
     verb: [0.2, 0.15],
     layers: [
@@ -46,7 +46,7 @@ export default def("footstep", {
       { wave: "noise", bp: 1500, a: 0.001, d: 0.03, shape: -5, gain: 0.4 },
     ],
   }],
-  "step-snow": ["Crunchy step in snow", {
+  "step-snow": ["눈 위 뽀득한 발소리", {
     ...walk,
     layers: [
       heel(400, 0.08, 0.6),
@@ -54,7 +54,7 @@ export default def("footstep", {
       { wave: "pink", lp: 1500, a: 0.02, d: 0.12, shape: -4, gain: 0.5 },
     ],
   }],
-  "step-gravel": ["Step on loose gravel", {
+  "step-gravel": ["자갈 위 발소리", {
     ...walk,
     layers: [
       heel(500, 0.08, 0.8),
@@ -63,7 +63,7 @@ export default def("footstep", {
       tail(0.2),
     ],
   }],
-  "step-water": ["Splashy step in a puddle", {
+  "step-water": ["물웅덩이 첨벙 발소리", {
     ...walk,
     layers: [
       heel(450, 0.07, 0.6),
@@ -71,7 +71,7 @@ export default def("footstep", {
       { wave: "sine", freq: 350, to: 900, curve: 3, at: 0.03, a: 0.002, d: 0.06, shape: 3, gain: 0.35 },
     ],
   }],
-  "step-sand": ["Muffled step in sand", {
+  "step-sand": ["모래 위 먹먹한 발소리", {
     ...walk,
     layers: [
       heel(400, 0.09, 0.7),
@@ -79,12 +79,12 @@ export default def("footstep", {
       { wave: "noise", hp: 3000, lp: 7000, at: 0.02, a: 0.02, d: 0.08, shape: -4, gain: 0.12 },
     ],
   }],
-  "step-retro": ["8-bit footstep tick", {
+  "step-retro": ["8비트 발소리 틱", {
     vary: 2,
     bits: 4,
     layers: [{ wave: "crunch", freq: 4000, a: 0.001, d: 0.035, shape: 2 }],
   }],
-  "step-heavy": ["Heavy creature stomp", {
+  "step-heavy": ["무거운 크리처의 쿵쿵 걸음", {
     vary: 1, varyF: 3, varyG: 1.5,
     verb: [0.2, 0.12],
     layers: [
@@ -96,7 +96,7 @@ export default def("footstep", {
       { wave: "brown", lp: 220, a: 0.002, d: 0.24, shape: -4, gain: 0.35 },
     ],
   }],
-  "step-carpet": ["Muffled step on carpet or rug", {
+  "step-carpet": ["카펫이나 러그 위 먹먹한 발소리", {
     ...walk,
     layers: [
       { wave: "pink", lp: 400, lpTo: 200, a: 0.004, d: 0.08, shape: -6 },
@@ -104,7 +104,7 @@ export default def("footstep", {
       { wave: "brown", lp: 200, a: 0.004, d: 0.15, shape: -4, gain: 0.3 },
     ],
   }],
-  "step-mud": ["Squelchy step in mud", {
+  "step-mud": ["진흙 위 질척한 발소리", {
     ...walk,
     varyF: 2,
     varyG: 1.5,

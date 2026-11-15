@@ -455,17 +455,17 @@ function draw() {
     }
     g.fillStyle = C.ink;
     g.font = "bold 28px ui-monospace, Menlo, monospace";
-    g.fillText(state == "title" ? "plink run" : won ? `${coins} coins!` : "game over", W / 2, 110);
+    g.fillText(state == "title" ? "plink run" : won ? `코인 ${coins}개!` : "게임 오버", W / 2, 110);
     g.font = "15px ui-monospace, Menlo, monospace";
     g.fillStyle = C.dim;
-    g.fillText(state == "title" ? "30 seconds. jump the gaps, stomp the slimes, grab the coins." : `best: ${best} coins`, W / 2, 156);
+    g.fillText(state == "title" ? "30초. 틈을 뛰어넘고 슬라임을 밟고 코인을 모으세요." : `최고 기록: 코인 ${best}개`, W / 2, 156);
     // blinking prompt; steady when motion is reduced
     if (still || Math.floor(t * 2) % 2 == 0) {
       g.fillStyle = C.plink;
-      g.fillText(state == "title" ? "press space or tap to start" : "space or tap to play again", W / 2, 200);
+      g.fillText(state == "title" ? "스페이스 바 또는 탭으로 시작" : "스페이스 바 또는 탭으로 다시 플레이", W / 2, 200);
     }
     g.fillStyle = C.dim;
-    g.fillText("sound on", W / 2, 240);
+    g.fillText("소리를 켜 주세요", W / 2, 240);
   } else if (state == "count") {
     g.fillStyle = C.ink;
     g.font = "bold 48px ui-monospace, Menlo, monospace";

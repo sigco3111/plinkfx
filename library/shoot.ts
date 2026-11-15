@@ -1,17 +1,17 @@
 import { def } from "./def.ts";
 
 export default def("shoot", {
-  laser: ["Classic laser: fast square sweep down", {
+  laser: ["고전 레이저: 빠르게 내려가는 스퀘어 스윕", {
     vary: 0.8, varyF: 2, varyG: 1.5,
     layers: [
       { wave: "square", duty: 0.5, freq: 1500, to: 220, curve: 3, a: 0.001, d: 0.2, shape: 1.8, lp: 7500, kt: 1 },
       { wave: "saw", freq: 750, to: 110, curve: 3, a: 0.001, d: 0.17, lp: 3500, kt: 1, gain: 0.4 },
     ],
   }],
-  "laser-soft": ["Rounder laser for cute shooters", {
+  "laser-soft": ["귀여운 슈터용 둥근 레이저", {
     layers: [{ wave: "sine", freq: 1400, to: 300, curve: 3, a: 0.001, d: 0.16, shape: 2, fm: [0.5, 1.5, 0.08] }],
   }],
-  "laser-heavy": ["Thick laser cannon", {
+  "laser-heavy": ["묵직한 레이저 캐논", {
     verb: [0.25, 0.12],
     echo: [0.07, 0.3, 0.18],
     layers: [
@@ -20,7 +20,7 @@ export default def("shoot", {
       { wave: "noise", hp: 2500, a: 0.001, d: 0.05, gain: 0.3 },
     ],
   }],
-  blaster: ["Sci-fi blaster bolt", {
+  blaster: ["SF 블래스터 탄", {
     echo: [0.07, 0.3, 0.18],
     layers: [
       { wave: "square", duty: 0.25, freq: 950, to: 160, curve: 2.5, a: 0.001, d: 0.14, shape: 2, lp: 5000, kt: 1 },
@@ -28,7 +28,7 @@ export default def("shoot", {
       { wave: "sine", freq: 180, to: 60, a: 0.001, d: 0.08, gain: 0.6 },
     ],
   }],
-  zap: ["Electric zap", {
+  zap: ["전기 지직", {
     vary: 1, varyF: 2, varyG: 1.5,
     layers: [
       { wave: "crunch", freq: 6000, to: 1500, hp: 1200, lp: 9000, a: 0.001, d: 0.15, shape: -3, drive: 3, gain: 0.8 },
@@ -36,11 +36,11 @@ export default def("shoot", {
       { wave: "square", duty: 0.1, freq: 120, bp: 1500, q: 2, a: 0.001, d: 0.12, shape: -4, gain: 0.5 },
     ],
   }],
-  pew: ["Tiny pew for bullet-hell spam", {
+  pew: ["탄막 연사용 작은 퓨", {
     vary: 1, varyF: 2, varyG: 1.5,
     layers: [{ wave: "square", duty: 0.25, freq: 2100, to: 600, curve: 4, a: 0.001, d: 0.08, shape: 2, hp: 150, lp: 7000, kt: 1 }],
   }],
-  gunshot: ["Pistol shot with room tail", {
+  gunshot: ["방 안 여운이 있는 권총 발사", {
     varyF: 2, varyG: 1.5,
     verb: [0.25, 0.2],
     layers: [
@@ -51,7 +51,7 @@ export default def("shoot", {
       { wave: "pink", bp: 1400, q: 1, a: 0.001, d: 0.22, shape: -4, gain: 0.3 },
     ],
   }],
-  shotgun: ["Shotgun blast, wide and heavy", {
+  shotgun: ["산탄총 발사, 넓고 묵직함", {
     verb: [0.45, 0.22],
     layers: [
       { wave: "noise", hp: 300, lp: 8000, lpTo: 1500, a: 0.001, d: 0.4, shape: 3.5, drive: 2.5, gain: 1.2 },
@@ -59,14 +59,14 @@ export default def("shoot", {
       { wave: "brown", lp: 600, a: 0.001, d: 0.35, gain: 0.7 },
     ],
   }],
-  "shoot-retro": ["8-bit shot", {
+  "shoot-retro": ["8비트 발사", {
     rate: 16000,
     layers: [
       { wave: "crunch", freq: 3000, to: 600, a: 0.001, d: 0.14, shape: 2, drive: 1 },
       { wave: "square", freq: 600, to: 150, a: 0.001, d: 0.1, drive: 1, gain: 0.6 },
     ],
   }],
-  railgun: ["Charge whine, then a piercing shot", {
+  railgun: ["충전 윙 소리 후 꿰뚫는 발사", {
     echo: [0.09, 0.3, 0.15],
     verb: [0.4, 0.2],
     layers: [
@@ -76,23 +76,23 @@ export default def("shoot", {
       { wave: "sine", freq: 100, to: 40, at: 0.26, a: 0.001, d: 0.2, drive: 1 },
     ],
   }],
-  ray: ["Warbling ray gun", {
+  ray: ["떨리는 광선총", {
     layers: [{ wave: "sine", freq: 900, to: 300, fm: [0.5, 6, 0.3], vib: [11, 1], a: 0.004, h: 0.15, d: 0.25, shape: 2 }],
   }],
-  plasma: ["Plasma ball launch", {
+  plasma: ["플라즈마 볼 발사", {
     layers: [
       { wave: "saw", freq: 300, to: 120, lp: 3000, lpTo: 600, q: 4, vib: [25, 1], a: 0.003, d: 0.3, shape: 2 },
       { wave: "noise", bp: 2400, bpTo: 800, q: 2, a: 0.003, d: 0.2, gain: 0.4 },
     ],
   }],
-  missile: ["Rocket launch whoosh", {
+  missile: ["로켓 발사 휘잉", {
     layers: [
       { wave: "noise", bp: 600, bpTo: 3500, q: 1.2, a: 0.02, h: 0.3, d: 0.4, shape: 2, drive: 0.5 },
       { wave: "brown", lp: 400, a: 0.002, d: 0.5, gain: 0.7 },
       { wave: "sine", freq: 300, to: 900, a: 0.05, h: 0.25, d: 0.3, gain: 0.15 },
     ],
   }],
-  ricochet: ["Bullet ricochet: sharp tick and a falling whine", {
+  ricochet: ["총알 도탄: 날카로운 틱과 떨어지는 윙", {
     verb: [0.3, 0.15],
     layers: [
       { wave: "noise", bp: 3000, q: 1, a: 0.001, d: 0.012, shape: 3, drive: 2, gain: 0.6 },
@@ -101,7 +101,7 @@ export default def("shoot", {
       { wave: "triangle", freq: 1700, to: 750, curve: 0.8, vib: [28, 0.25], at: 0.008, a: 0.004, d: 0.3, shape: 2.5, gain: 0.25 },
     ],
   }],
-  "dry-fire": ["Empty gun: the hammer clicks, nothing fires", {
+  "dry-fire": ["빈 총: 해머만 딸깍, 발사 없음", {
     verb: [0.15, 0.1],
     layers: [
       { wave: "metal", freq: 1200, bp: 3500, q: 2, a: 0.001, h: 0.006, d: 0.03, shape: 3, drive: 4 },
@@ -109,7 +109,7 @@ export default def("shoot", {
       { wave: "metal", freq: 1500, bp: 4000, q: 2, at: 0.06, a: 0.001, d: 0.02, shape: 3, drive: 2, gain: 0.5 },
     ],
   }],
-  reload: ["Reload: two metal clicks", {
+  reload: ["재장전: 금속 딸깍 두 번", {
     layers: [
       { wave: "metal", freq: 1100, bp: 3500, q: 2, a: 0.001, d: 0.06, shape: 3, drive: 2 },
       { wave: "noise", bp: 1500, q: 2, at: 0.005, a: 0.001, d: 0.03, gain: 0.4 },
@@ -118,7 +118,7 @@ export default def("shoot", {
       { wave: "sine", freq: 200, to: 140, at: 0.22, a: 0.001, d: 0.05, gain: 0.4 },
     ],
   }],
-  "bow-twang": ["Bowstring released", {
+  "bow-twang": ["활시위 놓기", {
     vary: 1,
     varyF: 2,
     layers: [
@@ -127,7 +127,7 @@ export default def("shoot", {
       { wave: "noise", bp: 900, bpTo: 2600, q: 2, at: 0.02, a: 0.03, d: 0.12, shape: -3, gain: 0.25 },
     ],
   }],
-  "machine-gun": ["Automatic burst, five rounds", {
+  "machine-gun": ["자동 연사, 다섯 발", {
     vary: 0.3,
     varyF: 1.5,
     verb: [0.3, 0.12],
@@ -137,13 +137,13 @@ export default def("shoot", {
       { wave: "brown" as const, lp: 600, at, a: 0.001, d: 0.08, shape: -4, gain: 0.4 },
     ]),
   }],
-  "shell-casing": ["Brass shell casings tinkle on the floor", {
+  "shell-casing": ["황동 탄피가 바닥에 찰랑거림", {
     vary: 1,
     varyF: 2,
     varyG: 2,
     layers: [0, 0.08, 0.13].map((at, i) => ({ wave: "modal" as const, freq: 3200 + i * 250, modes: [1, 2.756, 5.404], at, a: 0.001, d: 0.12, shape: -5, gain: 1 - i * 0.3 })),
   }],
-  flamethrower: ["Flamethrower burst: roaring hiss", {
+  flamethrower: ["화염방사: 포효하는 씽 소리", {
     vary: 0.3,
     varyF: 2,
     layers: [
@@ -152,7 +152,7 @@ export default def("shoot", {
       ...Array.from({ length: 8 }, (_, i) => ({ wave: "noise" as const, bp: 3000, q: 2, at: 0.06 + i * 0.09, a: 0.001, d: 0.01, shape: -5, gain: 0.3 })),
     ],
   }],
-  "grenade-launch": ["Grenade launcher: hollow thoomp", {
+  "grenade-launch": ["유탄발사기: 빈 쿵 소리", {
     vary: 0.5,
     varyF: 1.5,
     verb: [0.3, 0.12],

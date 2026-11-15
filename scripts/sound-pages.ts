@@ -7,7 +7,7 @@
  */
 import { ogCard } from "./og.ts";
 
-export const SITE = "https://maximilianfeix.github.io/plinkfx/";
+export const SITE = "https://sigco3111.github.io/plinkfx/";
 
 interface Catalog {
   categories: Record<string, { title: string }>;
@@ -23,10 +23,10 @@ const attr = (s: string) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").rep
 export function soundPage(s: Catalog["sounds"][number], catTitle: string) {
   const what = s.desc.replace(/\.$/, ""),
     url = `${SITE}s/${s.name}/`,
-    title = `${s.name} · free CC0 game sound effect · plinkfx`,
-    desc = `${what}. A free CC0 game sound effect (${catTitle.toLowerCase()}), made from code: play it, tweak it, copy one line or download the WAV.`;
+    title = `${s.name} · 무료 CC0 게임 효과음 · plinkfx`,
+    desc = `${what}. 코드로 만든 무료 CC0 게임 효과음(${catTitle}): 재생하고, 조정하고, 코드 한 줄을 복사하거나 WAV로 받으세요.`;
   return `<!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,7 +42,7 @@ export function soundPage(s: Catalog["sounds"][number], catTitle: string) {
 <meta property="og:image" content="${url}og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="${attr(`${s.name}: waveform of the sound, plinkfx, CC0`)}">
+<meta property="og:image:alt" content="${attr(`${s.name}: 사운드 파형, plinkfx, CC0`)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${attr(title)}">
 <meta name="twitter:description" content="${attr(desc)}">
@@ -53,8 +53,8 @@ export function soundPage(s: Catalog["sounds"][number], catTitle: string) {
 </head>
 <body>
 <h1>${attr(s.name)}</h1>
-<p>${attr(what)}. ${attr(catTitle)}, CC0.</p>
-<p><a href="../../#${s.name}">Open ${attr(s.name)} in the plinkfx gallery</a></p>
+<p>${attr(what)}. 카테고리: ${attr(catTitle)} · CC0.</p>
+<p><a href="../../#${s.name}">plinkfx 갤러리에서 ${attr(s.name)} 열기</a></p>
 </body>
 </html>
 `;

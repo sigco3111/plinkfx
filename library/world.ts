@@ -5,7 +5,7 @@ const WOOD = [1, 2.32, 4.25, 6.63];
 
 export default def("world", {
   // Loops: every layer spans the whole render (d: 0 keeps every take the same length); see Sound.loop.
-  "engine-idle": ["Engine idling, seamless loop (play with rate for revs)", {
+  "engine-idle": ["엔진 아이들링, 끊김 없는 루프 (rate로 회전수 조절)", {
     loop: true,
     // No pitch spread: whole cycles in the 3 s loop keep the crossfade in phase.
     vary: 0,
@@ -18,7 +18,7 @@ export default def("world", {
       { wave: "brown", lp: 160, a: 0.02, h: 3.48, d: 0, gain: 0.5 },
     ],
   }],
-  "force-field": ["Force field or reactor hum, seamless loop", {
+  "force-field": ["포스 필드나 원자로 험, 끊김 없는 루프", {
     loop: true,
     vary: 0,
     varyF: 1.5,
@@ -30,7 +30,7 @@ export default def("world", {
       { wave: "noise", bp: 3200, q: 3, a: 0.02, h: 3.48, d: 0, gain: 0.05 },
     ],
   }],
-  whoosh: ["Medium whoosh for dashes and swings", {
+  whoosh: ["대시와 스윙용 중간 휙", {
     varyF: 3,
     varyG: 1.5,
     layers: [
@@ -40,7 +40,7 @@ export default def("world", {
       { wave: "brown", lp: 300, a: 0.12, d: 0.15, gain: 0.3 },
     ],
   }],
-  swing: ["Sword or stick swing", {
+  swing: ["검이나 막대 휘두르기", {
     vary: 1,
     varyF: 3,
     varyG: 1.5,
@@ -49,13 +49,13 @@ export default def("world", {
       { wave: "noise", bp: 3000, bpTo: 900, q: 2, at: 0.08, a: 0.02, d: 0.22, shape: -4, gain: 0.45 },
     ],
   }],
-  dash: ["Quick dash with a burst", {
+  dash: ["짧은 버스트와 함께 빠른 대시", {
     layers: [
       { wave: "noise", bp: 1200, bpTo: 5000, q: 1.2, a: 0.01, d: 0.18, shape: 2 },
       { wave: "sine", freq: 200, to: 600, a: 0.005, d: 0.1, gain: 0.3 },
     ],
   }],
-  splash: ["Something falls in water", {
+  splash: ["무언가 물에 빠짐", {
     verb: [0.25, 0.12],
     layers: [
       { wave: "noise", lp: 4000, lpTo: 800, a: 0.003, d: 0.4, shape: 2.5 },
@@ -64,16 +64,16 @@ export default def("world", {
       { wave: "sine", freq: 800, to: 1800, curve: 3, at: 0.2, a: 0.002, d: 0.04, gain: 0.2 },
     ],
   }],
-  "water-drop": ["Single water drop", {
+  "water-drop": ["물방울 한 방울", {
     verb: [0.4, 0.2],
     vary: 1,
     layers: [{ wave: "sine", freq: 900, to: 2100, curve: 4, sweep: 0.06, a: 0.001, d: 0.1, shape: 3 }],
   }],
-  bubble: ["Bubbles rising", {
+  bubble: ["올라오는 거품", {
     vary: 1,
     layers: [0, 0.07, 0.11, 0.19, 0.24].map((at, i) => ({ wave: "sine" as const, freq: [400, 520, 460, 600, 700][i], to: [900, 1200, 1000, 1400, 1600][i], curve: 3, at, a: 0.002, d: 0.05, shape: 3, gain: 1 - i * 0.12 })),
   }],
-  wind: ["Gust of wind", {
+  wind: ["한 번의 돌풍", {
     layers: [
       { wave: "pink", bp: 350, bpTo: 1100, q: 2.5, a: 0.5, d: 0.25, shape: 1.5 },
       { wave: "pink", bp: 1100, bpTo: 450, q: 2.5, at: 0.55, a: 0.05, d: 0.9, shape: 2 },
@@ -81,7 +81,7 @@ export default def("world", {
       { wave: "brown", lp: 250, a: 0.4, h: 0.3, d: 0.7, gain: 0.3 },
     ],
   }],
-  "glass-break": ["Glass shatters", {
+  "glass-break": ["유리가 산산조각", {
     vary: 0.8, varyF: 2, varyG: 3,
     verb: [0.35, 0.2],
     layers: [
@@ -92,7 +92,7 @@ export default def("world", {
       { wave: "noise", hp: 4000, lp: 11000, a: 0.002, d: 0.35, shape: -4, gain: 0.25 },
     ],
   }],
-  thud: ["Generic body or crate falling", {
+  thud: ["몸이나 상자가 떨어지는 일반 쿵", {
     vary: 0.8, varyF: 2, varyG: 1,
     layers: [
       { wave: "noise", bp: 1200, q: 1, a: 0.001, d: 0.008, shape: -6, gain: 0.3 },
@@ -105,7 +105,7 @@ export default def("world", {
       { wave: "modal", freq: 150, modes: [1, 2.32, 4.25, 6.63], at: 0.09, a: 0.001, d: 0.12, shape: -5, gain: 0.4 },
     ],
   }],
-  toss: ["Throw something", {
+  toss: ["무언가 던지기", {
     vary: 1,
     varyF: 3,
     varyG: 1.5,
@@ -114,13 +114,13 @@ export default def("world", {
       { wave: "noise", bp: 1400, bpTo: 500, q: 1.5, at: 0.06, a: 0.01, d: 0.25, shape: -4, drive: 1 },
     ],
   }],
-  "fire-crackle": ["Campfire crackle", {
+  "fire-crackle": ["모닥불 탁탁", {
     layers: [
       { wave: "brown", lp: 800, a: 0.1, h: 0.6, d: 0.3, gain: 0.5 },
       ...[0.05, 0.13, 0.17, 0.3, 0.42, 0.48, 0.61, 0.74, 0.8].map((at, i) => ({ wave: "noise" as const, bp: 2500 + i * 300, q: 2, at, a: 0.001, d: 0.012, shape: 2, gain: 0.8 })),
     ],
   }],
-  "crate-break": ["Wooden crate smashes into planks", {
+  "crate-break": ["나무 상자가 판자로 박살", {
     varyF: 2,
     varyG: 1.5,
     verb: [0.25, 0.12],
@@ -131,7 +131,7 @@ export default def("world", {
       { wave: "pink", lp: 1500, a: 0.001, d: 0.25, shape: -4, gain: 0.4 },
     ],
   }],
-  "pot-break": ["Clay pot shatters (Zelda pots)", {
+  "pot-break": ["토기 항아리 깨짐 (젤다 항아리)", {
     varyF: 2,
     varyG: 1.5,
     verb: [0.25, 0.12],
@@ -141,7 +141,7 @@ export default def("world", {
       ...[0.04, 0.08, 0.13, 0.19].map((at, i) => ({ wave: "modal" as const, freq: 1200 + i * 230, modes: [1, 2.1, 3.4], at, a: 0.001, d: 0.06, shape: -5, gain: 0.5 })),
     ],
   }],
-  "metal-clang": ["Metal object or pipe hits the floor", {
+  "metal-clang": ["금속 물체나 파이프가 바닥에 캉", {
     vary: 0.8,
     varyF: 1.5,
     varyG: 1,
@@ -153,7 +153,7 @@ export default def("world", {
       { wave: "modal", freq: 640, modes: [1, 2.756, 5.404], at: 0.15, a: 0.001, d: 0.4, shape: -4, gain: 0.35 },
     ],
   }],
-  "rock-crumble": ["Rocks and rubble crumble down", {
+  "rock-crumble": ["바위와 잔해가 무너짐", {
     varyF: 2,
     varyG: 1.5,
     verb: [0.4, 0.18],
@@ -162,7 +162,7 @@ export default def("world", {
       ...Array.from({ length: 10 }, (_, i) => ({ wave: "modal" as const, freq: 300 + (i * 173) % 500, modes: [1, 2.6, 4.9], at: i * 0.06 + (i % 3) * 0.012, a: 0.002, d: 0.06, shape: -6, gain: 0.8 - i * 0.05 })),
     ],
   }],
-  ignite: ["Torch or fire ignites: whoomph", {
+  ignite: ["횃불이나 불 점화: 훙", {
     vary: 0.5,
     varyF: 2,
     layers: [

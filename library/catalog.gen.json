@@ -5,83 +5,83 @@
    "target": -20
   },
   "pickup": {
-   "title": "Pickups",
+   "title": "수집",
    "target": -16
   },
   "jump": {
-   "title": "Jump & land",
+   "title": "점프·착지",
    "target": -16
   },
   "hit": {
-   "title": "Hits",
+   "title": "타격",
    "target": -15
   },
   "explosion": {
-   "title": "Explosions",
+   "title": "폭발",
    "target": -14
   },
   "powerup": {
-   "title": "Power-ups",
+   "title": "파워업",
    "target": -16
   },
   "shoot": {
-   "title": "Shots & lasers",
+   "title": "총격·레이저",
    "target": -16
   },
   "footstep": {
-   "title": "Footsteps",
+   "title": "발소리",
    "target": -20
   },
   "magic": {
-   "title": "Magic",
+   "title": "마법",
    "target": -16
   },
   "alert": {
-   "title": "Alerts",
+   "title": "경보",
    "target": -18
   },
   "jingle": {
-   "title": "Jingles",
+   "title": "징글",
    "target": -17
   },
   "mechanic": {
-   "title": "Doors & mechanics",
+   "title": "문·기계",
    "target": -17
   },
   "world": {
-   "title": "World",
+   "title": "월드",
    "target": -17
   },
   "creature": {
-   "title": "Creatures",
+   "title": "크리처",
    "target": -17
   },
   "nature": {
-   "title": "Nature",
+   "title": "자연",
    "target": -18
   },
   "card": {
-   "title": "Cards & casino",
+   "title": "카드·카지노",
    "target": -18
   },
   "vehicle": {
-   "title": "Vehicles",
+   "title": "탈것",
    "target": -16
   },
   "horror": {
-   "title": "Horror",
+   "title": "호러",
    "target": -17
   },
   "farm": {
-   "title": "Farm & crafting",
+   "title": "농장·제작",
    "target": -17
   },
   "scifi": {
-   "title": "Sci-fi & tech",
+   "title": "SF·기술",
    "target": -18
   },
   "puzzle": {
-   "title": "Puzzle",
+   "title": "퍼즐",
    "target": -17
   }
  },
@@ -90,7 +90,7 @@
    "name": "click",
    "id": "click",
    "cat": "ui",
-   "desc": "Neutral button click",
+   "desc": "중립적인 버튼 클릭",
    "gain": 0.458,
    "limited": true,
    "m": {
@@ -169,7 +169,7 @@
    "name": "click-soft",
    "id": "clickSoft",
    "cat": "ui",
-   "desc": "Rounded, quiet click for lists and tabs",
+   "desc": "목록과 탭용 둥글고 조용한 클릭",
    "gain": 2.04,
    "limited": true,
    "m": {
@@ -248,7 +248,7 @@
    "name": "click-hard",
    "id": "clickHard",
    "cat": "ui",
-   "desc": "Firm mechanical click",
+   "desc": "확실한 기계식 클릭",
    "gain": 0.508,
    "limited": false,
    "m": {
@@ -327,7 +327,7 @@
    "name": "tap",
    "id": "tap",
    "cat": "ui",
-   "desc": "Bubbly tap, good for mobile",
+   "desc": "모바일에 좋은 통통 튀는 탭",
    "gain": 1.42,
    "limited": true,
    "m": {
@@ -406,7 +406,7 @@
    "name": "hover",
    "id": "hover",
    "cat": "ui",
-   "desc": "Faint tick when the cursor enters a button",
+   "desc": "커서가 버튼에 올라갈 때 희미한 틱",
    "gain": 1.41,
    "limited": false,
    "m": {
@@ -485,7 +485,7 @@
    "name": "toggle-on",
    "id": "toggleOn",
    "cat": "ui",
-   "desc": "Switch on: two rising notes",
+   "desc": "스위치 켜기: 올라가는 두 음",
    "gain": 0.78,
    "limited": false,
    "m": {
@@ -564,7 +564,7 @@
    "name": "toggle-off",
    "id": "toggleOff",
    "cat": "ui",
-   "desc": "Switch off: two falling notes",
+   "desc": "스위치 끄기: 내려가는 두 음",
    "gain": 0.731,
    "limited": false,
    "m": {
@@ -643,7 +643,7 @@
    "name": "confirm",
    "id": "confirm",
    "cat": "ui",
-   "desc": "Bright major arpeggio, 'OK'",
+   "desc": "밝은 장조 아르페지오, '확인'",
    "gain": 0.395,
    "limited": false,
    "m": {
@@ -722,7 +722,7 @@
    "name": "cancel",
    "id": "cancel",
    "cat": "ui",
-   "desc": "Soft descending 'back'",
+   "desc": "부드럽게 내려가는 '뒤로'",
    "gain": 0.415,
    "limited": false,
    "m": {
@@ -801,7 +801,7 @@
    "name": "error",
    "id": "error",
    "cat": "ui",
-   "desc": "Two low buzzes, 'not allowed'",
+   "desc": "낮은 버즈 두 번, '허용 안 됨'",
    "gain": 0.224,
    "limited": false,
    "m": {
@@ -880,7 +880,7 @@
    "name": "deny",
    "id": "deny",
    "cat": "ui",
-   "desc": "Short dull thunk for disabled buttons",
+   "desc": "비활성 버튼용 짧고 묵직한 쿵",
    "gain": 0.367,
    "limited": false,
    "m": {
@@ -959,7 +959,7 @@
    "name": "notify",
    "id": "notify",
    "cat": "ui",
-   "desc": "Two-tone bell notification",
+   "desc": "두 음 벨 알림",
    "gain": 0.154,
    "limited": false,
    "m": {
@@ -1038,7 +1038,7 @@
    "name": "pop",
    "id": "pop",
    "cat": "ui",
-   "desc": "Upward pop, for things appearing",
+   "desc": "무언가 나타날 때 위로 팝",
    "gain": 0.898,
    "limited": false,
    "m": {
@@ -1117,7 +1117,7 @@
    "name": "pop-down",
    "id": "popDown",
    "cat": "ui",
-   "desc": "Downward pop, for things disappearing",
+   "desc": "무언가 사라질 때 아래로 팝",
    "gain": 0.834,
    "limited": false,
    "m": {
@@ -1196,7 +1196,7 @@
    "name": "swipe",
    "id": "swipe",
    "cat": "ui",
-   "desc": "Quick airy swipe between pages",
+   "desc": "페이지 사이 빠른 바람 스와이프",
    "gain": 1.31,
    "limited": false,
    "m": {
@@ -1275,7 +1275,7 @@
    "name": "type",
    "id": "type",
    "cat": "ui",
-   "desc": "Keyboard tick for text that types itself",
+   "desc": "글자가 타이핑될 때 키보드 틱",
    "gain": 0.574,
    "limited": true,
    "m": {
@@ -1354,7 +1354,7 @@
    "name": "tick",
    "id": "tick",
    "cat": "ui",
-   "desc": "Tiny tick for sliders and scroll steps",
+   "desc": "슬라이더와 스크롤 단계용 작은 틱",
    "gain": 0.728,
    "limited": false,
    "m": {
@@ -1433,7 +1433,7 @@
    "name": "menu-open",
    "id": "menuOpen",
    "cat": "ui",
-   "desc": "Menu or panel slides open",
+   "desc": "메뉴나 패널이 열림",
    "gain": 0.721,
    "limited": false,
    "m": {
@@ -1512,7 +1512,7 @@
    "name": "menu-close",
    "id": "menuClose",
    "cat": "ui",
-   "desc": "Menu or panel closes",
+   "desc": "메뉴나 패널이 닫힘",
    "gain": 0.699,
    "limited": false,
    "m": {
@@ -1591,7 +1591,7 @@
    "name": "select",
    "id": "select",
    "cat": "ui",
-   "desc": "Retro menu cursor move",
+   "desc": "레트로 메뉴 커서 이동",
    "gain": 0.585,
    "limited": false,
    "m": {
@@ -1670,7 +1670,7 @@
    "name": "select-soft",
    "id": "selectSoft",
    "cat": "ui",
-   "desc": "Gentle cursor move for modern menus",
+   "desc": "모던 메뉴용 부드러운 커서 이동",
    "gain": 0.618,
    "limited": false,
    "m": {
@@ -1749,7 +1749,7 @@
    "name": "message",
    "id": "message",
    "cat": "ui",
-   "desc": "Chat message arrives",
+   "desc": "채팅 메시지 도착",
    "gain": 0.43,
    "limited": false,
    "m": {
@@ -1828,7 +1828,7 @@
    "name": "plink",
    "id": "plink",
    "cat": "ui",
-   "desc": "The plinkfx signature: one drop of sound",
+   "desc": "plinkfx 시그니처: 한 방울의 소리",
    "gain": 0.281,
    "limited": false,
    "m": {
@@ -1907,7 +1907,7 @@
    "name": "drag-start",
    "id": "dragStart",
    "cat": "ui",
-   "desc": "Pick up a draggable item: soft lift",
+   "desc": "드래그 아이템 들기: 부드러운 들림",
    "gain": 0.882,
    "limited": false,
    "m": {
@@ -1986,7 +1986,7 @@
    "name": "drop",
    "id": "drop",
    "cat": "ui",
-   "desc": "Drop it into a slot: soft settle",
+   "desc": "슬롯에 놓기: 부드러운 안착",
    "gain": 0.826,
    "limited": false,
    "m": {
@@ -2065,7 +2065,7 @@
    "name": "success",
    "id": "success",
    "cat": "ui",
-   "desc": "Task done: clean rising check-mark chime",
+   "desc": "작업 완료: 깔끔하게 올라가는 체크 차임",
    "gain": 0.204,
    "limited": false,
    "m": {
@@ -2144,7 +2144,7 @@
    "name": "maximize",
    "id": "maximize",
    "cat": "ui",
-   "desc": "Window or card expands: rising whoosh-blip",
+   "desc": "창이나 카드 확대: 올라가는 휙-블립",
    "gain": 1.15,
    "limited": false,
    "m": {
@@ -2223,7 +2223,7 @@
    "name": "minimize",
    "id": "minimize",
    "cat": "ui",
-   "desc": "Window or card collapses: falling whoosh-blip",
+   "desc": "창이나 카드 축소: 내려가는 휙-블립",
    "gain": 1.17,
    "limited": false,
    "m": {
@@ -2302,7 +2302,7 @@
    "name": "question",
    "id": "question",
    "cat": "ui",
-   "desc": "Dialog asks something: curious upward lilt",
+   "desc": "대화상자 질문: 궁금해하며 올라가는 억양",
    "gain": 0.277,
    "limited": false,
    "m": {
@@ -2381,7 +2381,7 @@
    "name": "message-send",
    "id": "messageSend",
    "cat": "ui",
-   "desc": "Message sent: quick upward swoosh",
+   "desc": "메시지 전송: 빠르게 위로 휙",
    "gain": 1.26,
    "limited": false,
    "m": {
@@ -2460,7 +2460,7 @@
    "name": "trash",
    "id": "trash",
    "cat": "ui",
-   "desc": "Delete / move to trash: crumple and drop",
+   "desc": "삭제/휴지통 이동: 구기고 떨굼",
    "gain": 1.49,
    "limited": false,
    "m": {
@@ -2539,7 +2539,7 @@
    "name": "page-turn",
    "id": "pageTurn",
    "cat": "ui",
-   "desc": "Turn a book or tutorial page",
+   "desc": "책이나 튜토리얼 페이지 넘김",
    "gain": 1.46,
    "limited": false,
    "m": {
@@ -2618,7 +2618,7 @@
    "name": "coin",
    "id": "coin",
    "cat": "pickup",
-   "desc": "The classic two-note coin, with a little shimmer",
+   "desc": "고전 두 음 코인, 살짝 반짝임 포함",
    "gain": 0.272,
    "limited": false,
    "m": {
@@ -2697,7 +2697,7 @@
    "name": "coin-soft",
    "id": "coinSoft",
    "cat": "pickup",
-   "desc": "Rounder coin for cosy games",
+   "desc": "아늑한 게임용 둥근 코인",
    "gain": 0.478,
    "limited": false,
    "m": {
@@ -2776,7 +2776,7 @@
    "name": "coin-double",
    "id": "coinDouble",
    "cat": "pickup",
-   "desc": "Two coins in quick succession",
+   "desc": "빠르게 연속 두 코인",
    "gain": 0.278,
    "limited": false,
    "m": {
@@ -2855,7 +2855,7 @@
    "name": "coin-bag",
    "id": "coinBag",
    "cat": "pickup",
-   "desc": "A handful of coins, a small payout",
+   "desc": "한 움큼의 동전, 소소한 상금",
    "gain": 0.463,
    "limited": false,
    "m": {
@@ -2934,7 +2934,7 @@
    "name": "gem",
    "id": "gem",
    "cat": "pickup",
-   "desc": "Glassy bell for gems and crystals",
+   "desc": "보석과 크리스탈용 유리 같은 벨",
    "gain": 0.286,
    "limited": false,
    "m": {
@@ -3013,7 +3013,7 @@
    "name": "pickup",
    "id": "pickup",
    "cat": "pickup",
-   "desc": "Generic item pickup, quick rising notes",
+   "desc": "일반 아이템 줍기, 빠르게 올라가는 음",
    "gain": 0.346,
    "limited": false,
    "m": {
@@ -3092,7 +3092,7 @@
    "name": "pickup-soft",
    "id": "pickupSoft",
    "cat": "pickup",
-   "desc": "Soft pop-and-chime pickup",
+   "desc": "부드러운 팝-차임 줍기",
    "gain": 0.826,
    "limited": false,
    "m": {
@@ -3171,7 +3171,7 @@
    "name": "pickup-item",
    "id": "pickupItem",
    "cat": "pickup",
-   "desc": "Grab an item: a short slide up",
+   "desc": "아이템 줍기: 짧게 올라가는 슬라이드",
    "gain": 0.572,
    "limited": false,
    "m": {
@@ -3250,7 +3250,7 @@
    "name": "key",
    "id": "key",
    "cat": "pickup",
-   "desc": "Key pickup: metal jingle and a chime",
+   "desc": "열쇠 줍기: 금속 징글과 차임",
    "gain": 0.83,
    "limited": false,
    "m": {
@@ -3329,7 +3329,7 @@
    "name": "heart",
    "id": "heart",
    "cat": "pickup",
-   "desc": "Health pickup, warm and friendly",
+   "desc": "체력 회복 아이템, 따뜻하고 다정함",
    "gain": 0.402,
    "limited": false,
    "m": {
@@ -3408,7 +3408,7 @@
    "name": "ammo",
    "id": "ammo",
    "cat": "pickup",
-   "desc": "Ammo or clip pickup: metallic clack",
+   "desc": "탄약이나 클립 줍기: 금속 달각",
    "gain": 0.715,
    "limited": true,
    "m": {
@@ -3487,7 +3487,7 @@
    "name": "ka-ching",
    "id": "kaChing",
    "cat": "pickup",
-   "desc": "Cash register for shops and purchases",
+   "desc": "상점과 구매용 계산대 소리",
    "gain": 0.265,
    "limited": false,
    "m": {
@@ -3566,7 +3566,7 @@
    "name": "xp-orb",
    "id": "xpOrb",
    "cat": "pickup",
-   "desc": "Experience orb, small and bright",
+   "desc": "경험치 구슬, 작고 밝음",
    "gain": 0.963,
    "limited": false,
    "m": {
@@ -3645,7 +3645,7 @@
    "name": "star",
    "id": "star",
    "cat": "pickup",
-   "desc": "Collect a star: sparkling run upward",
+   "desc": "별 줍기: 반짝이며 치솟는 런",
    "gain": 0.25,
    "limited": false,
    "m": {
@@ -3724,7 +3724,7 @@
    "name": "ring",
    "id": "ring",
    "cat": "pickup",
-   "desc": "Fast ring pickup, two-note bright chime",
+   "desc": "빠른 링 줍기, 밝은 두 음 차임",
    "gain": 0.313,
    "limited": false,
    "m": {
@@ -3803,7 +3803,7 @@
    "name": "potion-drink",
    "id": "potionDrink",
    "cat": "pickup",
-   "desc": "Drink a potion: three glugs and a sigh of sparkle",
+   "desc": "포션 마시기: 꿀꺽 세 번과 반짝이는 한숨",
    "gain": 0.904,
    "limited": false,
    "m": {
@@ -3882,7 +3882,7 @@
    "name": "eat",
    "id": "eat",
    "cat": "pickup",
-   "desc": "Eat food: two crunchy bites",
+   "desc": "음식 먹기: 바삭한 두 입",
    "gain": 0.789,
    "limited": false,
    "m": {
@@ -3961,7 +3961,7 @@
    "name": "loot-rare",
    "id": "lootRare",
    "cat": "pickup",
-   "desc": "Rare loot drops: shimmering beam and a chord",
+   "desc": "레어 전리품 드롭: 반짝이는 빔과 코드",
    "gain": 0.164,
    "limited": false,
    "m": {
@@ -4040,7 +4040,7 @@
    "name": "equip",
    "id": "equip",
    "cat": "pickup",
-   "desc": "Equip gear: leather and buckle",
+   "desc": "장비 착용: 가죽과 버클",
    "gain": 3.07,
    "limited": false,
    "m": {
@@ -4119,7 +4119,7 @@
    "name": "jump",
    "id": "jump",
    "cat": "jump",
-   "desc": "Platformer jump: square sweep up",
+   "desc": "플랫포머 점프: 위로 올라가는 스퀘어 스윕",
    "gain": 0.426,
    "limited": false,
    "m": {
@@ -4198,7 +4198,7 @@
    "name": "jump-soft",
    "id": "jumpSoft",
    "cat": "jump",
-   "desc": "Gentle hop for cute characters",
+   "desc": "귀여운 캐릭터용 부드러운 폴짝",
    "gain": 0.846,
    "limited": false,
    "m": {
@@ -4277,7 +4277,7 @@
    "name": "jump-high",
    "id": "jumpHigh",
    "cat": "jump",
-   "desc": "Big jump with a longer rise",
+   "desc": "더 길게 치솟는 큰 점프",
    "gain": 0.364,
    "limited": false,
    "m": {
@@ -4356,7 +4356,7 @@
    "name": "jump-double",
    "id": "jumpDouble",
    "cat": "jump",
-   "desc": "Second jump in mid-air, higher and airier",
+   "desc": "공중에서 두 번째 점프, 더 높고 가볍게",
    "gain": 0.677,
    "limited": false,
    "m": {
@@ -4435,7 +4435,7 @@
    "name": "jump-cartoon",
    "id": "jumpCartoon",
    "cat": "jump",
-   "desc": "Boingy cartoon jump with wobble",
+   "desc": "통통 튀는 만화풍 점프, 흔들림 포함",
    "gain": 0.478,
    "limited": false,
    "m": {
@@ -4514,7 +4514,7 @@
    "name": "hop",
    "id": "hop",
    "cat": "jump",
-   "desc": "Tiny hop for small creatures",
+   "desc": "작은 생물의 깡충",
    "gain": 1.06,
    "limited": false,
    "m": {
@@ -4593,7 +4593,7 @@
    "name": "land",
    "id": "land",
    "cat": "jump",
-   "desc": "Landing on solid ground",
+   "desc": "단단한 땅에 착지",
    "gain": 0.724,
    "limited": true,
    "m": {
@@ -4672,7 +4672,7 @@
    "name": "land-heavy",
    "id": "landHeavy",
    "cat": "jump",
-   "desc": "Heavy landing with a thud",
+   "desc": "쿵 소리 나는 무거운 착지",
    "gain": 0.918,
    "limited": true,
    "m": {
@@ -4751,7 +4751,7 @@
    "name": "spring",
    "id": "spring",
    "cat": "jump",
-   "desc": "Spring or trampoline boing",
+   "desc": "스프링이나 트램펄린 통통",
    "gain": 0.502,
    "limited": false,
    "m": {
@@ -4830,7 +4830,7 @@
    "name": "wall-jump",
    "id": "wallJump",
    "cat": "jump",
-   "desc": "Push off a wall: scuff then rise",
+   "desc": "벽 차고 점프: 스치고 상승",
    "gain": 0.688,
    "limited": true,
    "m": {
@@ -4909,7 +4909,7 @@
    "name": "slide",
    "id": "slide",
    "cat": "jump",
-   "desc": "Slide along the ground",
+   "desc": "땅을 미끄러짐",
    "gain": 0.606,
    "limited": false,
    "m": {
@@ -4988,7 +4988,7 @@
    "name": "fall-whistle",
    "id": "fallWhistle",
    "cat": "jump",
-   "desc": "Cartoon falling whistle",
+   "desc": "만화풍 낙하 휘파람",
    "gain": 0.271,
    "limited": false,
    "m": {
@@ -5067,7 +5067,7 @@
    "name": "hit",
    "id": "hit",
    "cat": "hit",
-   "desc": "Solid all-round hit: click, body, thump",
+   "desc": "무난한 전천후 타격: 클릭, 몸통, 쿵",
    "gain": 0.777,
    "limited": true,
    "m": {
@@ -5146,7 +5146,7 @@
    "name": "hit-light",
    "id": "hitLight",
    "cat": "hit",
-   "desc": "Light jab or tap",
+   "desc": "가벼운 잽이나 톡",
    "gain": 1.04,
    "limited": true,
    "m": {
@@ -5225,7 +5225,7 @@
    "name": "hit-heavy",
    "id": "hitHeavy",
    "cat": "hit",
-   "desc": "Heavy blow with crunch and low end",
+   "desc": "우지끈하고 저역이 실린 강타",
    "gain": 0.658,
    "limited": true,
    "m": {
@@ -5304,7 +5304,7 @@
    "name": "punch",
    "id": "punch",
    "cat": "hit",
-   "desc": "Cartoon punch, meaty",
+   "desc": "만화풍 묵직한 펀치",
    "gain": 0.764,
    "limited": false,
    "m": {
@@ -5383,7 +5383,7 @@
    "name": "slap",
    "id": "slap",
    "cat": "hit",
-   "desc": "Flat slap",
+   "desc": "납작한 따귀",
    "gain": 0.494,
    "limited": true,
    "m": {
@@ -5462,7 +5462,7 @@
    "name": "hurt",
    "id": "hurt",
    "cat": "hit",
-   "desc": "Player takes damage: buzzy drop",
+   "desc": "플레이어 피격: 지직거리며 떨어짐",
    "gain": 0.398,
    "limited": false,
    "m": {
@@ -5541,7 +5541,7 @@
    "name": "enemy-hit",
    "id": "enemyHit",
    "cat": "hit",
-   "desc": "Enemy flinches: short high blip and smack",
+   "desc": "적이 움찔: 짧은 고음 블립과 탁",
    "gain": 0.464,
    "limited": true,
    "m": {
@@ -5620,7 +5620,7 @@
    "name": "enemy-die",
    "id": "enemyDie",
    "cat": "hit",
-   "desc": "Enemy defeated: falling crushed tone",
+   "desc": "적 처치: 뭉개지며 떨어지는 톤",
    "gain": 0.347,
    "limited": false,
    "m": {
@@ -5699,7 +5699,7 @@
    "name": "sword-hit",
    "id": "swordHit",
    "cat": "hit",
-   "desc": "Blade hits armour",
+   "desc": "칼날이 갑옷을 침",
    "gain": 0.415,
    "limited": true,
    "m": {
@@ -5778,7 +5778,7 @@
    "name": "block",
    "id": "block",
    "cat": "hit",
-   "desc": "Shield block: dull metal clank",
+   "desc": "방패 막기: 묵직한 금속 캉",
    "gain": 0.827,
    "limited": false,
    "m": {
@@ -5857,7 +5857,7 @@
    "name": "crit",
    "id": "crit",
    "cat": "hit",
-   "desc": "Critical hit: impact plus a bright ring",
+   "desc": "치명타: 타격에 밝은 울림 추가",
    "gain": 0.918,
    "limited": true,
    "m": {
@@ -5936,7 +5936,7 @@
    "name": "squish",
    "id": "squish",
    "cat": "hit",
-   "desc": "Wet squish for slimes",
+   "desc": "슬라임용 질척 으깨짐",
    "gain": 0.972,
    "limited": true,
    "m": {
@@ -6015,7 +6015,7 @@
    "name": "bonk",
    "id": "bonk",
    "cat": "hit",
-   "desc": "Cartoon bonk on the head",
+   "desc": "머리를 때리는 만화풍 띵",
    "gain": 0.994,
    "limited": true,
    "m": {
@@ -6094,7 +6094,7 @@
    "name": "stomp",
    "id": "stomp",
    "cat": "hit",
-   "desc": "Stomp on an enemy: squashy thump that springs up",
+   "desc": "적 밟기: 으깨졌다 튀어 오르는 쿵",
    "gain": 0.87,
    "limited": true,
    "m": {
@@ -6173,7 +6173,7 @@
    "name": "arrow-hit",
    "id": "arrowHit",
    "cat": "hit",
-   "desc": "Arrow thunks into wood",
+   "desc": "화살이 나무에 콱 박힘",
    "gain": 0.907,
    "limited": false,
    "m": {
@@ -6252,7 +6252,7 @@
    "name": "kick",
    "id": "kick",
    "cat": "hit",
-   "desc": "Kick: low thump with a cloth snap",
+   "desc": "킥: 낮은 쿵과 천 스냅",
    "gain": 0.677,
    "limited": true,
    "m": {
@@ -6331,7 +6331,7 @@
    "name": "stab",
    "id": "stab",
    "cat": "hit",
-   "desc": "Blade stab into flesh: short wet thrust",
+   "desc": "칼날 찌르기: 짧고 축축한 찌름",
    "gain": 0.911,
    "limited": true,
    "m": {
@@ -6410,7 +6410,7 @@
    "name": "sword-clash",
    "id": "swordClash",
    "cat": "hit",
-   "desc": "Two blades clash and ring",
+   "desc": "두 칼날이 부딪혀 울림",
    "gain": 0.66,
    "limited": true,
    "m": {
@@ -6489,7 +6489,7 @@
    "name": "sword-draw",
    "id": "swordDraw",
    "cat": "hit",
-   "desc": "Unsheathe a sword: metallic scrape that rings out",
+   "desc": "검 뽑기: 길게 울리는 금속 스크레이프",
    "gain": 0.893,
    "limited": false,
    "m": {
@@ -6568,7 +6568,7 @@
    "name": "body-fall",
    "id": "bodyFall",
    "cat": "hit",
-   "desc": "Body hits the floor",
+   "desc": "몸이 바닥에 쓰러짐",
    "gain": 0.739,
    "limited": true,
    "m": {
@@ -6647,7 +6647,7 @@
    "name": "explosion",
    "id": "explosion",
    "cat": "explosion",
-   "desc": "Mid-size explosion: crack, rumble, tail",
+   "desc": "중간 크기 폭발: 파열, 울림, 여운",
    "gain": 0.299,
    "limited": true,
    "m": {
@@ -6726,7 +6726,7 @@
    "name": "explosion-small",
    "id": "explosionSmall",
    "cat": "explosion",
-   "desc": "Small pop of an explosion, grenades, barrels",
+   "desc": "작은 펑 폭발, 수류탄, 드럼통",
    "gain": 0.533,
    "limited": true,
    "m": {
@@ -6805,7 +6805,7 @@
    "name": "explosion-big",
    "id": "explosionBig",
    "cat": "explosion",
-   "desc": "Huge blast with a long rolling tail",
+   "desc": "길게 울려 퍼지는 거대 폭발",
    "gain": 0.229,
    "limited": false,
    "m": {
@@ -6884,7 +6884,7 @@
    "name": "explosion-retro",
    "id": "explosionRetro",
    "cat": "explosion",
-   "desc": "8-bit explosion, crunchy noise falling",
+   "desc": "8비트 폭발, 거친 노이즈가 내려감",
    "gain": 0.567,
    "limited": false,
    "m": {
@@ -6963,7 +6963,7 @@
    "name": "explosion-distant",
    "id": "explosionDistant",
    "cat": "explosion",
-   "desc": "Far-off boom, muffled",
+   "desc": "멀리서 들리는 먹먹한 굉음",
    "gain": 0.742,
    "limited": false,
    "m": {
@@ -7042,7 +7042,7 @@
    "name": "firework",
    "id": "firework",
    "cat": "explosion",
-   "desc": "Firework pop with crackle",
+   "desc": "불꽃놀이의 펑과 파파박",
    "gain": 0.668,
    "limited": false,
    "m": {
@@ -7121,7 +7121,7 @@
    "name": "implosion",
    "id": "implosion",
    "cat": "explosion",
-   "desc": "Reverse-feel suck-in then thump",
+   "desc": "빨려 들어가는 느낌 후 쿵",
    "gain": 0.539,
    "limited": false,
    "m": {
@@ -7200,7 +7200,7 @@
    "name": "debris",
    "id": "debris",
    "cat": "explosion",
-   "desc": "Rubble and debris settling",
+   "desc": "잔해와 부스러기가 가라앉음",
    "gain": 0.968,
    "limited": false,
    "m": {
@@ -7279,7 +7279,7 @@
    "name": "shockwave",
    "id": "shockwave",
    "cat": "explosion",
-   "desc": "Energy shockwave, sci-fi",
+   "desc": "에너지 충격파, SF",
    "gain": 0.417,
    "limited": false,
    "m": {
@@ -7358,7 +7358,7 @@
    "name": "bomb-fuse",
    "id": "bombFuse",
    "cat": "explosion",
-   "desc": "Lit fuse fizzing",
+   "desc": "불붙은 도화선이 지지직",
    "gain": 0.894,
    "limited": false,
    "m": {
@@ -7437,7 +7437,7 @@
    "name": "powerup",
    "id": "powerup",
    "cat": "powerup",
-   "desc": "Classic power-up: fast arpeggio climbing two octaves",
+   "desc": "고전 파워업: 두 옥타브 치솟는 빠른 아르페지오",
    "gain": 0.184,
    "limited": false,
    "m": {
@@ -7516,7 +7516,7 @@
    "name": "powerup-retro",
    "id": "powerupRetro",
    "cat": "powerup",
-   "desc": "Rising warble, 8-bit style",
+   "desc": "올라가는 떨림, 8비트 스타일",
    "gain": 0.201,
    "limited": false,
    "m": {
@@ -7595,7 +7595,7 @@
    "name": "level-up",
    "id": "levelUp",
    "cat": "powerup",
-   "desc": "Level up: chord, sparkle and hold",
+   "desc": "레벨 업: 코드, 반짝임과 유지",
    "gain": 0.223,
    "limited": false,
    "m": {
@@ -7674,7 +7674,7 @@
    "name": "extra-life",
    "id": "extraLife",
    "cat": "powerup",
-   "desc": "1-up style six-note phrase",
+   "desc": "1UP 스타일 여섯 음 구절",
    "gain": 0.154,
    "limited": false,
    "m": {
@@ -7753,7 +7753,7 @@
    "name": "shield-on",
    "id": "shieldOn",
    "cat": "powerup",
-   "desc": "Energy shield raises",
+   "desc": "에너지 방어막 전개",
    "gain": 0.283,
    "limited": false,
    "m": {
@@ -7832,7 +7832,7 @@
    "name": "shield-off",
    "id": "shieldOff",
    "cat": "powerup",
-   "desc": "Shield drops or breaks down",
+   "desc": "방어막 꺼짐 또는 붕괴",
    "gain": 0.618,
    "limited": false,
    "m": {
@@ -7911,7 +7911,7 @@
    "name": "speed-up",
    "id": "speedUp",
    "cat": "powerup",
-   "desc": "Speed boost: fast whirring rise",
+   "desc": "스피드 부스트: 빠르게 윙 올라감",
    "gain": 0.299,
    "limited": false,
    "m": {
@@ -7990,7 +7990,7 @@
    "name": "heal",
    "id": "heal",
    "cat": "powerup",
-   "desc": "Healing: soft rising chime with shimmer",
+   "desc": "치유: 반짝임을 동반한 부드럽게 올라가는 차임",
    "gain": 0.179,
    "limited": false,
    "m": {
@@ -8069,7 +8069,7 @@
    "name": "charge-up",
    "id": "chargeUp",
    "cat": "powerup",
-   "desc": "Charging a shot, rising tension",
+   "desc": "샷 차징, 차오르는 긴장",
    "gain": 0.215,
    "limited": false,
    "m": {
@@ -8148,7 +8148,7 @@
    "name": "power-down",
    "id": "powerDown",
    "cat": "powerup",
-   "desc": "Lose a power: arpeggio falling",
+   "desc": "파워 상실: 내려가는 아르페지오",
    "gain": 0.188,
    "limited": false,
    "m": {
@@ -8227,7 +8227,7 @@
    "name": "unlock",
    "id": "unlock",
    "cat": "powerup",
-   "desc": "New ability unlocked",
+   "desc": "새 능력 잠금 해제",
    "gain": 0.267,
    "limited": false,
    "m": {
@@ -8306,7 +8306,7 @@
    "name": "invincible",
    "id": "invincible",
    "cat": "powerup",
-   "desc": "Invincibility: looping bright arpeggio",
+   "desc": "무적: 밝은 아르페지오 루프",
    "gain": 0.159,
    "limited": false,
    "m": {
@@ -8385,7 +8385,7 @@
    "name": "laser",
    "id": "laser",
    "cat": "shoot",
-   "desc": "Classic laser: fast square sweep down",
+   "desc": "고전 레이저: 빠르게 내려가는 스퀘어 스윕",
    "gain": 0.497,
    "limited": false,
    "m": {
@@ -8464,7 +8464,7 @@
    "name": "laser-soft",
    "id": "laserSoft",
    "cat": "shoot",
-   "desc": "Rounder laser for cute shooters",
+   "desc": "귀여운 슈터용 둥근 레이저",
    "gain": 0.79,
    "limited": false,
    "m": {
@@ -8543,7 +8543,7 @@
    "name": "laser-heavy",
    "id": "laserHeavy",
    "cat": "shoot",
-   "desc": "Thick laser cannon",
+   "desc": "묵직한 레이저 캐논",
    "gain": 0.319,
    "limited": false,
    "m": {
@@ -8622,7 +8622,7 @@
    "name": "blaster",
    "id": "blaster",
    "cat": "shoot",
-   "desc": "Sci-fi blaster bolt",
+   "desc": "SF 블래스터 탄",
    "gain": 0.689,
    "limited": true,
    "m": {
@@ -8701,7 +8701,7 @@
    "name": "zap",
    "id": "zap",
    "cat": "shoot",
-   "desc": "Electric zap",
+   "desc": "전기 지직",
    "gain": 0.722,
    "limited": false,
    "m": {
@@ -8780,7 +8780,7 @@
    "name": "pew",
    "id": "pew",
    "cat": "shoot",
-   "desc": "Tiny pew for bullet-hell spam",
+   "desc": "탄막 연사용 작은 퓨",
    "gain": 0.785,
    "limited": true,
    "m": {
@@ -8859,7 +8859,7 @@
    "name": "gunshot",
    "id": "gunshot",
    "cat": "shoot",
-   "desc": "Pistol shot with room tail",
+   "desc": "방 안 여운이 있는 권총 발사",
    "gain": 0.477,
    "limited": true,
    "m": {
@@ -8938,7 +8938,7 @@
    "name": "shotgun",
    "id": "shotgun",
    "cat": "shoot",
-   "desc": "Shotgun blast, wide and heavy",
+   "desc": "산탄총 발사, 넓고 묵직함",
    "gain": 0.273,
    "limited": false,
    "m": {
@@ -9017,7 +9017,7 @@
    "name": "shoot-retro",
    "id": "shootRetro",
    "cat": "shoot",
-   "desc": "8-bit shot",
+   "desc": "8비트 발사",
    "gain": 0.428,
    "limited": true,
    "m": {
@@ -9096,7 +9096,7 @@
    "name": "railgun",
    "id": "railgun",
    "cat": "shoot",
-   "desc": "Charge whine, then a piercing shot",
+   "desc": "충전 윙 소리 후 꿰뚫는 발사",
    "gain": 0.36,
    "limited": false,
    "m": {
@@ -9175,7 +9175,7 @@
    "name": "ray",
    "id": "ray",
    "cat": "shoot",
-   "desc": "Warbling ray gun",
+   "desc": "떨리는 광선총",
    "gain": 0.291,
    "limited": false,
    "m": {
@@ -9254,7 +9254,7 @@
    "name": "plasma",
    "id": "plasma",
    "cat": "shoot",
-   "desc": "Plasma ball launch",
+   "desc": "플라즈마 볼 발사",
    "gain": 0.598,
    "limited": true,
    "m": {
@@ -9333,7 +9333,7 @@
    "name": "missile",
    "id": "missile",
    "cat": "shoot",
-   "desc": "Rocket launch whoosh",
+   "desc": "로켓 발사 휘잉",
    "gain": 0.608,
    "limited": false,
    "m": {
@@ -9412,7 +9412,7 @@
    "name": "ricochet",
    "id": "ricochet",
    "cat": "shoot",
-   "desc": "Bullet ricochet: sharp tick and a falling whine",
+   "desc": "총알 도탄: 날카로운 틱과 떨어지는 윙",
    "gain": 0.333,
    "limited": false,
    "m": {
@@ -9491,7 +9491,7 @@
    "name": "dry-fire",
    "id": "dryFire",
    "cat": "shoot",
-   "desc": "Empty gun: the hammer clicks, nothing fires",
+   "desc": "빈 총: 해머만 딸깍, 발사 없음",
    "gain": 0.987,
    "limited": true,
    "m": {
@@ -9570,7 +9570,7 @@
    "name": "reload",
    "id": "reload",
    "cat": "shoot",
-   "desc": "Reload: two metal clicks",
+   "desc": "재장전: 금속 딸깍 두 번",
    "gain": 0.829,
    "limited": false,
    "m": {
@@ -9649,7 +9649,7 @@
    "name": "bow-twang",
    "id": "bowTwang",
    "cat": "shoot",
-   "desc": "Bowstring released",
+   "desc": "활시위 놓기",
    "gain": 2.14,
    "limited": true,
    "m": {
@@ -9728,7 +9728,7 @@
    "name": "machine-gun",
    "id": "machineGun",
    "cat": "shoot",
-   "desc": "Automatic burst, five rounds",
+   "desc": "자동 연사, 다섯 발",
    "gain": 0.534,
    "limited": false,
    "m": {
@@ -9807,7 +9807,7 @@
    "name": "shell-casing",
    "id": "shellCasing",
    "cat": "shoot",
-   "desc": "Brass shell casings tinkle on the floor",
+   "desc": "황동 탄피가 바닥에 찰랑거림",
    "gain": 0.527,
    "limited": true,
    "m": {
@@ -9886,7 +9886,7 @@
    "name": "flamethrower",
    "id": "flamethrower",
    "cat": "shoot",
-   "desc": "Flamethrower burst: roaring hiss",
+   "desc": "화염방사: 포효하는 씽 소리",
    "gain": 0.289,
    "limited": false,
    "m": {
@@ -9965,7 +9965,7 @@
    "name": "grenade-launch",
    "id": "grenadeLaunch",
    "cat": "shoot",
-   "desc": "Grenade launcher: hollow thoomp",
+   "desc": "유탄발사기: 빈 쿵 소리",
    "gain": 0.601,
    "limited": false,
    "m": {
@@ -10044,7 +10044,7 @@
    "name": "step-grass",
    "id": "stepGrass",
    "cat": "footstep",
-   "desc": "Soft step on grass",
+   "desc": "풀 위 부드러운 발소리",
    "gain": 2.3,
    "limited": true,
    "m": {
@@ -10123,7 +10123,7 @@
    "name": "step-stone",
    "id": "stepStone",
    "cat": "footstep",
-   "desc": "Hard sole on stone",
+   "desc": "돌 위 딱딱한 신발 발소리",
    "gain": 1.76,
    "limited": true,
    "m": {
@@ -10202,7 +10202,7 @@
    "name": "step-wood",
    "id": "stepWood",
    "cat": "footstep",
-   "desc": "Step on a wooden floor",
+   "desc": "나무 바닥 발소리",
    "gain": 0.874,
    "limited": true,
    "m": {
@@ -10281,7 +10281,7 @@
    "name": "step-metal",
    "id": "stepMetal",
    "cat": "footstep",
-   "desc": "Step on a metal grate",
+   "desc": "금속 격자 위 발소리",
    "gain": 1.52,
    "limited": true,
    "m": {
@@ -10360,7 +10360,7 @@
    "name": "step-snow",
    "id": "stepSnow",
    "cat": "footstep",
-   "desc": "Crunchy step in snow",
+   "desc": "눈 위 뽀득한 발소리",
    "gain": 0.747,
    "limited": true,
    "m": {
@@ -10439,7 +10439,7 @@
    "name": "step-gravel",
    "id": "stepGravel",
    "cat": "footstep",
-   "desc": "Step on loose gravel",
+   "desc": "자갈 위 발소리",
    "gain": 1.16,
    "limited": false,
    "m": {
@@ -10518,7 +10518,7 @@
    "name": "step-water",
    "id": "stepWater",
    "cat": "footstep",
-   "desc": "Splashy step in a puddle",
+   "desc": "물웅덩이 첨벙 발소리",
    "gain": 1.78,
    "limited": true,
    "m": {
@@ -10597,7 +10597,7 @@
    "name": "step-sand",
    "id": "stepSand",
    "cat": "footstep",
-   "desc": "Muffled step in sand",
+   "desc": "모래 위 먹먹한 발소리",
    "gain": 1.65,
    "limited": true,
    "m": {
@@ -10676,7 +10676,7 @@
    "name": "step-retro",
    "id": "stepRetro",
    "cat": "footstep",
-   "desc": "8-bit footstep tick",
+   "desc": "8비트 발소리 틱",
    "gain": 0.773,
    "limited": true,
    "m": {
@@ -10755,7 +10755,7 @@
    "name": "step-heavy",
    "id": "stepHeavy",
    "cat": "footstep",
-   "desc": "Heavy creature stomp",
+   "desc": "무거운 크리처의 쿵쿵 걸음",
    "gain": 0.973,
    "limited": true,
    "m": {
@@ -10834,7 +10834,7 @@
    "name": "step-carpet",
    "id": "stepCarpet",
    "cat": "footstep",
-   "desc": "Muffled step on carpet or rug",
+   "desc": "카펫이나 러그 위 먹먹한 발소리",
    "gain": 2.12,
    "limited": true,
    "m": {
@@ -10913,7 +10913,7 @@
    "name": "step-mud",
    "id": "stepMud",
    "cat": "footstep",
-   "desc": "Squelchy step in mud",
+   "desc": "진흙 위 질척한 발소리",
    "gain": 1.05,
    "limited": false,
    "m": {
@@ -10992,7 +10992,7 @@
    "name": "sparkle",
    "id": "sparkle",
    "cat": "magic",
-   "desc": "Twinkling sparkle",
+   "desc": "반짝반짝 스파클",
    "gain": 0.205,
    "limited": false,
    "m": {
@@ -11071,7 +11071,7 @@
    "name": "spell-cast",
    "id": "spellCast",
    "cat": "magic",
-   "desc": "Generic spell: swell and release",
+   "desc": "일반 주문: 부풀었다 방출",
    "gain": 0.309,
    "limited": false,
    "m": {
@@ -11150,7 +11150,7 @@
    "name": "fireball",
    "id": "fireball",
    "cat": "magic",
-   "desc": "Fireball whoosh with roar",
+   "desc": "화염구 휘릭과 포효",
    "gain": 0.465,
    "limited": false,
    "m": {
@@ -11229,7 +11229,7 @@
    "name": "ice",
    "id": "ice",
    "cat": "magic",
-   "desc": "Ice spell: crack and glassy ring",
+   "desc": "얼음 마법: 갈라짐과 유리 같은 울림",
    "gain": 0.277,
    "limited": false,
    "m": {
@@ -11308,7 +11308,7 @@
    "name": "teleport",
    "id": "teleport",
    "cat": "magic",
-   "desc": "Teleport: fast warble upward",
+   "desc": "텔레포트: 빠르게 위로 떨림",
    "gain": 0.33,
    "limited": false,
    "m": {
@@ -11387,7 +11387,7 @@
    "name": "portal",
    "id": "portal",
    "cat": "magic",
-   "desc": "Portal opens: deep swirling hum",
+   "desc": "포탈 열림: 깊게 소용돌이치는 험",
    "gain": 0.192,
    "limited": false,
    "m": {
@@ -11466,7 +11466,7 @@
    "name": "lightning",
    "id": "lightning",
    "cat": "magic",
-   "desc": "Lightning strike: crack and rumble",
+   "desc": "번개 강타: 파열과 울림",
    "gain": 0.4,
    "limited": false,
    "m": {
@@ -11545,7 +11545,7 @@
    "name": "curse",
    "id": "curse",
    "cat": "magic",
-   "desc": "Dark curse: low detuned drone",
+   "desc": "어둠의 저주: 낮은 디튠 드론",
    "gain": 0.979,
    "limited": false,
    "m": {
@@ -11624,7 +11624,7 @@
    "name": "enchant",
    "id": "enchant",
    "cat": "magic",
-   "desc": "Enchant an item: bells in a row",
+   "desc": "아이템 인챈트: 이어지는 종소리",
    "gain": 0.157,
    "limited": false,
    "m": {
@@ -11703,7 +11703,7 @@
    "name": "dispel",
    "id": "dispel",
    "cat": "magic",
-   "desc": "Dispel: shimmer that falls away",
+   "desc": "디스펠: 사그라지는 반짝임",
    "gain": 0.314,
    "limited": false,
    "m": {
@@ -11782,7 +11782,7 @@
    "name": "summon",
    "id": "summon",
    "cat": "magic",
-   "desc": "Summon: rising chord from the deep",
+   "desc": "소환: 심연에서 치솟는 코드",
    "gain": 0.237,
    "limited": false,
    "m": {
@@ -11861,7 +11861,7 @@
    "name": "magic-missile",
    "id": "magicMissile",
    "cat": "magic",
-   "desc": "Homing magic bolt",
+   "desc": "유도 마법 탄",
    "gain": 0.542,
    "limited": false,
    "m": {
@@ -11940,7 +11940,7 @@
    "name": "harp",
    "id": "harp",
    "cat": "magic",
-   "desc": "Harp glissando up, for wishes and revelations",
+   "desc": "하프 글리산도 상승, 소원과 계시용",
    "gain": 1.29,
    "limited": false,
    "m": {
@@ -12019,7 +12019,7 @@
    "name": "alarm",
    "id": "alarm",
    "cat": "alert",
-   "desc": "Two-tone alarm, loops cleanly if repeated",
+   "desc": "두 음 경보, 반복해도 자연스럽게 이어짐",
    "gain": 0.132,
    "limited": false,
    "m": {
@@ -12098,7 +12098,7 @@
    "name": "beep",
    "id": "beep",
    "cat": "alert",
-   "desc": "Plain beep",
+   "desc": "단순한 비프음",
    "gain": 0.371,
    "limited": false,
    "m": {
@@ -12177,7 +12177,7 @@
    "name": "warning",
    "id": "warning",
    "cat": "alert",
-   "desc": "Warning: three urgent pulses",
+   "desc": "경고: 급박한 세 번의 펄스",
    "gain": 0.306,
    "limited": false,
    "m": {
@@ -12256,7 +12256,7 @@
    "name": "low-health",
    "id": "lowHealth",
    "cat": "alert",
-   "desc": "Low health: soft double beep",
+   "desc": "체력 부족: 부드러운 두 번의 비프",
    "gain": 0.364,
    "limited": false,
    "m": {
@@ -12335,7 +12335,7 @@
    "name": "heartbeat",
    "id": "heartbeat",
    "cat": "alert",
-   "desc": "Heartbeat: lub-dub",
+   "desc": "심장 박동: 두근두근",
    "gain": 0.703,
    "limited": false,
    "m": {
@@ -12414,7 +12414,7 @@
    "name": "countdown",
    "id": "countdown",
    "cat": "alert",
-   "desc": "Countdown tick: 3, 2, 1",
+   "desc": "카운트다운 틱: 3, 2, 1",
    "gain": 0.369,
    "limited": false,
    "m": {
@@ -12493,7 +12493,7 @@
    "name": "countdown-go",
    "id": "countdownGo",
    "cat": "alert",
-   "desc": "Countdown end: GO!",
+   "desc": "카운트다운 종료: 출발!",
    "gain": 0.137,
    "limited": false,
    "m": {
@@ -12572,7 +12572,7 @@
    "name": "siren",
    "id": "siren",
    "cat": "alert",
-   "desc": "Siren sweep",
+   "desc": "사이렌 스윕",
    "gain": 0.23,
    "limited": false,
    "m": {
@@ -12651,7 +12651,7 @@
    "name": "radar-ping",
    "id": "radarPing",
    "cat": "alert",
-   "desc": "Sonar ping",
+   "desc": "소나 핑",
    "gain": 0.391,
    "limited": false,
    "m": {
@@ -12730,7 +12730,7 @@
    "name": "quest-new",
    "id": "questNew",
    "cat": "alert",
-   "desc": "New quest or objective",
+   "desc": "새 퀘스트 또는 목표",
    "gain": 0.195,
    "limited": false,
    "m": {
@@ -12809,7 +12809,7 @@
    "name": "buzzer-wrong",
    "id": "buzzerWrong",
    "cat": "alert",
-   "desc": "Quiz-show wrong-answer buzzer",
+   "desc": "퀴즈쇼 오답 버저",
    "gain": 0.133,
    "limited": false,
    "m": {
@@ -12888,7 +12888,7 @@
    "name": "ding-correct",
    "id": "dingCorrect",
    "cat": "alert",
-   "desc": "Quiz-show correct-answer ding-ding",
+   "desc": "퀴즈쇼 정답 딩동",
    "gain": 0.216,
    "limited": false,
    "m": {
@@ -12967,7 +12967,7 @@
    "name": "timer-done",
    "id": "timerDone",
    "cat": "alert",
-   "desc": "Kitchen timer done: rapid bell trill",
+   "desc": "주방 타이머 종료: 빠른 종소리 트릴",
    "gain": 0.765,
    "limited": false,
    "m": {
@@ -13046,7 +13046,7 @@
    "name": "victory",
    "id": "victory",
    "cat": "jingle",
-   "desc": "Victory fanfare",
+   "desc": "승리 팡파레",
    "gain": 0.104,
    "limited": false,
    "m": {
@@ -13125,7 +13125,7 @@
    "name": "level-complete",
    "id": "levelComplete",
    "cat": "jingle",
-   "desc": "Level complete: rising run and a held chord",
+   "desc": "레벨 클리어: 올라가는 런과 길게 누르는 코드",
    "gain": 0.129,
    "limited": false,
    "m": {
@@ -13204,7 +13204,7 @@
    "name": "game-over",
    "id": "gameOver",
    "cat": "jingle",
-   "desc": "Game over: slow sad descent",
+   "desc": "게임 오버: 느리고 슬픈 하강",
    "gain": 0.2,
    "limited": false,
    "m": {
@@ -13283,7 +13283,7 @@
    "name": "lose",
    "id": "lose",
    "cat": "jingle",
-   "desc": "Lost a round: wah-wah",
+   "desc": "라운드 패배: 와와",
    "gain": 0.188,
    "limited": false,
    "m": {
@@ -13362,7 +13362,7 @@
    "name": "secret-found",
    "id": "secretFound",
    "cat": "jingle",
-   "desc": "Secret found: rising mystery arpeggio",
+   "desc": "비밀 발견: 올라가는 미스터리 아르페지오",
    "gain": 0.137,
    "limited": false,
    "m": {
@@ -13441,7 +13441,7 @@
    "name": "achievement",
    "id": "achievement",
    "cat": "jingle",
-   "desc": "Achievement unlocked",
+   "desc": "업적 달성",
    "gain": 0.347,
    "limited": false,
    "m": {
@@ -13520,7 +13520,7 @@
    "name": "puzzle-solved",
    "id": "puzzleSolved",
    "cat": "jingle",
-   "desc": "Puzzle solved: clear 'ta-da'",
+   "desc": "퍼즐 해결: 명쾌한 '짜잔'",
    "gain": 0.188,
    "limited": false,
    "m": {
@@ -13599,7 +13599,7 @@
    "name": "checkpoint",
    "id": "checkpoint",
    "cat": "jingle",
-   "desc": "Checkpoint reached: three quick mallet notes and a bell",
+   "desc": "체크포인트 도달: 빠른 말렛 세 음과 종",
    "gain": 0.244,
    "limited": false,
    "m": {
@@ -13678,7 +13678,7 @@
    "name": "round-start",
    "id": "roundStart",
    "cat": "jingle",
-   "desc": "Round start stinger",
+   "desc": "라운드 시작 스팅어",
    "gain": 0.151,
    "limited": false,
    "m": {
@@ -13757,7 +13757,7 @@
    "name": "highscore",
    "id": "highscore",
    "cat": "jingle",
-   "desc": "New high score: excited climbing fanfare",
+   "desc": "신기록: 신나게 치솟는 팡파레",
    "gain": 0.165,
    "limited": false,
    "m": {
@@ -13836,7 +13836,7 @@
    "name": "boss-intro",
    "id": "bossIntro",
    "cat": "jingle",
-   "desc": "Boss appears: ominous low brass hits",
+   "desc": "보스 등장: 불길한 저음 금관 타격",
    "gain": 0.146,
    "limited": false,
    "m": {
@@ -13915,7 +13915,7 @@
    "name": "door-open",
    "id": "doorOpen",
    "cat": "mechanic",
-   "desc": "Creaky wooden door opening",
+   "desc": "삐걱대는 나무 문 열기",
    "gain": 1.82,
    "limited": true,
    "m": {
@@ -13994,7 +13994,7 @@
    "name": "door-close",
    "id": "doorClose",
    "cat": "mechanic",
-   "desc": "Door shuts with a thud",
+   "desc": "쿵 소리 내며 문 닫힘",
    "gain": 0.842,
    "limited": true,
    "m": {
@@ -14073,7 +14073,7 @@
    "name": "door-heavy",
    "id": "doorHeavy",
    "cat": "mechanic",
-   "desc": "Heavy dungeon door slams",
+   "desc": "무거운 던전 문이 쾅",
    "gain": 1.07,
    "limited": false,
    "m": {
@@ -14152,7 +14152,7 @@
    "name": "lock-open",
    "id": "lockOpen",
    "cat": "mechanic",
-   "desc": "Lock clicks open",
+   "desc": "딸깍하며 자물쇠 열림",
    "gain": 1.29,
    "limited": true,
    "m": {
@@ -14231,7 +14231,7 @@
    "name": "locked",
    "id": "locked",
    "cat": "mechanic",
-   "desc": "Door is locked: rattle",
+   "desc": "문이 잠김: 덜컹거림",
    "gain": 1.98,
    "limited": true,
    "m": {
@@ -14310,7 +14310,7 @@
    "name": "chest-open",
    "id": "chestOpen",
    "cat": "mechanic",
-   "desc": "Treasure chest creaks open",
+   "desc": "보물상자가 삐걱하며 열림",
    "gain": 0.887,
    "limited": false,
    "m": {
@@ -14389,7 +14389,7 @@
    "name": "lever",
    "id": "lever",
    "cat": "mechanic",
-   "desc": "Pull a lever: clunk",
+   "desc": "레버 당기기: 쿵",
    "gain": 1.13,
    "limited": true,
    "m": {
@@ -14468,7 +14468,7 @@
    "name": "button",
    "id": "button",
    "cat": "mechanic",
-   "desc": "Press a mechanical floor button",
+   "desc": "기계식 바닥 버튼 누르기",
    "gain": 0.688,
    "limited": true,
    "m": {
@@ -14547,7 +14547,7 @@
    "name": "ratchet",
    "id": "ratchet",
    "cat": "mechanic",
-   "desc": "Gear or crank turning",
+   "desc": "기어나 크랭크 돌아감",
    "gain": 0.882,
    "limited": true,
    "m": {
@@ -14626,7 +14626,7 @@
    "name": "machine",
    "id": "machine",
    "cat": "mechanic",
-   "desc": "Machine starts up and hums",
+   "desc": "기계가 켜지며 웅웅",
    "gain": 0.339,
    "limited": false,
    "m": {
@@ -14705,7 +14705,7 @@
    "name": "engine-idle",
    "id": "engineIdle",
    "cat": "world",
-   "desc": "Engine idling, seamless loop (play with rate for revs)",
+   "desc": "엔진 아이들링, 끊김 없는 루프 (rate로 회전수 조절)",
    "gain": 0.347,
    "limited": false,
    "loop": true,
@@ -14785,7 +14785,7 @@
    "name": "force-field",
    "id": "forceField",
    "cat": "world",
-   "desc": "Force field or reactor hum, seamless loop",
+   "desc": "포스 필드나 원자로 험, 끊김 없는 루프",
    "gain": 0.234,
    "limited": false,
    "loop": true,
@@ -14865,7 +14865,7 @@
    "name": "whoosh",
    "id": "whoosh",
    "cat": "world",
-   "desc": "Medium whoosh for dashes and swings",
+   "desc": "대시와 스윙용 중간 휙",
    "gain": 1.84,
    "limited": false,
    "m": {
@@ -14944,7 +14944,7 @@
    "name": "swing",
    "id": "swing",
    "cat": "world",
-   "desc": "Sword or stick swing",
+   "desc": "검이나 막대 휘두르기",
    "gain": 2.76,
    "limited": true,
    "m": {
@@ -15023,7 +15023,7 @@
    "name": "dash",
    "id": "dash",
    "cat": "world",
-   "desc": "Quick dash with a burst",
+   "desc": "짧은 버스트와 함께 빠른 대시",
    "gain": 1.79,
    "limited": false,
    "m": {
@@ -15102,7 +15102,7 @@
    "name": "splash",
    "id": "splash",
    "cat": "world",
-   "desc": "Something falls in water",
+   "desc": "무언가 물에 빠짐",
    "gain": 0.917,
    "limited": false,
    "m": {
@@ -15181,7 +15181,7 @@
    "name": "water-drop",
    "id": "waterDrop",
    "cat": "world",
-   "desc": "Single water drop",
+   "desc": "물방울 한 방울",
    "gain": 0.836,
    "limited": false,
    "m": {
@@ -15260,7 +15260,7 @@
    "name": "bubble",
    "id": "bubble",
    "cat": "world",
-   "desc": "Bubbles rising",
+   "desc": "올라오는 거품",
    "gain": 0.864,
    "limited": false,
    "m": {
@@ -15339,7 +15339,7 @@
    "name": "wind",
    "id": "wind",
    "cat": "world",
-   "desc": "Gust of wind",
+   "desc": "한 번의 돌풍",
    "gain": 1.44,
    "limited": false,
    "m": {
@@ -15418,7 +15418,7 @@
    "name": "glass-break",
    "id": "glassBreak",
    "cat": "world",
-   "desc": "Glass shatters",
+   "desc": "유리가 산산조각",
    "gain": 0.689,
    "limited": true,
    "m": {
@@ -15497,7 +15497,7 @@
    "name": "thud",
    "id": "thud",
    "cat": "world",
-   "desc": "Generic body or crate falling",
+   "desc": "몸이나 상자가 떨어지는 일반 쿵",
    "gain": 0.518,
    "limited": true,
    "m": {
@@ -15576,7 +15576,7 @@
    "name": "toss",
    "id": "toss",
    "cat": "world",
-   "desc": "Throw something",
+   "desc": "무언가 던지기",
    "gain": 1.23,
    "limited": true,
    "m": {
@@ -15655,7 +15655,7 @@
    "name": "fire-crackle",
    "id": "fireCrackle",
    "cat": "world",
-   "desc": "Campfire crackle",
+   "desc": "모닥불 탁탁",
    "gain": 1.76,
    "limited": false,
    "m": {
@@ -15734,7 +15734,7 @@
    "name": "crate-break",
    "id": "crateBreak",
    "cat": "world",
-   "desc": "Wooden crate smashes into planks",
+   "desc": "나무 상자가 판자로 박살",
    "gain": 0.555,
    "limited": true,
    "m": {
@@ -15813,7 +15813,7 @@
    "name": "pot-break",
    "id": "potBreak",
    "cat": "world",
-   "desc": "Clay pot shatters (Zelda pots)",
+   "desc": "토기 항아리 깨짐 (젤다 항아리)",
    "gain": 0.574,
    "limited": true,
    "m": {
@@ -15892,7 +15892,7 @@
    "name": "metal-clang",
    "id": "metalClang",
    "cat": "world",
-   "desc": "Metal object or pipe hits the floor",
+   "desc": "금속 물체나 파이프가 바닥에 캉",
    "gain": 0.487,
    "limited": true,
    "m": {
@@ -15971,7 +15971,7 @@
    "name": "rock-crumble",
    "id": "rockCrumble",
    "cat": "world",
-   "desc": "Rocks and rubble crumble down",
+   "desc": "바위와 잔해가 무너짐",
    "gain": 0.585,
    "limited": false,
    "m": {
@@ -16050,7 +16050,7 @@
    "name": "ignite",
    "id": "ignite",
    "cat": "world",
-   "desc": "Torch or fire ignites: whoomph",
+   "desc": "횃불이나 불 점화: 훙",
    "gain": 0.833,
    "limited": false,
    "m": {
@@ -16129,7 +16129,7 @@
    "name": "bat-flap",
    "id": "batFlap",
    "cat": "creature",
-   "desc": "Wings flapping past",
+   "desc": "지나가는 날갯짓",
    "gain": 3.87,
    "limited": true,
    "m": {
@@ -16208,7 +16208,7 @@
    "name": "slime-blob",
    "id": "slimeBlob",
    "cat": "creature",
-   "desc": "Slime squelches and wobbles",
+   "desc": "슬라임이 질척이며 흔들림",
    "gain": 0.616,
    "limited": false,
    "m": {
@@ -16287,7 +16287,7 @@
    "name": "chirp",
    "id": "chirp",
    "cat": "creature",
-   "desc": "Small critter chirp",
+   "desc": "작은 동물의 지저귐",
    "gain": 0.632,
    "limited": false,
    "m": {
@@ -16366,7 +16366,7 @@
    "name": "growl-small",
    "id": "growlSmall",
    "cat": "creature",
-   "desc": "Low growl of a small monster",
+   "desc": "작은 몬스터의 낮은 으르렁",
    "gain": 0.64,
    "limited": false,
    "m": {
@@ -16445,7 +16445,7 @@
    "name": "ghost-moan",
    "id": "ghostMoan",
    "cat": "creature",
-   "desc": "Ghostly 'oooh'",
+   "desc": "유령의 '우우~' 신음",
    "gain": 0.15,
    "limited": false,
    "m": {
@@ -16524,7 +16524,7 @@
    "name": "bee-buzz",
    "id": "beeBuzz",
    "cat": "creature",
-   "desc": "Buzzing insect flying by",
+   "desc": "지나가는 곤충의 윙윙 소리",
    "gain": 0.761,
    "limited": false,
    "m": {
@@ -16603,7 +16603,7 @@
    "name": "creature-hurt",
    "id": "creatureHurt",
    "cat": "creature",
-   "desc": "Creature yelps when hit",
+   "desc": "맞았을 때 크리처의 비명",
    "gain": 1.07,
    "limited": false,
    "m": {
@@ -16682,7 +16682,7 @@
    "name": "creature-die",
    "id": "creatureDie",
    "cat": "creature",
-   "desc": "Creature's last cry, falling away",
+   "desc": "크리처의 마지막 울음, 멀어짐",
    "gain": 0.57,
    "limited": false,
    "m": {
@@ -16761,7 +16761,7 @@
    "name": "voice-babble",
    "id": "voiceBabble",
    "cat": "creature",
-   "desc": "Gibberish dialogue blips, like a character talking",
+   "desc": "캐릭터 말소리 같은 알 수 없는 대사 블립",
    "gain": 0.384,
    "limited": false,
    "m": {
@@ -16840,7 +16840,7 @@
    "name": "zombie-groan",
    "id": "zombieGroan",
    "cat": "creature",
-   "desc": "Zombie groan",
+   "desc": "좀비 신음",
    "gain": 0.444,
    "limited": false,
    "m": {
@@ -16919,7 +16919,7 @@
    "name": "roar",
    "id": "roar",
    "cat": "creature",
-   "desc": "Big monster roar",
+   "desc": "거대 몬스터의 포효",
    "gain": 0.185,
    "limited": false,
    "m": {
@@ -16998,7 +16998,7 @@
    "name": "dog-bark",
    "id": "dogBark",
    "cat": "creature",
-   "desc": "Dog barks twice",
+   "desc": "개가 두 번 짖음",
    "gain": 0.822,
    "limited": false,
    "m": {
@@ -17077,7 +17077,7 @@
    "name": "cat-meow",
    "id": "catMeow",
    "cat": "creature",
-   "desc": "Cat meows",
+   "desc": "고양이 울음",
    "gain": 0.867,
    "limited": false,
    "m": {
@@ -17156,7 +17156,7 @@
    "name": "rain-loop",
    "id": "rainLoop",
    "cat": "nature",
-   "desc": "Steady rain, seamless loop",
+   "desc": "꾸준한 빗소리, 끊김 없는 루프",
    "gain": 0.53,
    "limited": false,
    "loop": true,
@@ -17236,7 +17236,7 @@
    "name": "wind-loop",
    "id": "windLoop",
    "cat": "nature",
-   "desc": "Wind blowing with slow gusts, seamless loop",
+   "desc": "느린 돌풍이 섞인 바람, 끊김 없는 루프",
    "gain": 0.913,
    "limited": false,
    "loop": true,
@@ -17316,7 +17316,7 @@
    "name": "thunder-far",
    "id": "thunderFar",
    "cat": "nature",
-   "desc": "Distant thunder rolling in",
+   "desc": "멀리서 구르는 천둥",
    "gain": 0.332,
    "limited": false,
    "m": {
@@ -17395,7 +17395,7 @@
    "name": "rain-drop",
    "id": "rainDrop",
    "cat": "nature",
-   "desc": "A raindrop on a leaf",
+   "desc": "잎사귀에 떨어지는 빗방울",
    "gain": 0.778,
    "limited": true,
    "m": {
@@ -17474,7 +17474,7 @@
    "name": "bird-chirp",
    "id": "birdChirp",
    "cat": "nature",
-   "desc": "Songbird, three quick chirps",
+   "desc": "새의 빠른 세 번 지저귐",
    "gain": 0.43,
    "limited": false,
    "m": {
@@ -17553,7 +17553,7 @@
    "name": "frog-croak",
    "id": "frogCroak",
    "cat": "nature",
-   "desc": "Frog croak",
+   "desc": "개구리 울음",
    "gain": 2.81,
    "limited": true,
    "m": {
@@ -17632,7 +17632,7 @@
    "name": "leaf-rustle",
    "id": "leafRustle",
    "cat": "nature",
-   "desc": "Leaves rustling in a bush",
+   "desc": "덤불 속 나뭇잎 부스럭",
    "gain": 1.43,
    "limited": false,
    "m": {
@@ -17711,7 +17711,7 @@
    "name": "stone-drop",
    "id": "stoneDrop",
    "cat": "nature",
-   "desc": "Pebble drops and bounces once",
+   "desc": "자갈이 떨어져 한 번 튐",
    "gain": 0.655,
    "limited": false,
    "m": {
@@ -17790,7 +17790,7 @@
    "name": "thunder-crack",
    "id": "thunderCrack",
    "cat": "nature",
-   "desc": "Close lightning: sharp crack into a rolling boom",
+   "desc": "가까운 낙뢰: 날카로운 파열 후 구르는 굉음",
    "gain": 0.207,
    "limited": false,
    "m": {
@@ -17869,7 +17869,7 @@
    "name": "ocean-wave",
    "id": "oceanWave",
    "cat": "nature",
-   "desc": "A wave rolls in and washes back",
+   "desc": "파도가 밀려왔다 빠짐",
    "gain": 0.56,
    "limited": false,
    "m": {
@@ -17948,7 +17948,7 @@
    "name": "rain-burst",
    "id": "rainBurst",
    "cat": "nature",
-   "desc": "Short rain shower patter (layer or loop it)",
+   "desc": "짧은 소나기 파바박 (겹치거나 루프 가능)",
    "gain": 0.831,
    "limited": false,
    "m": {
@@ -18027,7 +18027,7 @@
    "name": "dive-splash",
    "id": "diveSplash",
    "cat": "nature",
-   "desc": "Dive into deep water: plunge and bubbles",
+   "desc": "깊은 물에 다이빙: 첨벙과 거품",
    "gain": 0.345,
    "limited": false,
    "m": {
@@ -18106,7 +18106,7 @@
    "name": "card-flip",
    "id": "cardFlip",
    "cat": "card",
-   "desc": "Flip a card face up: quick papery snap",
+   "desc": "카드 뒤집기: 빠른 종이 스냅",
    "gain": 2.82,
    "limited": true,
    "m": {
@@ -18185,7 +18185,7 @@
    "name": "card-deal",
    "id": "cardDeal",
    "cat": "card",
-   "desc": "Deal a card across the table: swish and slap",
+   "desc": "테이블 위로 카드 딜링: 휙-탁",
    "gain": 1.72,
    "limited": false,
    "m": {
@@ -18264,7 +18264,7 @@
    "name": "card-place",
    "id": "cardPlace",
    "cat": "card",
-   "desc": "Lay a card down on felt",
+   "desc": "펠트 위에 카드 내려놓기",
    "gain": 2.52,
    "limited": true,
    "m": {
@@ -18343,7 +18343,7 @@
    "name": "card-shuffle",
    "id": "cardShuffle",
    "cat": "card",
-   "desc": "Riffle shuffle: a fast burst of card ticks",
+   "desc": "리플 셔플: 빠른 카드 틱 연발",
    "gain": 1.91,
    "limited": false,
    "m": {
@@ -18422,7 +18422,7 @@
    "name": "chip-stack",
    "id": "chipStack",
    "cat": "card",
-   "desc": "Poker chips clack onto a stack",
+   "desc": "포커 칩이 쌓이며 달각거림",
    "gain": 0.794,
    "limited": true,
    "m": {
@@ -18501,7 +18501,7 @@
    "name": "dice-roll",
    "id": "diceRoll",
    "cat": "card",
-   "desc": "Dice tumble across a table and settle",
+   "desc": "주사위가 테이블 위를 굴러 멈춤",
    "gain": 1.01,
    "limited": true,
    "m": {
@@ -18580,7 +18580,7 @@
    "name": "slot-spin",
    "id": "slotSpin",
    "cat": "card",
-   "desc": "Slot reels spinning: fast ratchet ticks",
+   "desc": "슬롯 릴 회전: 빠른 라쳇 틱",
    "gain": 0.904,
    "limited": false,
    "m": {
@@ -18659,7 +18659,7 @@
    "name": "slot-stop",
    "id": "slotStop",
    "cat": "card",
-   "desc": "A reel locks into place: clunk and ding",
+   "desc": "릴이 제자리에 잠김: 쿵-딩",
    "gain": 0.852,
    "limited": false,
    "m": {
@@ -18738,7 +18738,7 @@
    "name": "jackpot",
    "id": "jackpot",
    "cat": "card",
-   "desc": "Jackpot: bell flurry over a rising arpeggio",
+   "desc": "잭팟: 상승 아르페지오 위 종소리 세례",
    "gain": 0.23,
    "limited": false,
    "m": {
@@ -18817,7 +18817,7 @@
    "name": "engine-start",
    "id": "engineStart",
    "cat": "vehicle",
-   "desc": "Engine cranks, catches and idles",
+   "desc": "엔진 시동이 걸리고 아이들링",
    "gain": 0.256,
    "limited": false,
    "m": {
@@ -18896,7 +18896,7 @@
    "name": "engine-rev",
    "id": "engineRev",
    "cat": "vehicle",
-   "desc": "Throttle blip: engine revs up and falls back",
+   "desc": "스로틀 블립: 엔진이 치솟았다 가라앉음",
    "gain": 0.241,
    "limited": false,
    "m": {
@@ -18975,7 +18975,7 @@
    "name": "tire-screech",
    "id": "tireScreech",
    "cat": "vehicle",
-   "desc": "Tyres squeal on a hard turn or brake",
+   "desc": "급커브나 급제동에 타이어 끼익",
    "gain": 1.21,
    "limited": false,
    "m": {
@@ -19054,7 +19054,7 @@
    "name": "car-crash",
    "id": "carCrash",
    "cat": "vehicle",
-   "desc": "Car crash: metal crunch, glass and debris",
+   "desc": "자동차 충돌: 금속 으깨짐, 유리와 잔해",
    "gain": 0.223,
    "limited": true,
    "m": {
@@ -19133,7 +19133,7 @@
    "name": "car-horn",
    "id": "carHorn",
    "cat": "vehicle",
-   "desc": "Two-tone car horn honk",
+   "desc": "두 음 자동차 경적 빵빵",
    "gain": 0.225,
    "limited": false,
    "m": {
@@ -19212,7 +19212,7 @@
    "name": "boost",
    "id": "boost",
    "cat": "vehicle",
-   "desc": "Nitro / turbo boost: whoosh with a rising jet whine",
+   "desc": "니트로/터보 부스트: 치솟는 제트 윙과 함께 휙",
    "gain": 0.763,
    "limited": false,
    "m": {
@@ -19291,7 +19291,7 @@
    "name": "race-light",
    "id": "raceLight",
    "cat": "vehicle",
-   "desc": "Start-light beep (ready, set): play three times then countdown-go",
+   "desc": "출발 신호등 비프 (준비): 세 번 재생 후 countdown-go",
    "gain": 0.226,
    "limited": false,
    "m": {
@@ -19370,7 +19370,7 @@
    "name": "jumpscare",
    "id": "jumpscare",
    "cat": "horror",
-   "desc": "Jump scare: screeching sting with a sub hit",
+   "desc": "점프 스케어: 비명 같은 스팅과 서브 타격",
    "gain": 0.17,
    "limited": false,
    "m": {
@@ -19449,7 +19449,7 @@
    "name": "dread-drone",
    "id": "dreadDrone",
    "cat": "horror",
-   "desc": "Rising dread: detuned low drone that swells",
+   "desc": "차오르는 공포: 디튠된 저음 드론이 부풂",
    "gain": 0.247,
    "limited": false,
    "m": {
@@ -19528,7 +19528,7 @@
    "name": "whisper",
    "id": "whisper",
    "cat": "horror",
-   "desc": "Breathy unintelligible whisper",
+   "desc": "숨소리 같은 알 수 없는 속삭임",
    "gain": 1.35,
    "limited": false,
    "m": {
@@ -19607,7 +19607,7 @@
    "name": "horror-sting",
    "id": "horrorSting",
    "cat": "horror",
-   "desc": "Dissonant orchestral-style stab for a reveal",
+   "desc": "반전용 불협화음 오케스트라풍 스탭",
    "gain": 0.154,
    "limited": false,
    "m": {
@@ -19686,7 +19686,7 @@
    "name": "chains-rattle",
    "id": "chainsRattle",
    "cat": "horror",
-   "desc": "Chains clink and drag",
+   "desc": "쇠사슬이 달그락거리며 끌림",
    "gain": 1.05,
    "limited": true,
    "m": {
@@ -19765,7 +19765,7 @@
    "name": "static-burst",
    "id": "staticBurst",
    "cat": "horror",
-   "desc": "TV / radio static burst, for haunted screens",
+   "desc": "TV/라디오 지직 소리, 빙의된 화면용",
    "gain": 0.291,
    "limited": false,
    "m": {
@@ -19844,7 +19844,7 @@
    "name": "music-box",
    "id": "musicBox",
    "cat": "horror",
-   "desc": "Creepy music-box phrase, slightly detuned",
+   "desc": "소름 돋는 오르골 구절, 살짝 디튠",
    "gain": 0.375,
    "limited": false,
    "m": {
@@ -19923,7 +19923,7 @@
    "name": "axe-chop",
    "id": "axeChop",
    "cat": "farm",
-   "desc": "Axe bites into a log",
+   "desc": "도끼가 통나무를 내리찍음",
    "gain": 0.68,
    "limited": true,
    "m": {
@@ -20002,7 +20002,7 @@
    "name": "tree-fall",
    "id": "treeFall",
    "cat": "farm",
-   "desc": "Tree creaks, topples and crashes down",
+   "desc": "나무가 삐걱거리며 쓰러져 쾅",
    "gain": 0.339,
    "limited": false,
    "m": {
@@ -20081,7 +20081,7 @@
    "name": "pickaxe-mine",
    "id": "pickaxeMine",
    "cat": "farm",
-   "desc": "Pickaxe strikes rock",
+   "desc": "곡괭이가 바위를 침",
    "gain": 0.636,
    "limited": true,
    "m": {
@@ -20160,7 +20160,7 @@
    "name": "dig",
    "id": "dig",
    "cat": "farm",
-   "desc": "Shovel into soil",
+   "desc": "삽으로 흙을 팜",
    "gain": 1.33,
    "limited": true,
    "m": {
@@ -20239,7 +20239,7 @@
    "name": "plant-seed",
    "id": "plantSeed",
    "cat": "farm",
-   "desc": "Pop a seed into the ground: soft pat and sprout chime",
+   "desc": "땅에 씨앗 심기: 부드러운 톡과 싹틈 차임",
    "gain": 1.92,
    "limited": false,
    "m": {
@@ -20318,7 +20318,7 @@
    "name": "watering-can",
    "id": "wateringCan",
    "cat": "farm",
-   "desc": "Watering can pours over the soil",
+   "desc": "물뿌리개가 흙 위로 물을 부음",
    "gain": 0.709,
    "limited": false,
    "m": {
@@ -20397,7 +20397,7 @@
    "name": "harvest",
    "id": "harvest",
    "cat": "farm",
-   "desc": "Pull up a crop: rustle, pluck and a happy pop",
+   "desc": "작물 뽑기: 부스럭, 뽑는 소리와 경쾌한 팝",
    "gain": 1.47,
    "limited": false,
    "m": {
@@ -20476,7 +20476,7 @@
    "name": "fishing-cast",
    "id": "fishingCast",
    "cat": "farm",
-   "desc": "Cast a line: rod whip, reel whirr and a plop",
+   "desc": "낚싯줄 던지기: 채찍질, 릴 감기와 첨벙",
    "gain": 1.93,
    "limited": true,
    "m": {
@@ -20555,7 +20555,7 @@
    "name": "fish-bite",
    "id": "fishBite",
    "cat": "farm",
-   "desc": "Bobber dips: something is biting!",
+   "desc": "찌가 잠김: 입질이 왔다!",
    "gain": 0.648,
    "limited": false,
    "m": {
@@ -20634,7 +20634,7 @@
    "name": "computer-beep",
    "id": "computerBeep",
    "cat": "scifi",
-   "desc": "Terminal data chirps: a burst of random blips",
+   "desc": "터미널 데이터 소리: 무작위 블립 연발",
    "gain": 0.266,
    "limited": false,
    "m": {
@@ -20713,7 +20713,7 @@
    "name": "scan",
    "id": "scan",
    "cat": "scifi",
-   "desc": "Scanner sweep: rising filtered tone with a ping",
+   "desc": "스캐너 스윕: 핑과 함께 올라가는 필터 톤",
    "gain": 0.817,
    "limited": false,
    "m": {
@@ -20792,7 +20792,7 @@
    "name": "access-granted",
    "id": "accessGranted",
    "cat": "scifi",
-   "desc": "Keycard accepted: two bright beeps",
+   "desc": "키카드 승인: 밝은 비프 두 번",
    "gain": 0.24,
    "limited": false,
    "m": {
@@ -20871,7 +20871,7 @@
    "name": "access-denied",
    "id": "accessDenied",
    "cat": "scifi",
-   "desc": "Keycard rejected: low double buzz with a crackle",
+   "desc": "키카드 거부: 지직거리는 낮은 더블 버즈",
    "gain": 0.18,
    "limited": false,
    "m": {
@@ -20950,7 +20950,7 @@
    "name": "door-slide",
    "id": "doorSlide",
    "cat": "scifi",
-   "desc": "Sci-fi door slides open with a hiss",
+   "desc": "SF 문이 쓱 미끄러져 열림",
    "gain": 0.649,
    "limited": false,
    "m": {
@@ -21029,7 +21029,7 @@
    "name": "robot-chatter",
    "id": "robotChatter",
    "cat": "scifi",
-   "desc": "Cute robot beeps and boops",
+   "desc": "귀여운 로봇의 삑삑 뽑뽑",
    "gain": 0.169,
    "limited": false,
    "m": {
@@ -21108,7 +21108,7 @@
    "name": "shutdown",
    "id": "shutdown",
    "cat": "scifi",
-   "desc": "System shutdown: whine falls and cuts",
+   "desc": "시스템 종료: 윙 소리가 떨어지며 끊김",
    "gain": 0.325,
    "limited": false,
    "m": {
@@ -21187,7 +21187,7 @@
    "name": "glitch",
    "id": "glitch",
    "cat": "scifi",
-   "desc": "Digital glitch: stuttering crushed burst",
+   "desc": "디지털 글리치: 뭉개진 소리가 뚝뚝 끊김",
    "gain": 0.367,
    "limited": false,
    "m": {
@@ -21266,7 +21266,7 @@
    "name": "swap",
    "id": "swap",
    "cat": "puzzle",
-   "desc": "Swap two tiles: quick two-way swish",
+   "desc": "두 타일 교환: 빠른 양방향 휙",
    "gain": 2.31,
    "limited": false,
    "m": {
@@ -21345,7 +21345,7 @@
    "name": "match",
    "id": "match",
    "cat": "puzzle",
-   "desc": "Three in a row: bright glassy pop",
+   "desc": "3매치: 밝고 유리 같은 팝",
    "gain": 0.505,
    "limited": false,
    "m": {
@@ -21424,7 +21424,7 @@
    "name": "combo-chain",
    "id": "comboChain",
    "cat": "puzzle",
-   "desc": "Cascade combo: each step a little higher (pitch it per chain)",
+   "desc": "연쇄 콤보: 단계마다 조금씩 높게 (체인별 피치 조절)",
    "gain": 0.333,
    "limited": false,
    "m": {
@@ -21503,7 +21503,7 @@
    "name": "line-clear",
    "id": "lineClear",
    "cat": "puzzle",
-   "desc": "Clear a row: zipper sweep and a chime",
+   "desc": "한 줄 지우기: 지퍼 스윕과 차임",
    "gain": 0.488,
    "limited": false,
    "m": {
@@ -21582,7 +21582,7 @@
    "name": "piece-lock",
    "id": "pieceLock",
    "cat": "puzzle",
-   "desc": "Falling piece locks in place: tight thunk",
+   "desc": "떨어지는 조각이 제자리에 콱",
    "gain": 0.897,
    "limited": true,
    "m": {
@@ -21661,7 +21661,7 @@
    "name": "merge",
    "id": "merge",
    "cat": "puzzle",
-   "desc": "Two items merge into a bigger one: whoomp and sparkle",
+   "desc": "두 아이템이 더 큰 것으로 합체: 쿵과 반짝임",
    "gain": 0.665,
    "limited": false,
    "m": {

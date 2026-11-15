@@ -1,7 +1,7 @@
 import { def } from "./def.ts";
 
 export default def("mechanic", {
-  "door-open": ["Creaky wooden door opening", {
+  "door-open": ["삐걱대는 나무 문 열기", {
     vary: 1.5, varyF: 2, varyG: 1.5,
     verb: [0.4, 0.2],
     layers: [
@@ -11,7 +11,7 @@ export default def("mechanic", {
       { wave: "saw", freq: 33, to: 24, vib: [3.7, 5], formant: [450, 900, 1750], at: 0.12, a: 0.1, h: 0.25, d: 0.3, shape: -3, gain: 0.6 },
     ],
   }],
-  "door-close": ["Door shuts with a thud", {
+  "door-close": ["쿵 소리 내며 문 닫힘", {
     varyF: 2, varyG: 1,
     verb: [0.35, 0.18],
     layers: [
@@ -23,7 +23,7 @@ export default def("mechanic", {
       { wave: "modal", freq: 1500, modes: [1, 2.76, 5.4], at: 0.04, a: 0.001, d: 0.05, shape: -5, gain: 0.25 },
     ],
   }],
-  "door-heavy": ["Heavy dungeon door slams", {
+  "door-heavy": ["무거운 던전 문이 쾅", {
     varyF: 2, varyG: 1,
     verb: [0.7, 0.3],
     layers: [
@@ -37,7 +37,7 @@ export default def("mechanic", {
       { wave: "modal", freq: 1300, modes: [1, 2.76, 5.4], at: 0.6, a: 0.001, d: 0.08, shape: -5, gain: 0.15 },
     ],
   }],
-  "lock-open": ["Lock clicks open", {
+  "lock-open": ["딸깍하며 자물쇠 열림", {
     layers: [
       { wave: "metal", freq: 1300, bp: 3500, q: 2, a: 0.001, d: 0.03, shape: 3 },
       { wave: "metal", freq: 900, bp: 2500, q: 2, at: 0.09, a: 0.001, d: 0.06, shape: 3 },
@@ -45,13 +45,13 @@ export default def("mechanic", {
       { wave: "sine", freq: 220, to: 140, at: 0.09, a: 0.001, d: 0.05, shape: 2.5, drive: 1, gain: 0.5 },
     ],
   }],
-  locked: ["Door is locked: rattle", {
+  locked: ["문이 잠김: 덜컹거림", {
     layers: [0, 0.06, 0.12, 0.2].flatMap((at, i) => [
       { wave: "metal" as const, freq: 700 + i * 60, bp: 2200, q: 2, at, a: 0.001, d: 0.05, shape: 3, gain: 1 - i * 0.15 },
       { wave: "pink" as const, lp: 600, at, a: 0.001, d: 0.04, shape: 3, drive: 1, gain: 0.4 - i * 0.07 },
     ]),
   }],
-  "chest-open": ["Treasure chest creaks open", {
+  "chest-open": ["보물상자가 삐걱하며 열림", {
     vary: 1, varyF: 2, varyG: 1.5,
     verb: [0.35, 0.18],
     layers: [
@@ -62,7 +62,7 @@ export default def("mechanic", {
       { wave: "sine", freq: 2093, fm: [3.01, 1.5, 0.2], at: 0.45, a: 0.002, d: 0.6, shape: -4, gain: 0.35 },
     ],
   }],
-  lever: ["Pull a lever: clunk", {
+  lever: ["레버 당기기: 쿵", {
     verb: [0.3, 0.15],
     layers: [
       { wave: "noise", bp: 700, q: 1.5, a: 0.02, d: 0.08, gain: 0.5 },
@@ -70,7 +70,7 @@ export default def("mechanic", {
       { wave: "sine", freq: 120, to: 70, at: 0.09, a: 0.001, d: 0.12, gain: 0.8 },
     ],
   }],
-  button: ["Press a mechanical floor button", {
+  button: ["기계식 바닥 버튼 누르기", {
     varyF: 1.5, varyG: 1,
     layers: [
       { wave: "noise", bp: 2000, q: 2, a: 0.001, d: 0.008, shape: -5, gain: 0.4 },
@@ -80,7 +80,7 @@ export default def("mechanic", {
       { wave: "modal", freq: 900, modes: [1, 2.32], at: 0.06, a: 0.001, d: 0.03, shape: -5, gain: 0.3 },
     ],
   }],
-  ratchet: ["Gear or crank turning", {
+  ratchet: ["기어나 크랭크 돌아감", {
     varyF: 1.5, varyG: 2,
     layers: [0, 0.045, 0.09, 0.135, 0.18, 0.225, 0.27].flatMap((at, i) => [
       { wave: "noise" as const, bp: i % 2 ? 2400 : 3200, q: 3, at, a: 0.001, d: 0.02, shape: -5, drive: 1 },
@@ -88,7 +88,7 @@ export default def("mechanic", {
       { wave: "modal" as const, freq: 2600, modes: [1, 2.76, 5.4], at, a: 0.001, d: 0.03, shape: -5, gain: 0.3 },
     ]),
   }],
-  machine: ["Machine starts up and hums", {
+  machine: ["기계가 켜지며 웅웅", {
     vary: 0.6, varyF: 2, varyG: 1,
     layers: [
       { wave: "saw", freq: 30, to: 110, curve: 0.6, lp: 600, a: 0.2, h: 0.6, d: 0.3, shape: 2 },

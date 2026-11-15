@@ -6,7 +6,7 @@ const AH = [730, 1090, 2440],
   EE = [270, 2290, 3010];
 
 export default def("horror", {
-  jumpscare: ["Jump scare: screeching sting with a sub hit", {
+  jumpscare: ["점프 스케어: 비명 같은 스팅과 서브 타격", {
     vary: 0.3,
     verb: [0.6, 0.3],
     layers: [
@@ -16,7 +16,7 @@ export default def("horror", {
       { wave: "sine", freq: 70, to: 30, curve: 2, a: 0.001, d: 0.6, shape: -3, drive: 2 },
     ],
   }],
-  "dread-drone": ["Rising dread: detuned low drone that swells", {
+  "dread-drone": ["차오르는 공포: 디튠된 저음 드론이 부풂", {
     vary: 0.2,
     verb: [0.65, 0.3],
     layers: [
@@ -26,7 +26,7 @@ export default def("horror", {
       { wave: "brown", lp: 200, a: 0.8, h: 0.3, d: 0.5, shape: -3, gain: 0.4 },
     ],
   }],
-  whisper: ["Breathy unintelligible whisper", {
+  whisper: ["숨소리 같은 알 수 없는 속삭임", {
     vary: 1,
     varyF: 2,
     verb: [0.5, 0.25],
@@ -37,7 +37,7 @@ export default def("horror", {
       { wave: "noise", bp: 6000, q: 2, at: 0.2, a: 0.01, d: 0.05, shape: -4, gain: 0.3 },
     ],
   }],
-  "horror-sting": ["Dissonant orchestral-style stab for a reveal", {
+  "horror-sting": ["반전용 불협화음 오케스트라풍 스탭", {
     vary: 0.1,
     verb: [0.75, 0.35],
     layers: [
@@ -48,7 +48,7 @@ export default def("horror", {
       { wave: "metal", freq: 600, hp: 3000, a: 0.001, d: 1, shape: -3, gain: 0.15 },
     ],
   }],
-  "chains-rattle": ["Chains clink and drag", {
+  "chains-rattle": ["쇠사슬이 달그락거리며 끌림", {
     vary: 0.6,
     varyF: 2,
     varyG: 2,
@@ -58,7 +58,7 @@ export default def("horror", {
       { wave: "noise" as const, bp: 4000, q: 2, at, a: 0.001, d: 0.01, shape: -6, gain: 0.3 },
     ]),
   }],
-  "static-burst": ["TV / radio static burst, for haunted screens", {
+  "static-burst": ["TV/라디오 지직 소리, 빙의된 화면용", {
     vary: 0.5,
     varyF: 3,
     bits: 6,
@@ -68,7 +68,7 @@ export default def("horror", {
       { wave: "square", freq: 60, lp: 300, a: 0.005, h: 0.25, d: 0.08, shape: 1, gain: 0.3 },
     ],
   }],
-  "music-box": ["Creepy music-box phrase, slightly detuned", {
+  "music-box": ["소름 돋는 오르골 구절, 살짝 디튠", {
     vary: 0.05,
     verb: [0.6, 0.3],
     // One strike per note (a modal layer rings out, it does not re-strike on an arp step); odd notes a little flat.

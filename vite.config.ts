@@ -28,9 +28,9 @@ const prerender = (): Plugin => ({
   transformIndexHtml(html) {
     const n = (cat: string) => catalog.sounds.filter((s) => s.cat == cat).length;
     const chips =
-      `<button type="button" data-cat="all" aria-pressed="true">all <b>${catalog.sounds.length}</b></button>` +
+      `<button type="button" data-cat="all" aria-pressed="true">전체 <b>${catalog.sounds.length}</b></button>` +
       Object.entries(catalog.categories)
-        .map(([k, c]) => `<button type="button" data-cat="${k}" aria-pressed="false"><i></i>${esc(c.title.toLowerCase())} <b>${n(k)}</b></button>`)
+        .map(([k, c]) => `<button type="button" data-cat="${k}" aria-pressed="false"><i></i>${esc(c.title)} <b>${n(k)}</b></button>`)
         .join("");
     return html
       .replaceAll("<!--total-->", String(catalog.sounds.length))

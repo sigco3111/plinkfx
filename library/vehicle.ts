@@ -3,7 +3,7 @@ import { def } from "./def.ts";
 // Engines are detuned saws through a low-pass with drive; tyres are a narrow resonant noise band.
 
 export default def("vehicle", {
-  "engine-start": ["Engine cranks, catches and idles", {
+  "engine-start": ["엔진 시동이 걸리고 아이들링", {
     vary: 0.3,
     layers: [
       ...[0, 0.12, 0.24].map((at) => ({ wave: "saw" as const, freq: 40, to: 30, lp: 500, at, a: 0.01, d: 0.09, shape: -3, drive: 1.5, gain: 0.6 })),
@@ -12,7 +12,7 @@ export default def("vehicle", {
       { wave: "brown", lp: 400, at: 0.36, a: 0.02, h: 0.5, d: 0.4, gain: 0.3 },
     ],
   }],
-  "engine-rev": ["Throttle blip: engine revs up and falls back", {
+  "engine-rev": ["스로틀 블립: 엔진이 치솟았다 가라앉음", {
     vary: 0.5,
     layers: [
       { wave: "saw", freq: 60, to: 210, curve: 0.7, sweep: 0.35, lp: 1500, kt: 0.5, a: 0.02, h: 0.3, d: 0.5, shape: -3, drive: 2 },
@@ -20,7 +20,7 @@ export default def("vehicle", {
       { wave: "brown", lp: 500, a: 0.02, h: 0.3, d: 0.5, gain: 0.3 },
     ],
   }],
-  "tire-screech": ["Tyres squeal on a hard turn or brake", {
+  "tire-screech": ["급커브나 급제동에 타이어 끼익", {
     vary: 0.6,
     varyF: 2,
     layers: [
@@ -29,7 +29,7 @@ export default def("vehicle", {
       { wave: "pink", lp: 800, a: 0.04, h: 0.4, d: 0.2, gain: 0.2 },
     ],
   }],
-  "car-crash": ["Car crash: metal crunch, glass and debris", {
+  "car-crash": ["자동차 충돌: 금속 으깨짐, 유리와 잔해", {
     varyF: 2,
     varyG: 1.5,
     verb: [0.35, 0.15],
@@ -41,14 +41,14 @@ export default def("vehicle", {
       ...[0.12, 0.2, 0.31, 0.42].map((at, i) => ({ wave: "metal" as const, freq: 1400 + i * 300, hp: 3500, at, a: 0.001, d: 0.08, shape: -5, gain: 0.3 })),
     ],
   }],
-  "car-horn": ["Two-tone car horn honk", {
+  "car-horn": ["두 음 자동차 경적 빵빵", {
     vary: 0.15,
     layers: [
       { wave: "square", freq: 415, a: 0.01, h: 0.3, d: 0.08, shape: -3, bp: 1200, q: 1.2, drive: 1.5 },
       { wave: "square", freq: 523, a: 0.01, h: 0.3, d: 0.08, shape: -3, bp: 1500, q: 1.2, drive: 1.5, gain: 0.8 },
     ],
   }],
-  boost: ["Nitro / turbo boost: whoosh with a rising jet whine", {
+  boost: ["니트로/터보 부스트: 치솟는 제트 윙과 함께 휙", {
     vary: 0.4,
     varyF: 2,
     layers: [
@@ -58,7 +58,7 @@ export default def("vehicle", {
       { wave: "sine", freq: 90, to: 45, a: 0.001, d: 0.2, shape: -5, gain: 0.6 },
     ],
   }],
-  "race-light": ["Start-light beep (ready, set): play three times then countdown-go", {
+  "race-light": ["출발 신호등 비프 (준비): 세 번 재생 후 countdown-go", {
     vary: 0.02,
     layers: [
       { wave: "square", duty: 0.5, freq: 880, a: 0.002, h: 0.18, d: 0.05, shape: 1, lp: 3500 },

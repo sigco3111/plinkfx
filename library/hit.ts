@@ -1,7 +1,7 @@
 import { def } from "./def.ts";
 
 export default def("hit", {
-  hit: ["Solid all-round hit: click, body, thump", {
+  hit: ["무난한 전천후 타격: 클릭, 몸통, 쿵", {
     varyF: 2,
     varyG: 1.5,
     verb: [0.15, 0.08],
@@ -12,7 +12,7 @@ export default def("hit", {
       { wave: "brown", lp: 250, at: 0.01, a: 0.002, d: 0.35, shape: -5, gain: 0.25 },
     ],
   }],
-  "hit-light": ["Light jab or tap", {
+  "hit-light": ["가벼운 잽이나 톡", {
     varyF: 2, varyG: 1.5,
     layers: [
       { wave: "noise", bp: 2200, q: 1, a: 0.001, d: 0.008, shape: -6, drive: 2, gain: 0.6 },
@@ -21,7 +21,7 @@ export default def("hit", {
       { wave: "brown", lp: 300, at: 0.005, a: 0.002, d: 0.12, shape: -5, gain: 0.15 },
     ],
   }],
-  "hit-heavy": ["Heavy blow with crunch and low end", {
+  "hit-heavy": ["우지끈하고 저역이 실린 강타", {
     varyF: 2, varyG: 1.5,
     verb: [0.35, 0.15],
     layers: [
@@ -32,7 +32,7 @@ export default def("hit", {
       { wave: "brown", lp: 300, at: 0.01, a: 0.002, d: 0.45, shape: -4, gain: 0.3 },
     ],
   }],
-  punch: ["Cartoon punch, meaty", {
+  punch: ["만화풍 묵직한 펀치", {
     varyF: 2,
     varyG: 1.5,
     verb: [0.15, 0.08],
@@ -43,7 +43,7 @@ export default def("hit", {
       { wave: "brown", lp: 250, at: 0.01, a: 0.002, d: 0.3, shape: -5, gain: 0.25 },
     ],
   }],
-  slap: ["Flat slap", {
+  slap: ["납작한 따귀", {
     verb: [0.15, 0.12],
     layers: [
       { wave: "noise", bp: 3000, q: 0.8, a: 0.001, h: 0.01, d: 0.05, shape: 3, drive: 4 },
@@ -51,27 +51,27 @@ export default def("hit", {
       { wave: "sine", freq: 240, to: 140, at: 0.003, a: 0.001, d: 0.05, shape: 3, drive: 1, gain: 0.3 },
     ],
   }],
-  hurt: ["Player takes damage: buzzy drop", {
+  hurt: ["플레이어 피격: 지직거리며 떨어짐", {
     layers: [
       { wave: "square", duty: 0.5, freq: 520, to: 180, curve: 1.5, a: 0.001, h: 0.03, d: 0.17, shape: 2, lp: 3000, drive: 0.8 },
       { wave: "crunch", freq: 1600, to: 500, a: 0.001, d: 0.12, gain: 0.35, lp: 3000 },
     ],
   }],
-  "enemy-hit": ["Enemy flinches: short high blip and smack", {
+  "enemy-hit": ["적이 움찔: 짧은 고음 블립과 탁", {
     layers: [
       { wave: "square", duty: 0.25, freq: 900, to: 450, a: 0.001, h: 0.02, d: 0.09, shape: 2, lp: 5000, gain: 0.8 },
       { wave: "noise", bp: 3000, a: 0.001, d: 0.05, shape: 3, drive: 2 },
       { wave: "sine", freq: 220, to: 110, a: 0.001, d: 0.07, shape: 2.5, drive: 1, gain: 0.6 },
     ],
   }],
-  "enemy-die": ["Enemy defeated: falling crushed tone", {
+  "enemy-die": ["적 처치: 뭉개지며 떨어지는 톤", {
     rate: 11025,
     layers: [
       { wave: "square", duty: 0.5, freq: 680, to: 70, curve: 1.2, a: 0.001, h: 0.03, d: 0.34, shape: 1.5, lp: 3000 },
       { wave: "crunch", freq: 3000, to: 200, a: 0.001, d: 0.3, gain: 0.4 },
     ],
   }],
-  "sword-hit": ["Blade hits armour", {
+  "sword-hit": ["칼날이 갑옷을 침", {
     vary: 0.8, varyF: 2, varyG: 1.5,
     verb: [0.3, 0.18],
     layers: [
@@ -82,7 +82,7 @@ export default def("hit", {
       { wave: "noise", bp: 5000, bpTo: 2800, q: 3, at: 0.01, a: 0.005, d: 0.25, shape: -4, gain: 0.25 },
     ],
   }],
-  block: ["Shield block: dull metal clank", {
+  block: ["방패 막기: 묵직한 금속 캉", {
     verb: [0.2, 0.12],
     layers: [
       { wave: "metal", freq: 420, bp: 1600, q: 1.5, a: 0.001, d: 0.25, shape: 3, drive: 1 },
@@ -90,7 +90,7 @@ export default def("hit", {
       { wave: "sine", freq: 180, to: 100, a: 0.001, d: 0.14, drive: 1, gain: 0.7 },
     ],
   }],
-  crit: ["Critical hit: impact plus a bright ring", {
+  crit: ["치명타: 타격에 밝은 울림 추가", {
     varyF: 2, varyG: 1.5,
     verb: [0.25, 0.15],
     layers: [
@@ -100,27 +100,27 @@ export default def("hit", {
       { wave: "square", duty: 0.25, freq: 1760, arp: [0, 12], arpRate: 0.05, at: 0.02, a: 0.001, d: 0.3, shape: -4, lp: 6000, kt: 1, gain: 0.35 },
     ],
   }],
-  squish: ["Wet squish for slimes", {
+  squish: ["슬라임용 질척 으깨짐", {
     layers: [
       { wave: "noise", lp: 1400, lpTo: 300, q: 3, a: 0.004, d: 0.18, shape: 2, drive: 1.5 },
       { wave: "sine", freq: 300, to: 110, vib: [30, 2], a: 0.003, d: 0.14, gain: 0.5 },
     ],
   }],
-  bonk: ["Cartoon bonk on the head", {
+  bonk: ["머리를 때리는 만화풍 띵", {
     layers: [
       { wave: "sine", freq: 920, to: 330, curve: 2, a: 0.001, d: 0.12, shape: 2 },
       { wave: "triangle", freq: 460, to: 165, curve: 2, a: 0.001, d: 0.1, gain: 0.5 },
       { wave: "noise", bp: 1500, a: 0.001, d: 0.02, gain: 0.4 },
     ],
   }],
-  stomp: ["Stomp on an enemy: squashy thump that springs up", {
+  stomp: ["적 밟기: 으깨졌다 튀어 오르는 쿵", {
     layers: [
       { wave: "sine", freq: 520, to: 140, curve: 2, a: 0.001, d: 0.08, shape: 2.5, drive: 1 },
       { wave: "pink", lp: 1600, lpTo: 400, a: 0.001, d: 0.06, shape: 3, drive: 1.5, gain: 0.7 },
       { wave: "square", duty: 0.25, freq: 440, to: 1100, curve: 2, at: 0.05, a: 0.002, d: 0.09, shape: 2, lp: 4000, gain: 0.35 },
     ],
   }],
-  "arrow-hit": ["Arrow thunks into wood", {
+  "arrow-hit": ["화살이 나무에 콱 박힘", {
     varyF: 2, varyG: 1,
     layers: [
       { wave: "noise", bp: 1800, q: 2, a: 0.001, d: 0.008, shape: -5, drive: 2, gain: 0.6 },
@@ -130,7 +130,7 @@ export default def("hit", {
       { wave: "brown", lp: 300, a: 0.002, d: 0.12, shape: -5, gain: 0.3 },
     ],
   }],
-  kick: ["Kick: low thump with a cloth snap", {
+  kick: ["킥: 낮은 쿵과 천 스냅", {
     varyF: 2,
     varyG: 1.5,
     layers: [
@@ -141,7 +141,7 @@ export default def("hit", {
       { wave: "brown", lp: 250, at: 0.045, a: 0.002, d: 0.22, shape: -5, gain: 0.3 },
     ],
   }],
-  stab: ["Blade stab into flesh: short wet thrust", {
+  stab: ["칼날 찌르기: 짧고 축축한 찌름", {
     vary: 0.8,
     varyF: 2,
     varyG: 1.5,
@@ -151,7 +151,7 @@ export default def("hit", {
       { wave: "sine", freq: 180, to: 90, a: 0.001, d: 0.1, shape: -5, gain: 0.5 },
     ],
   }],
-  "sword-clash": ["Two blades clash and ring", {
+  "sword-clash": ["두 칼날이 부딪혀 울림", {
     vary: 0.6,
     varyF: 1.5,
     verb: [0.35, 0.2],
@@ -162,7 +162,7 @@ export default def("hit", {
       { wave: "sine", freq: 3300, fm: [1.41, 2, 0.15], vib: [7, 0.1], a: 0.001, d: 0.7, shape: -3, gain: 0.2 },
     ],
   }],
-  "sword-draw": ["Unsheathe a sword: metallic scrape that rings out", {
+  "sword-draw": ["검 뽑기: 길게 울리는 금속 스크레이프", {
     vary: 0.4,
     verb: [0.3, 0.15],
     layers: [
@@ -171,7 +171,7 @@ export default def("hit", {
       { wave: "modal", freq: 1700, modes: [1, 2.756, 5.404], at: 0.3, a: 0.001, d: 0.7, shape: -3, gain: 0.4 },
     ],
   }],
-  "body-fall": ["Body hits the floor", {
+  "body-fall": ["몸이 바닥에 쓰러짐", {
     varyF: 2,
     varyG: 1.5,
     verb: [0.25, 0.1],

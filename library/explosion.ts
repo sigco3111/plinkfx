@@ -1,7 +1,7 @@
 import { def } from "./def.ts";
 
 export default def("explosion", {
-  explosion: ["Mid-size explosion: crack, rumble, tail", {
+  explosion: ["중간 크기 폭발: 파열, 울림, 여운", {
     verb: [0.45, 0.22],
     layers: [
       { wave: "noise", hp: 1500, a: 0.001, d: 0.06, shape: 3, gain: 0.6 },
@@ -10,7 +10,7 @@ export default def("explosion", {
       { wave: "crunch", freq: 3000, to: 300, a: 0.001, d: 0.35, shape: 3, lp: 5000, gain: 0.4 },
     ],
   }],
-  "explosion-small": ["Small pop of an explosion, grenades, barrels", {
+  "explosion-small": ["작은 펑 폭발, 수류탄, 드럼통", {
     verb: [0.3, 0.15],
     layers: [
       { wave: "noise", hp: 1200, a: 0.001, d: 0.03, shape: 3, gain: 0.35 },
@@ -19,7 +19,7 @@ export default def("explosion", {
       { wave: "sine", freq: 150, to: 45, curve: 3, at: 0.004, a: 0.001, d: 0.3, shape: 2, drive: 1.5, gain: 0.8 },
     ],
   }],
-  "explosion-big": ["Huge blast with a long rolling tail", {
+  "explosion-big": ["길게 울려 퍼지는 거대 폭발", {
     verb: [0.75, 0.3],
     layers: [
       { wave: "noise", hp: 1000, a: 0.001, d: 0.1, shape: 3, gain: 0.5 },
@@ -29,18 +29,18 @@ export default def("explosion", {
       { wave: "pink", bp: 400, bpTo: 120, a: 0.2, d: 1.4, shape: 2, gain: 0.5 },
     ],
   }],
-  "explosion-retro": ["8-bit explosion, crunchy noise falling", {
+  "explosion-retro": ["8비트 폭발, 거친 노이즈가 내려감", {
     rate: 22050,
     layers: [{ wave: "crunch", freq: 1800, to: 60, curve: 1.5, a: 0.001, h: 0.05, d: 0.7, shape: 1.8 }],
   }],
-  "explosion-distant": ["Far-off boom, muffled", {
+  "explosion-distant": ["멀리서 들리는 먹먹한 굉음", {
     verb: [0.8, 0.4],
     layers: [
       { wave: "brown", lp: 380, lpTo: 90, a: 0.015, d: 1.4, shape: 2.2, gain: 1.6 },
       { wave: "sine", freq: 60, to: 30, a: 0.01, d: 0.8, shape: 2 },
     ],
   }],
-  firework: ["Firework pop with crackle", {
+  firework: ["불꽃놀이의 펑과 파파박", {
     verb: [0.5, 0.25],
     layers: [
       { wave: "noise", lp: 3000, lpTo: 600, a: 0.001, d: 0.25, shape: 3 },
@@ -48,7 +48,7 @@ export default def("explosion", {
       ...[0.18, 0.23, 0.26, 0.31, 0.37, 0.4, 0.46, 0.55].map((at) => ({ wave: "noise" as const, hp: 3000, at, a: 0.001, d: 0.012, shape: 2, gain: 0.5 })),
     ],
   }],
-  implosion: ["Reverse-feel suck-in then thump", {
+  implosion: ["빨려 들어가는 느낌 후 쿵", {
     verb: [0.3, 0.15],
     layers: [
       { wave: "noise", lp: 300, lpTo: 6000, a: 0.45, d: 0.03, shape: 1, gain: 0.6 },
@@ -56,14 +56,14 @@ export default def("explosion", {
       { wave: "sine", freq: 120, to: 40, at: 0.47, a: 0.001, d: 0.25, drive: 1.5 },
     ],
   }],
-  debris: ["Rubble and debris settling", {
+  debris: ["잔해와 부스러기가 가라앉음", {
     layers: [
       { wave: "brown", lp: 1200, lpTo: 300, a: 0.002, d: 0.6, shape: 2, drive: 1, gain: 0.9 },
       ...[0, 0.07, 0.12, 0.2, 0.26, 0.35, 0.47].map((at, i) => ({ wave: "noise" as const, bp: [900, 1400, 700, 1800, 1100, 600, 1300][i], q: 2, at, a: 0.001, d: 0.04, shape: 3, drive: 1.5, gain: 0.7 - i * 0.07 })),
       ...[0, 0.12, 0.26].map((at) => ({ wave: "sine" as const, freq: 160, to: 70, at, a: 0.001, d: 0.08, shape: 2.5, drive: 1, gain: 0.5 })),
     ],
   }],
-  shockwave: ["Energy shockwave, sci-fi", {
+  shockwave: ["에너지 충격파, SF", {
     verb: [0.5, 0.2],
     layers: [
       { wave: "sine", freq: 70, to: 30, a: 0.002, d: 0.8, shape: 2, drive: 1 },
@@ -71,7 +71,7 @@ export default def("explosion", {
       { wave: "saw", freq: 220, to: 55, lp: 1500, lpTo: 200, a: 0.002, d: 0.5, shape: 2, gain: 0.4 },
     ],
   }],
-  "bomb-fuse": ["Lit fuse fizzing", {
+  "bomb-fuse": ["불붙은 도화선이 지지직", {
     varyF: 2, varyG: 1,
     layers: [
       { wave: "noise", freq: 1000, arp: [0, 19, 7, 24, 3, 14, 0, 22], arpRate: 0.037, loop: true, kt: 1, lp: 2600, hp: 2000, a: 0.03, h: 0.85, d: 0.12, shape: -3, gain: 0.8 },

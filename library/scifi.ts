@@ -3,11 +3,11 @@ import { def } from "./def.ts";
 // Sci-fi HUD, terminals and robots: clean square/sine beeps, band-passed hiss for doors.
 
 export default def("scifi", {
-  "computer-beep": ["Terminal data chirps: a burst of random blips", {
+  "computer-beep": ["터미널 데이터 소리: 무작위 블립 연발", {
     vary: 2,
     layers: [{ wave: "square", duty: 0.25, freq: 1400, arp: [0, 7, 3, 12, 5, 10, 0, 15], arpRate: 0.035, a: 0.002, h: 0.26, d: 0.03, shape: 2, lp: 5000, gain: 0.6 }],
   }],
-  scan: ["Scanner sweep: rising filtered tone with a ping", {
+  scan: ["스캐너 스윕: 핑과 함께 올라가는 필터 톤", {
     vary: 0.3,
     echo: [0.12, 0.3, 0.25],
     layers: [
@@ -15,14 +15,14 @@ export default def("scifi", {
       { wave: "sine", freq: 2400, at: 0.55, a: 0.002, d: 0.3, shape: -4, gain: 0.5 },
     ],
   }],
-  "access-granted": ["Keycard accepted: two bright beeps", {
+  "access-granted": ["키카드 승인: 밝은 비프 두 번", {
     vary: 0.05,
     layers: [
       { wave: "sine", freq: 1320, arp: [0, 5], arpRate: 0.09, a: 0.002, h: 0.14, d: 0.06, shape: 1.5 },
       { wave: "square", duty: 0.25, freq: 2640, arp: [0, 5], arpRate: 0.09, a: 0.002, h: 0.14, d: 0.06, shape: 1.5, lp: 5000, gain: 0.15 },
     ],
   }],
-  "access-denied": ["Keycard rejected: low double buzz with a crackle", {
+  "access-denied": ["키카드 거부: 지직거리는 낮은 더블 버즈", {
     vary: 0.1,
     layers: [
       { wave: "square", freq: 220, a: 0.003, h: 0.08, d: 0.03, shape: 1, lp: 1500, drive: 1 },
@@ -30,7 +30,7 @@ export default def("scifi", {
       { wave: "crunch", freq: 4000, at: 0.14, a: 0.003, d: 0.1, shape: -4, gain: 0.15 },
     ],
   }],
-  "door-slide": ["Sci-fi door slides open with a hiss", {
+  "door-slide": ["SF 문이 쓱 미끄러져 열림", {
     vary: 0.3,
     varyF: 2,
     verb: [0.3, 0.12],
@@ -41,14 +41,14 @@ export default def("scifi", {
       { wave: "sine", freq: 110, to: 60, at: 0.33, a: 0.001, d: 0.1, shape: -5, gain: 0.5 },
     ],
   }],
-  "robot-chatter": ["Cute robot beeps and boops", {
+  "robot-chatter": ["귀여운 로봇의 삑삑 뽑뽑", {
     vary: 2,
     layers: [
       { wave: "sine", freq: 900, arp: [0, 9, 4, 14, -3, 7], arpRate: 0.06, vib: [24, 1.5], a: 0.003, h: 0.33, d: 0.05, shape: 2 },
       { wave: "square", duty: 0.3, freq: 450, arp: [0, 9, 4, 14, -3, 7], arpRate: 0.06, lp: 2500, a: 0.003, h: 0.33, d: 0.05, shape: 2, gain: 0.25 },
     ],
   }],
-  shutdown: ["System shutdown: whine falls and cuts", {
+  shutdown: ["시스템 종료: 윙 소리가 떨어지며 끊김", {
     vary: 0.2,
     layers: [
       { wave: "saw", freq: 900, to: 40, curve: 0.7, lp: 3000, kt: 1, a: 0.005, h: 0.1, d: 0.7, shape: 1.5, gain: 0.7 },
@@ -56,7 +56,7 @@ export default def("scifi", {
       { wave: "noise", bp: 1200, at: 0.8, a: 0.001, d: 0.02, shape: -5, gain: 0.4 },
     ],
   }],
-  glitch: ["Digital glitch: stuttering crushed burst", {
+  glitch: ["디지털 글리치: 뭉개진 소리가 뚝뚝 끊김", {
     vary: 2,
     varyF: 3,
     rate: 8000,

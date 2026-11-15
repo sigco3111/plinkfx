@@ -7,27 +7,27 @@ const AH = [730, 1090, 2440],
   EE = [270, 2290, 3010];
 
 export default def("creature", {
-  "bat-flap": ["Wings flapping past", {
+  "bat-flap": ["지나가는 날갯짓", {
     vary: 1,
     varyF: 3,
     varyG: 1.5,
     layers: [0, 0.05, 0.1, 0.15, 0.2].map((at, i) => ({ wave: "pink" as const, bp: 900 + i * 60, q: 1.5, at, a: 0.006, d: 0.04, shape: -4, gain: 1 - i * 0.15 })),
   }],
-  "slime-blob": ["Slime squelches and wobbles", {
+  "slime-blob": ["슬라임이 질척이며 흔들림", {
     varyF: 2,
     layers: [
       { wave: "sine", freq: 180, to: 90, vib: [11, 3], a: 0.004, d: 0.28, shape: -3 },
       { wave: "noise", lp: 1100, lpTo: 250, q: 4, a: 0.003, d: 0.2, shape: -4, drive: 1, gain: 0.5 },
     ],
   }],
-  chirp: ["Small critter chirp", {
+  chirp: ["작은 동물의 지저귐", {
     vary: 1.5,
     layers: [
       { wave: "sine", freq: 2600, to: 3800, fm: [2, 0.5, 0.03], a: 0.002, d: 0.05, shape: -3 },
       { wave: "sine", freq: 2900, to: 4200, fm: [2, 0.5, 0.03], at: 0.08, a: 0.002, d: 0.06, shape: -3, gain: 0.8 },
     ],
   }],
-  "growl-small": ["Low growl of a small monster", {
+  "growl-small": ["작은 몬스터의 낮은 으르렁", {
     vary: 1,
     varyF: 2,
     layers: [
@@ -35,7 +35,7 @@ export default def("creature", {
       { wave: "brown", lp: 400, a: 0.08, h: 0.2, d: 0.3, gain: 0.4 },
     ],
   }],
-  "ghost-moan": ["Ghostly 'oooh'", {
+  "ghost-moan": ["유령의 '우우~' 신음", {
     vary: 0.25,
     verb: [0.75, 0.35],
     layers: [
@@ -43,30 +43,30 @@ export default def("creature", {
       { wave: "triangle", freq: 290, to: 250, vib: [5, 0.7], formant: OO, a: 0.4, h: 0.4, d: 0.8, shape: -3, gain: 0.6 },
     ],
   }],
-  "bee-buzz": ["Buzzing insect flying by", {
+  "bee-buzz": ["지나가는 곤충의 윙윙 소리", {
     vary: 0.8,
     layers: [
       { wave: "saw", freq: 210, to: 240, vib: [6, 0.5], bp: 900, bpTo: 1300, q: 2, a: 0.15, h: 0.4, d: 0.3, shape: -3 },
       { wave: "saw", freq: 212, to: 243, vib: [6.6, 0.5], bp: 2400, q: 3, a: 0.15, h: 0.4, d: 0.3, shape: -3, gain: 0.4 },
     ],
   }],
-  "creature-hurt": ["Creature yelps when hit", {
+  "creature-hurt": ["맞았을 때 크리처의 비명", {
     vary: 1.5,
     layers: [
       { wave: "saw", freq: 420, to: 250, curve: 2, formant: AH, kt: 1, a: 0.005, h: 0.04, d: 0.2, shape: -3, drive: 1 },
       { wave: "noise", bp: 2000, a: 0.001, d: 0.02, shape: -5, gain: 0.4 },
     ],
   }],
-  "creature-die": ["Creature's last cry, falling away", {
+  "creature-die": ["크리처의 마지막 울음, 멀어짐", {
     vary: 1,
     verb: [0.4, 0.2],
     layers: [{ wave: "saw", freq: 330, to: 80, curve: 0.8, vib: [9, 0.6], formant: AH, kt: 1, a: 0.01, h: 0.1, d: 0.6, shape: -2.5, drive: 0.8 }],
   }],
-  "voice-babble": ["Gibberish dialogue blips, like a character talking", {
+  "voice-babble": ["캐릭터 말소리 같은 알 수 없는 대사 블립", {
     vary: 2,
     layers: [{ wave: "square", duty: 0.3, freq: 280, arp: [0, 4, -2, 7, 2, 5], arpRate: 0.07, formant: EE, a: 0.005, h: 0.36, d: 0.06, shape: -3 }],
   }],
-  "zombie-groan": ["Zombie groan", {
+  "zombie-groan": ["좀비 신음", {
     vary: 1.2,
     varyF: 2,
     verb: [0.35, 0.15],
@@ -76,7 +76,7 @@ export default def("creature", {
       { wave: "noise", formant: AH, a: 0.1, h: 0.4, d: 0.3, shape: -3, gain: 0.2 },
     ],
   }],
-  roar: ["Big monster roar", {
+  roar: ["거대 몬스터의 포효", {
     vary: 0.8,
     varyF: 2,
     verb: [0.6, 0.25],
@@ -86,7 +86,7 @@ export default def("creature", {
       { wave: "noise", bp: 1200, q: 0.8, a: 0.05, h: 0.6, d: 0.4, shape: -3, drive: 1.5, gain: 0.35 },
     ],
   }],
-  "dog-bark": ["Dog barks twice", {
+  "dog-bark": ["개가 두 번 짖음", {
     vary: 1.5,
     varyF: 2,
     verb: [0.25, 0.1],
@@ -95,7 +95,7 @@ export default def("creature", {
       { wave: "noise" as const, bp: 1500, q: 1, at, a: 0.002, d: 0.06, shape: -4, gain: 0.3 },
     ]),
   }],
-  "cat-meow": ["Cat meows", {
+  "cat-meow": ["고양이 울음", {
     vary: 1.5,
     layers: [
       { wave: "saw", freq: 600, to: 900, sweep: 0.2, curve: 0.8, vib: [5, 0.3], formant: EE, kt: 1, a: 0.04, h: 0.1, d: 0.3, shape: -3 },

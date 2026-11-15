@@ -3,7 +3,7 @@ import { def } from "./def.ts";
 // Puzzle and match-3: short, bright and tonal, so they can be pitched per step (play(s, { pitch })).
 
 export default def("puzzle", {
-  swap: ["Swap two tiles: quick two-way swish", {
+  swap: ["두 타일 교환: 빠른 양방향 휙", {
     vary: 0.5,
     varyF: 2,
     layers: [
@@ -12,7 +12,7 @@ export default def("puzzle", {
       { wave: "noise", bp: 2500, bpTo: 4000, q: 1.5, a: 0.03, d: 0.06, shape: -3, gain: 0.25 },
     ],
   }],
-  match: ["Three in a row: bright glassy pop", {
+  match: ["3매치: 밝고 유리 같은 팝", {
     vary: 0.3,
     verb: [0.25, 0.15],
     layers: [
@@ -21,7 +21,7 @@ export default def("puzzle", {
       { wave: "metal", freq: 3000, hp: 6000, at: 0.05, a: 0.002, d: 0.2, shape: -4, gain: 0.1 },
     ],
   }],
-  "combo-chain": ["Cascade combo: each step a little higher (pitch it per chain)", {
+  "combo-chain": ["연쇄 콤보: 단계마다 조금씩 높게 (체인별 피치 조절)", {
     vary: 0.05,
     echo: [0.07, 0.3, 0.25],
     layers: [
@@ -29,7 +29,7 @@ export default def("puzzle", {
       { wave: "sine", freq: 1568, fm: [3.5, 1.2, 0.1], arp: [0, 4, 7, 12], arpRate: 0.04, a: 0.002, h: 0.1, d: 0.25, shape: -3, gain: 0.35 },
     ],
   }],
-  "line-clear": ["Clear a row: zipper sweep and a chime", {
+  "line-clear": ["한 줄 지우기: 지퍼 스윕과 차임", {
     vary: 0.1,
     verb: [0.3, 0.15],
     layers: [
@@ -38,7 +38,7 @@ export default def("puzzle", {
       { wave: "sine", freq: 2093, fm: [3.5, 1.5, 0.1], at: 0.18, a: 0.002, d: 0.45, shape: -4, gain: 0.45 },
     ],
   }],
-  "piece-lock": ["Falling piece locks in place: tight thunk", {
+  "piece-lock": ["떨어지는 조각이 제자리에 콱", {
     vary: 0.4,
     varyF: 1.5,
     varyG: 1,
@@ -49,7 +49,7 @@ export default def("puzzle", {
       { wave: "brown", lp: 300, a: 0.002, d: 0.12, shape: -5, gain: 0.3 },
     ],
   }],
-  merge: ["Two items merge into a bigger one: whoomp and sparkle", {
+  merge: ["두 아이템이 더 큰 것으로 합체: 쿵과 반짝임", {
     vary: 0.4,
     verb: [0.3, 0.15],
     layers: [

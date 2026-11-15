@@ -2,7 +2,7 @@ import { def } from "./def.ts";
 
 // Short stingers. vary is kept low so the melody stays in tune with music.
 export default def("jingle", {
-  victory: ["Victory fanfare", {
+  victory: ["승리 팡파레", {
     vary: 0.05,
     verb: [0.45, 0.2],
     layers: [
@@ -10,7 +10,7 @@ export default def("jingle", {
       { wave: "triangle", freq: 262, arp: [0, 0, 0, 4, 7, 7, 12, 12], arpRate: 0.1, a: 0.003, h: 0.75, d: 0.35, gain: 0.6 },
     ],
   }],
-  "level-complete": ["Level complete: rising run and a held chord", {
+  "level-complete": ["레벨 클리어: 올라가는 런과 길게 누르는 코드", {
     vary: 0.05,
     verb: [0.5, 0.25],
     layers: [
@@ -19,7 +19,7 @@ export default def("jingle", {
       { wave: "sine", freq: 1568, fm: [2, 1, 0.3], at: 0.42, a: 0.003, d: 0.8, gain: 0.3 },
     ],
   }],
-  "game-over": ["Game over: slow sad descent", {
+  "game-over": ["게임 오버: 느리고 슬픈 하강", {
     vary: 0.05,
     verb: [0.5, 0.25],
     layers: [
@@ -27,13 +27,13 @@ export default def("jingle", {
       { wave: "square", duty: 0.5, freq: 196, arp: [0, -1, -2, -3], arpRate: 0.28, a: 0.01, h: 1, d: 0.5, lp: 1200, gain: 0.35 },
     ],
   }],
-  lose: ["Lost a round: wah-wah", {
+  lose: ["라운드 패배: 와와", {
     vary: 0.05,
     layers: [
       { wave: "saw", freq: 330, arp: [0, -1, -2], arpRate: 0.22, lp: 600, lpTo: 2500, q: 3, a: 0.01, h: 0.5, d: 0.3, shape: 2, vib: [6, 0.3] },
     ],
   }],
-  "secret-found": ["Secret found: rising mystery arpeggio", {
+  "secret-found": ["비밀 발견: 올라가는 미스터리 아르페지오", {
     vary: 0.05,
     verb: [0.4, 0.2],
     layers: [
@@ -41,7 +41,7 @@ export default def("jingle", {
       { wave: "sine", freq: 1568, arp: [0, -1, -9, -14, -13, -5, -1, 4], arpRate: 0.075, a: 0.002, h: 0.55, d: 0.2, gain: 0.25 },
     ],
   }],
-  achievement: ["Achievement unlocked", {
+  achievement: ["업적 달성", {
     vary: 0.05,
     verb: [0.5, 0.25],
     layers: [
@@ -51,7 +51,7 @@ export default def("jingle", {
       { wave: "noise", hp: 7000, lp: 12000, at: 0.24, a: 0.002, d: 0.4, shape: -4, gain: 0.06 },
     ],
   }],
-  "puzzle-solved": ["Puzzle solved: clear 'ta-da'", {
+  "puzzle-solved": ["퍼즐 해결: 명쾌한 '짜잔'", {
     vary: 0.05,
     verb: [0.45, 0.22],
     layers: [
@@ -59,7 +59,7 @@ export default def("jingle", {
       { wave: "sine", freq: 1319, arp: [0, 5, 9, 12], arpRate: 0.06, fm: [2, 0.8, 0.2], a: 0.002, h: 0.3, d: 0.4, gain: 0.4 },
     ],
   }],
-  checkpoint: ["Checkpoint reached: three quick mallet notes and a bell", {
+  checkpoint: ["체크포인트 도달: 빠른 말렛 세 음과 종", {
     vary: 0.05,
     verb: [0.4, 0.2],
     layers: [
@@ -68,14 +68,14 @@ export default def("jingle", {
       { wave: "triangle", freq: 523, at: 0.21, a: 0.003, h: 0.1, d: 0.5, gain: 0.35 },
     ],
   }],
-  "round-start": ["Round start stinger", {
+  "round-start": ["라운드 시작 스팅어", {
     vary: 0.05,
     layers: [
       { wave: "square", duty: 0.5, freq: 440, arp: [0, 0, 12], arpRate: 0.12, a: 0.003, h: 0.3, d: 0.2, shape: 2, lp: 3500 },
       { wave: "sine", freq: 110, arp: [0, 0, 12], arpRate: 0.12, a: 0.003, h: 0.3, d: 0.2, gain: 0.6 },
     ],
   }],
-  highscore: ["New high score: excited climbing fanfare", {
+  highscore: ["신기록: 신나게 치솟는 팡파레", {
     vary: 0.05,
     verb: [0.35, 0.2],
     layers: [
@@ -83,7 +83,7 @@ export default def("jingle", {
       { wave: "triangle", freq: 262, arp: [0, 0, 7, 7, 5, 5, 7, 7, 12], arpRate: 0.08, a: 0.002, h: 0.75, d: 0.4, shape: 2 },
     ],
   }],
-  "boss-intro": ["Boss appears: ominous low brass hits", {
+  "boss-intro": ["보스 등장: 불길한 저음 금관 타격", {
     vary: 0.05,
     verb: [0.7, 0.3],
     layers: [0, 0.35, 0.7].flatMap((at, i) => [

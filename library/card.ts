@@ -4,7 +4,7 @@ import { def } from "./def.ts";
 const WOOD = [1, 2.32, 4.25, 6.63];
 
 export default def("card", {
-  "card-flip": ["Flip a card face up: quick papery snap", {
+  "card-flip": ["카드 뒤집기: 빠른 종이 스냅", {
     vary: 1,
     varyF: 3,
     varyG: 1.5,
@@ -14,7 +14,7 @@ export default def("card", {
       { wave: "pink", bp: 900, q: 1.5, at: 0.046, a: 0.001, d: 0.03, shape: -5, gain: 0.4 },
     ],
   }],
-  "card-deal": ["Deal a card across the table: swish and slap", {
+  "card-deal": ["테이블 위로 카드 딜링: 휙-탁", {
     vary: 1,
     varyF: 3,
     varyG: 1.5,
@@ -24,7 +24,7 @@ export default def("card", {
       { wave: "pink", lp: 1200, at: 0.08, a: 0.001, d: 0.04, shape: -5, gain: 0.5 },
     ],
   }],
-  "card-place": ["Lay a card down on felt", {
+  "card-place": ["펠트 위에 카드 내려놓기", {
     vary: 0.8,
     varyF: 2,
     varyG: 1,
@@ -34,7 +34,7 @@ export default def("card", {
       { wave: "pink", lp: 600, a: 0.002, d: 0.12, shape: -4, gain: 0.5 },
     ],
   }],
-  "card-shuffle": ["Riffle shuffle: a fast burst of card ticks", {
+  "card-shuffle": ["리플 셔플: 빠른 카드 틱 연발", {
     vary: 0.5,
     varyF: 2,
     layers: [
@@ -42,7 +42,7 @@ export default def("card", {
       { wave: "pink" as const, bp: 2000, q: 0.8, a: 0.05, h: 0.2, d: 0.12, gain: 0.25 },
     ],
   }],
-  "chip-stack": ["Poker chips clack onto a stack", {
+  "chip-stack": ["포커 칩이 쌓이며 달각거림", {
     vary: 0.6,
     varyF: 2,
     varyG: 1.5,
@@ -51,7 +51,7 @@ export default def("card", {
       { wave: "noise" as const, bp: 4500, q: 2, at, a: 0.001, d: 0.006, shape: -6, gain: 0.5 },
     ]),
   }],
-  "dice-roll": ["Dice tumble across a table and settle", {
+  "dice-roll": ["주사위가 테이블 위를 굴러 멈춤", {
     vary: 0.8,
     varyF: 2,
     varyG: 2,
@@ -60,7 +60,7 @@ export default def("card", {
       { wave: "noise" as const, bp: 3000, q: 2, at, a: 0.001, d: 0.006, shape: -6, gain: 0.4 - i * 0.04 },
     ]),
   }],
-  "slot-spin": ["Slot reels spinning: fast ratchet ticks", {
+  "slot-spin": ["슬롯 릴 회전: 빠른 라쳇 틱", {
     vary: 0.4,
     varyF: 1.5,
     layers: [
@@ -68,7 +68,7 @@ export default def("card", {
       { wave: "noise" as const, bp: 2500, q: 1, a: 0.05, h: 0.6, d: 0.1, gain: 0.08 },
     ],
   }],
-  "slot-stop": ["A reel locks into place: clunk and ding", {
+  "slot-stop": ["릴이 제자리에 잠김: 쿵-딩", {
     vary: 0.2,
     verb: [0.25, 0.12],
     layers: [
@@ -77,7 +77,7 @@ export default def("card", {
       { wave: "sine", freq: 1568, fm: [3.5, 1.4, 0.1], at: 0.04, a: 0.002, d: 0.4, shape: -4, gain: 0.4 },
     ],
   }],
-  jackpot: ["Jackpot: bell flurry over a rising arpeggio", {
+  jackpot: ["잭팟: 상승 아르페지오 위 종소리 세례", {
     vary: 0.05,
     verb: [0.4, 0.2],
     echo: [0.08, 0.3, 0.2],
