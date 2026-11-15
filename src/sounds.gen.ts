@@ -2,553 +2,553 @@
 // Sounds are CC0 1.0 (public domain). See LICENSE-SOUNDS.
 import type { Sound } from "./core/types.ts";
 
-/** Neutral button click */
+/** 중립적인 버튼 클릭 */
 export const click: Sound = {"vary":0.6,"varyF":1,"varyG":1,"layers":[{"wave":"noise","bp":3500,"q":3,"a":0.001,"d":0.006,"shape":-6,"gain":0.7},{"wave":"sine","freq":1900,"to":900,"a":0.001,"d":0.07,"shape":-4,"drive":1},{"wave":"modal","freq":1400,"modes":[1,2.3],"a":0.001,"d":0.06,"shape":-4,"gain":0.6},{"wave":"noise","bp":2500,"q":5,"at":0.03,"a":0.001,"d":0.006,"shape":-6,"gain":0.5}],"gain":0.458};
-/** Rounded, quiet click for lists and tabs */
+/** 목록과 탭용 둥글고 조용한 클릭 */
 export const clickSoft: Sound = {"varyF":1,"varyG":1,"layers":[{"wave":"noise","bp":2800,"q":3,"a":0.001,"d":0.004,"shape":-6,"gain":0.6},{"wave":"triangle","freq":880,"to":560,"a":0.002,"d":0.05,"shape":-4,"lp":3200,"gain":0.7},{"wave":"pink","bp":2000,"q":4,"at":0.014,"a":0.001,"d":0.006,"shape":-6,"gain":0.35}],"limit":1,"gain":2.04};
-/** Firm mechanical click */
+/** 확실한 기계식 클릭 */
 export const clickHard: Sound = {"layers":[{"wave":"sine","freq":2400,"to":1100,"a":0.001,"h":0.004,"d":0.018,"shape":4,"drive":3},{"wave":"noise","bp":3500,"q":1.5,"a":0.001,"d":0.008,"shape":3,"drive":2,"gain":0.5},{"wave":"sine","freq":420,"to":260,"at":0.002,"a":0.001,"d":0.035,"shape":3,"drive":1,"gain":0.5}],"gain":0.508};
-/** Bubbly tap, good for mobile */
+/** 모바일에 좋은 통통 튀는 탭 */
 export const tap: Sound = {"layers":[{"wave":"sine","freq":520,"to":260,"a":0.001,"d":0.06,"shape":4,"curve":2}],"limit":1,"gain":1.42};
-/** Faint tick when the cursor enters a button */
+/** 커서가 버튼에 올라갈 때 희미한 틱 */
 export const hover: Sound = {"vary":0.8,"layers":[{"wave":"sine","freq":2600,"a":0.001,"d":0.025,"shape":3,"hp":1200}],"limit":1,"gain":1.41};
-/** Switch on: two rising notes */
+/** 스위치 켜기: 올라가는 두 음 */
 export const toggleOn: Sound = {"layers":[{"wave":"triangle","freq":660,"arp":[0,7],"arpRate":0.045,"a":0.002,"d":0.11,"shape":2.5},{"wave":"sine","freq":1320,"arp":[0,7],"arpRate":0.045,"a":0.002,"d":0.08,"shape":3,"gain":0.3}],"gain":0.78};
-/** Switch off: two falling notes */
+/** 스위치 끄기: 내려가는 두 음 */
 export const toggleOff: Sound = {"layers":[{"wave":"triangle","freq":990,"arp":[0,-7],"arpRate":0.045,"a":0.002,"d":0.11,"shape":2.5},{"wave":"sine","freq":1980,"arp":[0,-7],"arpRate":0.045,"a":0.002,"d":0.08,"shape":3,"gain":0.3}],"gain":0.731};
-/** Bright major arpeggio, 'OK' */
+/** 밝은 장조 아르페지오, '확인' */
 export const confirm: Sound = {"verb":[0.2,0.15],"layers":[{"wave":"triangle","freq":784,"arp":[0,4,7],"arpRate":0.05,"a":0.002,"h":0.02,"d":0.22,"shape":2},{"wave":"sine","freq":1568,"arp":[0,4,7],"arpRate":0.05,"a":0.002,"d":0.2,"shape":2.5,"gain":0.35}],"gain":0.395};
-/** Soft descending 'back' */
+/** 부드럽게 내려가는 '뒤로' */
 export const cancel: Sound = {"layers":[{"wave":"square","duty":0.4,"freq":520,"to":330,"a":0.002,"d":0.13,"shape":2,"lp":1800},{"wave":"sine","freq":260,"to":165,"a":0.002,"d":0.12,"gain":0.5}],"gain":0.415};
-/** Two low buzzes, 'not allowed' */
+/** 낮은 버즈 두 번, '허용 안 됨' */
 export const error: Sound = {"vary":0.2,"layers":[{"wave":"saw","freq":155,"a":0.003,"h":0.05,"d":0.04,"shape":1.5,"lp":1300,"drive":0.6},{"wave":"saw","freq":155,"at":0.13,"a":0.003,"h":0.06,"d":0.06,"shape":1.5,"lp":1300,"drive":0.6},{"wave":"square","freq":77.5,"a":0.003,"h":0.17,"d":0.08,"lp":500,"gain":0.5}],"gain":0.224};
-/** Short dull thunk for disabled buttons */
+/** 비활성 버튼용 짧고 묵직한 쿵 */
 export const deny: Sound = {"layers":[{"wave":"square","freq":120,"to":90,"a":0.002,"d":0.12,"lp":700,"drive":1},{"wave":"noise","lp":1500,"a":0.001,"d":0.03,"gain":0.3}],"gain":0.367};
-/** Two-tone bell notification */
+/** 두 음 벨 알림 */
 export const notify: Sound = {"verb":[0.3,0.2],"layers":[{"wave":"sine","freq":1319,"fm":[3.5,1.6,0.12],"a":0.002,"d":0.45,"shape":2.5},{"wave":"sine","freq":1760,"fm":[3.5,1.6,0.12],"at":0.1,"a":0.002,"d":0.6,"shape":2.5}],"gain":0.154};
-/** Upward pop, for things appearing */
+/** 무언가 나타날 때 위로 팝 */
 export const pop: Sound = {"layers":[{"wave":"sine","freq":380,"to":1250,"curve":3,"a":0.002,"d":0.07,"shape":3}],"gain":0.898};
-/** Downward pop, for things disappearing */
+/** 무언가 사라질 때 아래로 팝 */
 export const popDown: Sound = {"layers":[{"wave":"sine","freq":1100,"to":330,"curve":3,"a":0.002,"d":0.08,"shape":3}],"gain":0.834};
-/** Quick airy swipe between pages */
+/** 페이지 사이 빠른 바람 스와이프 */
 export const swipe: Sound = {"layers":[{"wave":"noise","bp":1400,"bpTo":5200,"q":1.4,"a":0.04,"d":0.1,"shape":2},{"wave":"pink","bp":700,"bpTo":2000,"a":0.04,"d":0.08,"gain":0.5}],"gain":1.31};
-/** Keyboard tick for text that types itself */
+/** 글자가 타이핑될 때 키보드 틱 */
 export const type: Sound = {"vary":1.5,"layers":[{"wave":"noise","bp":3000,"q":1.5,"a":0.001,"h":0.004,"d":0.012,"shape":3,"drive":4},{"wave":"sine","freq":520,"to":300,"at":0.002,"a":0.001,"d":0.03,"shape":3,"drive":1,"gain":0.5},{"wave":"noise","bp":4500,"q":2,"at":0.02,"a":0.001,"d":0.008,"gain":0.25}],"gain":0.574};
-/** Tiny tick for sliders and scroll steps */
+/** 슬라이더와 스크롤 단계용 작은 틱 */
 export const tick: Sound = {"vary":1,"varyF":1,"layers":[{"wave":"noise","bp":4500,"q":2,"a":0.001,"d":0.004,"shape":-6,"gain":0.6},{"wave":"sine","freq":3200,"a":0.001,"d":0.035,"shape":-6,"drive":1}],"gain":0.728};
-/** Menu or panel slides open */
+/** 메뉴나 패널이 열림 */
 export const menuOpen: Sound = {"layers":[{"wave":"triangle","freq":330,"to":880,"a":0.004,"d":0.12,"shape":2,"lp":3000},{"wave":"noise","bp":2500,"bpTo":5000,"a":0.03,"d":0.06,"gain":0.25}],"gain":0.721};
-/** Menu or panel closes */
+/** 메뉴나 패널이 닫힘 */
 export const menuClose: Sound = {"layers":[{"wave":"triangle","freq":880,"to":330,"a":0.004,"d":0.12,"shape":2,"lp":3000},{"wave":"noise","bp":5000,"bpTo":2500,"a":0.03,"d":0.06,"gain":0.25}],"gain":0.699};
-/** Retro menu cursor move */
+/** 레트로 메뉴 커서 이동 */
 export const select: Sound = {"layers":[{"wave":"square","duty":0.125,"freq":1047,"arp":[0,12],"arpRate":0.035,"a":0.001,"d":0.1,"shape":2,"lp":5500}],"gain":0.585};
-/** Gentle cursor move for modern menus */
+/** 모던 메뉴용 부드러운 커서 이동 */
 export const selectSoft: Sound = {"layers":[{"wave":"sine","freq":1175,"fm":[2,0.8,0.03],"a":0.002,"d":0.08,"shape":3}],"gain":0.618};
-/** Chat message arrives */
+/** 채팅 메시지 도착 */
 export const message: Sound = {"verb":[0.2,0.1],"layers":[{"wave":"sine","freq":880,"arp":[0,5,12],"arpRate":0.055,"a":0.003,"d":0.2,"shape":2,"vib":[7,0.1]}],"gain":0.43};
-/** The plinkfx signature: one drop of sound */
+/** plinkfx 시그니처: 한 방울의 소리 */
 export const plink: Sound = {"verb":[0.35,0.22],"vary":0.3,"layers":[{"wave":"sine","freq":1050,"to":2150,"curve":4,"sweep":0.05,"a":0.001,"d":0.32,"shape":3},{"wave":"sine","freq":3150,"fm":[1.41,1.2,0.04],"a":0.001,"d":0.12,"shape":4,"gain":0.25},{"wave":"triangle","freq":525,"to":1075,"curve":4,"sweep":0.05,"a":0.001,"d":0.15,"shape":3,"gain":0.25}],"gain":0.281};
-/** Pick up a draggable item: soft lift */
+/** 드래그 아이템 들기: 부드러운 들림 */
 export const dragStart: Sound = {"vary":0.6,"varyF":1,"layers":[{"wave":"sine","freq":500,"to":800,"a":0.002,"d":0.08,"shape":-4},{"wave":"noise","bp":3000,"q":3,"a":0.001,"d":0.004,"shape":-6,"gain":0.4}],"gain":0.882};
-/** Drop it into a slot: soft settle */
+/** 슬롯에 놓기: 부드러운 안착 */
 export const drop: Sound = {"vary":0.6,"varyF":1,"layers":[{"wave":"sine","freq":700,"to":380,"a":0.002,"d":0.1,"shape":-4},{"wave":"noise","bp":2200,"q":3,"a":0.001,"d":0.005,"shape":-6,"gain":0.5},{"wave":"pink","lp":600,"a":0.001,"d":0.04,"shape":-5,"gain":0.3}],"gain":0.826};
-/** Task done: clean rising check-mark chime */
+/** 작업 완료: 깔끔하게 올라가는 체크 차임 */
 export const success: Sound = {"vary":0.1,"verb":[0.25,0.15],"layers":[{"wave":"sine","freq":1047,"fm":[2,0.8,0.06],"arp":[0,7],"arpRate":0.08,"a":0.002,"h":0.06,"d":0.35,"shape":-4},{"wave":"triangle","freq":523,"arp":[0,7],"arpRate":0.08,"a":0.002,"h":0.06,"d":0.25,"shape":-4,"gain":0.3}],"gain":0.204};
-/** Window or card expands: rising whoosh-blip */
+/** 창이나 카드 확대: 올라가는 휙-블립 */
 export const maximize: Sound = {"vary":0.4,"varyF":1,"layers":[{"wave":"sine","freq":400,"to":900,"curve":0.8,"a":0.01,"d":0.1,"shape":-3,"gain":0.6},{"wave":"noise","bp":1500,"bpTo":4000,"q":1.5,"a":0.03,"d":0.07,"shape":-3,"gain":0.25}],"gain":1.15};
-/** Window or card collapses: falling whoosh-blip */
+/** 창이나 카드 축소: 내려가는 휙-블립 */
 export const minimize: Sound = {"vary":0.4,"varyF":1,"layers":[{"wave":"sine","freq":900,"to":400,"curve":2,"a":0.005,"d":0.1,"shape":-3,"gain":0.6},{"wave":"noise","bp":4000,"bpTo":1500,"q":1.5,"a":0.01,"d":0.08,"shape":-3,"gain":0.25}],"gain":1.17};
-/** Dialog asks something: curious upward lilt */
+/** 대화상자 질문: 궁금해하며 올라가는 억양 */
 export const question: Sound = {"vary":0.1,"verb":[0.2,0.12],"layers":[{"wave":"triangle","freq":660,"arp":[0,-3,5],"arpRate":0.08,"a":0.002,"h":0.12,"d":0.15,"shape":-3},{"wave":"sine","freq":1320,"arp":[0,-3,5],"arpRate":0.08,"a":0.002,"h":0.12,"d":0.12,"shape":-3,"gain":0.25}],"gain":0.277};
-/** Message sent: quick upward swoosh */
+/** 메시지 전송: 빠르게 위로 휙 */
 export const messageSend: Sound = {"vary":0.3,"varyF":1,"layers":[{"wave":"noise","bp":1200,"bpTo":6000,"q":1.5,"a":0.05,"d":0.08,"shape":-3,"gain":0.5},{"wave":"sine","freq":600,"to":1500,"curve":1.5,"a":0.01,"d":0.1,"shape":-3,"gain":0.5}],"gain":1.26};
-/** Delete / move to trash: crumple and drop */
+/** 삭제/휴지통 이동: 구기고 떨굼 */
 export const trash: Sound = {"vary":0.5,"varyF":2,"layers":[{"wave":"noise","bp":2500,"q":1.5,"at":0,"a":0.001,"d":0.025,"shape":-5,"gain":0.6},{"wave":"noise","bp":2900,"q":1.5,"at":0.025,"a":0.001,"d":0.025,"shape":-5,"gain":0.6},{"wave":"noise","bp":3300,"q":1.5,"at":0.045,"a":0.001,"d":0.025,"shape":-5,"gain":0.6},{"wave":"noise","bp":3700,"q":1.5,"at":0.08,"a":0.001,"d":0.025,"shape":-5,"gain":0.6},{"wave":"noise","bp":4100,"q":1.5,"at":0.1,"a":0.001,"d":0.025,"shape":-5,"gain":0.6},{"wave":"sine","freq":500,"to":150,"curve":2,"at":0.12,"a":0.002,"d":0.1,"shape":-4,"gain":0.5},{"wave":"pink","lp":800,"at":0.2,"a":0.001,"d":0.05,"shape":-5,"gain":0.4}],"gain":1.49};
-/** Turn a book or tutorial page */
+/** 책이나 튜토리얼 페이지 넘김 */
 export const pageTurn: Sound = {"vary":0.6,"varyF":3,"varyG":1.5,"layers":[{"wave":"noise","bp":2000,"bpTo":5000,"q":0.9,"a":0.08,"d":0.12,"shape":-3,"gain":0.6},{"wave":"pink","bp":1200,"q":1,"a":0.06,"d":0.1,"shape":-3,"gain":0.3},{"wave":"noise","bp":3500,"q":2,"at":0.2,"a":0.001,"d":0.02,"shape":-5,"gain":0.4}],"gain":1.46};
-/** The classic two-note coin, with a little shimmer */
+/** 고전 두 음 코인, 살짝 반짝임 포함 */
 export const coin: Sound = {"verb":[0.2,0.12],"layers":[{"wave":"square","duty":0.25,"freq":988,"arp":[0,5],"arpRate":0.07,"a":0.001,"h":0.05,"d":0.3,"shape":2.5,"lp":7000},{"wave":"sine","freq":1976,"arp":[0,5],"arpRate":0.07,"a":0.001,"d":0.22,"shape":3,"gain":0.5}],"gain":0.272};
-/** Rounder coin for cosy games */
+/** 아늑한 게임용 둥근 코인 */
 export const coinSoft: Sound = {"verb":[0.25,0.15],"layers":[{"wave":"triangle","freq":1175,"arp":[0,5],"arpRate":0.065,"a":0.002,"h":0.04,"d":0.3,"shape":2.5},{"wave":"sine","freq":2350,"fm":[2,0.7,0.05],"arp":[0,5],"arpRate":0.065,"a":0.002,"d":0.25,"shape":3,"gain":0.35}],"gain":0.478};
-/** Two coins in quick succession */
+/** 빠르게 연속 두 코인 */
 export const coinDouble: Sound = {"verb":[0.2,0.12],"layers":[{"wave":"square","duty":0.25,"freq":988,"arp":[0,5],"arpRate":0.05,"a":0.001,"d":0.1,"shape":2,"lp":7000},{"wave":"square","duty":0.25,"freq":1175,"arp":[0,5],"arpRate":0.05,"at":0.1,"a":0.001,"h":0.04,"d":0.28,"shape":2.5,"lp":7000},{"wave":"sine","freq":2350,"arp":[0,5],"arpRate":0.05,"at":0.1,"a":0.001,"d":0.2,"shape":3,"gain":0.4}],"gain":0.278};
-/** A handful of coins, a small payout */
+/** 한 움큼의 동전, 소소한 상금 */
 export const coinBag: Sound = {"vary":0.6,"varyG":3,"verb":[0.25,0.15],"layers":[{"wave":"modal","freq":2600,"modes":[1,1.73,2.33,3.91],"at":0,"a":0.001,"d":0.16,"shape":-5,"gain":0.8},{"wave":"modal","freq":3100,"modes":[1,1.73,2.33,3.91],"at":0.05,"a":0.001,"d":0.18,"shape":-5,"gain":0.74},{"wave":"modal","freq":2800,"modes":[1,1.73,2.33,3.91],"at":0.09,"a":0.001,"d":0.2,"shape":-5,"gain":0.68},{"wave":"modal","freq":3500,"modes":[1,1.73,2.33,3.91],"at":0.15,"a":0.001,"d":0.22,"shape":-5,"gain":0.6200000000000001},{"wave":"modal","freq":2950,"modes":[1,1.73,2.33,3.91],"at":0.19,"a":0.001,"d":0.24,"shape":-5,"gain":0.56},{"wave":"modal","freq":3300,"modes":[1,1.73,2.33,3.91],"at":0.26,"a":0.001,"d":0.26,"shape":-5,"gain":0.5},{"wave":"pink","bp":1500,"q":1,"a":0.01,"d":0.3,"shape":-4,"gain":0.3},{"wave":"pink","lp":600,"a":0.002,"d":0.06,"shape":-5,"drive":1,"gain":0.5}],"gain":0.463};
-/** Glassy bell for gems and crystals */
+/** 보석과 크리스탈용 유리 같은 벨 */
 export const gem: Sound = {"verb":[0.45,0.25],"layers":[{"wave":"sine","freq":2093,"fm":[3.01,2.2,0.08],"a":0.001,"d":0.5,"shape":3},{"wave":"sine","freq":3136,"fm":[2.01,1.5,0.06],"at":0.07,"a":0.001,"d":0.55,"shape":3,"gain":0.7},{"wave":"sine","freq":4186,"at":0.12,"a":0.001,"d":0.3,"shape":3,"gain":0.25}],"gain":0.286};
-/** Generic item pickup, quick rising notes */
+/** 일반 아이템 줍기, 빠르게 올라가는 음 */
 export const pickup: Sound = {"layers":[{"wave":"square","duty":0.5,"freq":523,"arp":[0,4,7,12],"arpRate":0.032,"a":0.001,"h":0.06,"d":0.1,"shape":2,"lp":4500},{"wave":"triangle","freq":1046,"arp":[0,4,7,12],"arpRate":0.032,"a":0.001,"h":0.06,"d":0.1,"gain":0.5}],"gain":0.346};
-/** Soft pop-and-chime pickup */
+/** 부드러운 팝-차임 줍기 */
 export const pickupSoft: Sound = {"verb":[0.2,0.12],"layers":[{"wave":"sine","freq":420,"to":1100,"curve":3,"sweep":0.04,"a":0.001,"d":0.06,"shape":3},{"wave":"sine","freq":1568,"fm":[2,0.6,0.05],"at":0.035,"a":0.001,"d":0.22,"shape":3,"gain":0.6}],"gain":0.826};
-/** Grab an item: a short slide up */
+/** 아이템 줍기: 짧게 올라가는 슬라이드 */
 export const pickupItem: Sound = {"layers":[{"wave":"square","duty":0.25,"freq":330,"to":990,"curve":2,"a":0.001,"h":0.02,"d":0.12,"shape":2,"lp":5000},{"wave":"sine","freq":165,"to":495,"curve":2,"a":0.001,"d":0.1,"gain":0.4}],"limit":1,"gain":0.572};
-/** Key pickup: metal jingle and a chime */
+/** 열쇠 줍기: 금속 징글과 차임 */
 export const key: Sound = {"verb":[0.3,0.15],"layers":[{"wave":"modal","freq":2400,"modes":[1,2.76,5.4],"a":0.001,"d":0.09,"shape":-5,"gain":0.45},{"wave":"modal","freq":2850,"modes":[1,2.76,5.4],"at":0.06,"a":0.001,"d":0.12,"shape":-5,"gain":0.35},{"wave":"noise","hp":4000,"lp":10000,"a":0.001,"d":0.01,"shape":-6,"gain":0.2},{"wave":"triangle","freq":1319,"arp":[0,7,12],"arpRate":0.06,"at":0.04,"a":0.002,"d":0.3,"shape":2.5,"gain":0.7}],"gain":0.83};
-/** Health pickup, warm and friendly */
+/** 체력 회복 아이템, 따뜻하고 다정함 */
 export const heart: Sound = {"verb":[0.3,0.15],"layers":[{"wave":"triangle","freq":523,"arp":[0,4,7,12],"arpRate":0.06,"a":0.003,"h":0.1,"d":0.25,"shape":2,"vib":[6,0.15]},{"wave":"sine","freq":1046,"arp":[0,4,7,12],"arpRate":0.06,"a":0.003,"h":0.1,"d":0.2,"gain":0.35}],"gain":0.402};
-/** Ammo or clip pickup: metallic clack */
+/** 탄약이나 클립 줍기: 금속 달각 */
 export const ammo: Sound = {"layers":[{"wave":"noise","bp":2500,"q":1.2,"a":0.001,"d":0.02,"shape":3,"drive":2,"gain":0.7},{"wave":"metal","freq":700,"bp":2800,"q":2,"a":0.001,"d":0.07,"shape":3,"drive":1},{"wave":"sine","freq":260,"to":150,"a":0.001,"d":0.06,"shape":2.5,"drive":1,"gain":0.7},{"wave":"noise","bp":1800,"q":1.2,"at":0.07,"a":0.001,"d":0.02,"shape":3,"drive":2,"gain":0.7},{"wave":"metal","freq":560,"bp":2200,"q":2,"at":0.07,"a":0.001,"d":0.1,"shape":3,"drive":1},{"wave":"sine","freq":200,"to":110,"at":0.07,"a":0.001,"d":0.09,"shape":2.5,"drive":1,"gain":0.9}],"limit":1,"gain":0.715};
-/** Cash register for shops and purchases */
+/** 상점과 구매용 계산대 소리 */
 export const kaChing: Sound = {"verb":[0.25,0.12],"layers":[{"wave":"noise","bp":3000,"q":1,"a":0.001,"d":0.05,"gain":0.5},{"wave":"metal","freq":520,"bp":2400,"q":2,"a":0.001,"d":0.08,"gain":0.5},{"wave":"sine","freq":2637,"fm":[2.76,3,0.15],"at":0.07,"a":0.001,"d":0.7,"shape":2.5},{"wave":"sine","freq":3951,"fm":[2.76,2,0.1],"at":0.07,"a":0.001,"d":0.5,"shape":3,"gain":0.5}],"gain":0.265};
-/** Experience orb, small and bright */
+/** 경험치 구슬, 작고 밝음 */
 export const xpOrb: Sound = {"vary":2,"echo":[0.07,0.3,0.25],"layers":[{"wave":"sine","freq":1250,"to":2500,"curve":2,"sweep":0.04,"a":0.001,"d":0.09,"shape":3}],"limit":1,"gain":0.963};
-/** Collect a star: sparkling run upward */
+/** 별 줍기: 반짝이며 치솟는 런 */
 export const star: Sound = {"echo":[0.09,0.35,0.3],"layers":[{"wave":"triangle","freq":1047,"arp":[0,4,7,12,16,19,24],"arpRate":0.03,"a":0.001,"h":0.18,"d":0.2,"shape":2},{"wave":"sine","freq":2093,"arp":[0,4,7,12,16,19,24],"arpRate":0.03,"a":0.001,"h":0.18,"d":0.15,"gain":0.3}],"gain":0.25};
-/** Fast ring pickup, two-note bright chime */
+/** 빠른 링 줍기, 밝은 두 음 차임 */
 export const ring: Sound = {"verb":[0.3,0.2],"layers":[{"wave":"square","duty":0.5,"freq":1568,"arp":[0,4],"arpRate":0.045,"a":0.001,"h":0.04,"d":0.4,"shape":3,"lp":6000,"gain":0.6},{"wave":"sine","freq":3136,"arp":[0,4],"arpRate":0.045,"fm":[1.5,0.7,0.1],"a":0.001,"d":0.45,"shape":3,"gain":0.7}],"gain":0.313};
-/** Drink a potion: three glugs and a sigh of sparkle */
+/** 포션 마시기: 꿀꺽 세 번과 반짝이는 한숨 */
 export const potionDrink: Sound = {"vary":0.6,"layers":[{"wave":"sine","freq":260,"to":520,"curve":3,"vib":[30,1],"at":0,"a":0.005,"d":0.09,"shape":-3,"lp":1200,"gain":0.8},{"wave":"sine","freq":240,"to":520,"curve":3,"vib":[30,1],"at":0.14,"a":0.005,"d":0.09,"shape":-3,"lp":1200,"gain":0.8},{"wave":"sine","freq":220,"to":520,"curve":3,"vib":[30,1],"at":0.28,"a":0.005,"d":0.09,"shape":-3,"lp":1200,"gain":0.8},{"wave":"noise","lp":1000,"a":0.01,"h":0.35,"d":0.1,"gain":0.08},{"wave":"sine","freq":2093,"fm":[3.5,1.5,0.1],"arp":[0,4,7],"arpRate":0.05,"at":0.42,"a":0.002,"d":0.3,"shape":-4,"gain":0.25}],"gain":0.904};
-/** Eat food: two crunchy bites */
+/** 음식 먹기: 바삭한 두 입 */
 export const eat: Sound = {"vary":0.8,"varyF":2,"varyG":2,"layers":[{"wave":"crunch","freq":5000,"bp":2500,"q":0.8,"at":0,"a":0.002,"d":0.08,"shape":-3,"drive":1},{"wave":"pink","lp":900,"at":0,"a":0.002,"d":0.06,"shape":-4,"gain":0.5},{"wave":"noise","bp":3500,"q":2,"at":0.02,"a":0.001,"d":0.01,"shape":-5,"gain":0.4},{"wave":"noise","bp":3500,"q":2,"at":0.045,"a":0.001,"d":0.01,"shape":-5,"gain":0.4},{"wave":"crunch","freq":5000,"bp":2500,"q":0.8,"at":0.18,"a":0.002,"d":0.08,"shape":-3,"drive":1},{"wave":"pink","lp":900,"at":0.18,"a":0.002,"d":0.06,"shape":-4,"gain":0.5},{"wave":"noise","bp":3500,"q":2,"at":0.19999999999999998,"a":0.001,"d":0.01,"shape":-5,"gain":0.4},{"wave":"noise","bp":3500,"q":2,"at":0.22499999999999998,"a":0.001,"d":0.01,"shape":-5,"gain":0.4}],"limit":1,"gain":0.789};
-/** Rare loot drops: shimmering beam and a chord */
+/** 레어 전리품 드롭: 반짝이는 빔과 코드 */
 export const lootRare: Sound = {"vary":0.05,"verb":[0.5,0.25],"echo":[0.1,0.3,0.2],"layers":[{"wave":"saw","freq":220,"to":880,"curve":0.8,"bp":1000,"bpTo":5000,"q":4,"a":0.2,"d":0.2,"shape":-3,"gain":0.3},{"wave":"sine","freq":1319,"fm":[3.5,1.6,0.15],"at":0.25,"a":0.002,"h":0.1,"d":0.8,"shape":-3},{"wave":"sine","freq":1661,"fm":[3.5,1.6,0.15],"at":0.25,"a":0.002,"h":0.1,"d":0.8,"shape":-3,"gain":0.7},{"wave":"sine","freq":1976,"fm":[3.5,1.6,0.15],"at":0.25,"a":0.002,"h":0.1,"d":0.8,"shape":-3,"gain":0.6},{"wave":"metal","freq":4000,"hp":7000,"at":0.25,"a":0.01,"d":0.6,"shape":-3,"gain":0.1}],"gain":0.164};
-/** Equip gear: leather and buckle */
+/** 장비 착용: 가죽과 버클 */
 export const equip: Sound = {"vary":0.6,"varyF":2,"varyG":1.5,"layers":[{"wave":"pink","bp":1800,"q":1,"a":0.02,"d":0.12,"shape":-3,"gain":0.9},{"wave":"metal","freq":1100,"hp":2500,"lp":7000,"at":0.08,"a":0.001,"d":0.06,"shape":-5,"gain":0.5},{"wave":"metal","freq":1350,"hp":2500,"lp":7000,"at":0.13,"a":0.001,"d":0.08,"shape":-5,"gain":0.4},{"wave":"noise","bp":900,"q":1.5,"at":0.08,"a":0.001,"d":0.03,"shape":-5,"gain":0.4}],"limit":1,"gain":3.07};
-/** Platformer jump: square sweep up */
+/** 플랫포머 점프: 위로 올라가는 스퀘어 스윕 */
 export const jump: Sound = {"layers":[{"wave":"square","duty":0.5,"freq":250,"to":640,"curve":1.5,"a":0.002,"h":0.03,"d":0.15,"shape":2,"lp":3500},{"wave":"sine","freq":125,"to":320,"curve":1.5,"a":0.002,"d":0.14,"gain":0.5}],"gain":0.426};
-/** Gentle hop for cute characters */
+/** 귀여운 캐릭터용 부드러운 폴짝 */
 export const jumpSoft: Sound = {"layers":[{"wave":"sine","freq":290,"to":720,"curve":2,"a":0.003,"d":0.15,"shape":2},{"wave":"triangle","freq":580,"to":1440,"curve":2,"a":0.003,"d":0.1,"shape":3,"gain":0.3}],"limit":1,"gain":0.846};
-/** Big jump with a longer rise */
+/** 더 길게 치솟는 큰 점프 */
 export const jumpHigh: Sound = {"layers":[{"wave":"square","duty":0.25,"freq":220,"to":880,"curve":1.2,"a":0.002,"h":0.05,"d":0.25,"shape":2,"lp":4000},{"wave":"triangle","freq":110,"to":440,"curve":1.2,"a":0.002,"h":0.05,"d":0.22,"gain":0.6},{"wave":"noise","bp":800,"bpTo":3000,"a":0.02,"d":0.12,"gain":0.15}],"gain":0.364};
-/** Second jump in mid-air, higher and airier */
+/** 공중에서 두 번째 점프, 더 높고 가볍게 */
 export const jumpDouble: Sound = {"layers":[{"wave":"square","duty":0.25,"freq":440,"to":1100,"curve":2,"a":0.002,"d":0.14,"shape":2,"lp":4500},{"wave":"noise","bp":1800,"bpTo":5000,"q":1.2,"a":0.015,"d":0.12,"gain":0.35}],"limit":1,"gain":0.677};
-/** Boingy cartoon jump with wobble */
+/** 통통 튀는 만화풍 점프, 흔들림 포함 */
 export const jumpCartoon: Sound = {"layers":[{"wave":"sine","freq":180,"to":760,"curve":1.3,"vib":[14,1.2],"a":0.003,"h":0.05,"d":0.25,"shape":1.8}],"gain":0.478};
-/** Tiny hop for small creatures */
+/** 작은 생물의 깡충 */
 export const hop: Sound = {"vary":1,"layers":[{"wave":"triangle","freq":520,"to":900,"a":0.002,"h":0.02,"d":0.08,"shape":2}],"limit":1,"gain":1.06};
-/** Landing on solid ground */
+/** 단단한 땅에 착지 */
 export const land: Sound = {"vary":1,"varyF":3,"varyG":1,"layers":[{"wave":"pink","lp":1200,"lpTo":350,"a":0.001,"d":0.16,"shape":-3,"drive":3},{"wave":"noise","bp":1800,"q":1.2,"at":0.006,"a":0.001,"d":0.05,"shape":-4,"drive":1,"gain":0.3},{"wave":"noise","bp":260,"q":2,"a":0.001,"d":0.1,"shape":-4,"drive":1,"gain":0.8},{"wave":"sine","freq":150,"to":75,"a":0.001,"d":0.14,"shape":-4,"drive":1,"gain":0.6},{"wave":"brown","lp":250,"a":0.002,"d":0.2,"shape":-4,"gain":0.3}],"limit":1,"gain":0.724};
-/** Heavy landing with a thud */
+/** 쿵 소리 나는 무거운 착지 */
 export const landHeavy: Sound = {"vary":0.8,"varyF":3,"varyG":1,"verb":[0.2,0.1],"layers":[{"wave":"noise","bp":1500,"q":0.8,"a":0.001,"d":0.012,"shape":-6,"gain":0.4},{"wave":"pink","lp":900,"lpTo":250,"a":0.001,"d":0.2,"shape":-4,"drive":2},{"wave":"noise","bp":320,"q":2,"a":0.001,"d":0.16,"shape":-4,"drive":1,"gain":1},{"wave":"sine","freq":110,"to":55,"a":0.001,"d":0.3,"shape":-5,"drive":1,"gain":0.3},{"wave":"noise","bp":1300,"q":3,"at":0.035,"a":0.001,"d":0.02,"shape":-5,"gain":0.3},{"wave":"noise","bp":900,"q":3,"at":0.07,"a":0.001,"d":0.02,"shape":-5,"gain":0.24},{"wave":"noise","bp":1700,"q":3,"at":0.11,"a":0.001,"d":0.02,"shape":-5,"gain":0.18},{"wave":"brown","lp":300,"a":0.002,"d":0.35,"shape":-4,"gain":0.35}],"limit":1,"gain":0.918};
-/** Spring or trampoline boing */
+/** 스프링이나 트램펄린 통통 */
 export const spring: Sound = {"layers":[{"wave":"triangle","freq":160,"to":460,"vib":[22,2.5],"a":0.002,"h":0.05,"d":0.4,"shape":1.8},{"wave":"sine","freq":80,"to":230,"vib":[22,2.5],"a":0.002,"d":0.3,"gain":0.4}],"gain":0.502};
-/** Push off a wall: scuff then rise */
+/** 벽 차고 점프: 스치고 상승 */
 export const wallJump: Sound = {"layers":[{"wave":"noise","bp":1200,"q":1.5,"a":0.001,"d":0.04,"shape":2,"gain":0.7},{"wave":"square","duty":0.3,"freq":330,"to":780,"curve":2,"at":0.02,"a":0.002,"d":0.12,"shape":2,"lp":3500}],"gain":0.688};
-/** Slide along the ground */
+/** 땅을 미끄러짐 */
 export const slide: Sound = {"vary":0.5,"varyF":1.5,"varyG":1,"layers":[{"wave":"noise","bp":1800,"bpTo":1000,"q":1,"a":0.02,"h":0.2,"d":0.15,"shape":-3,"drive":0.5},{"wave":"brown","lp":400,"a":0.02,"h":0.2,"d":0.15,"gain":0.4}],"gain":0.606};
-/** Cartoon falling whistle */
+/** 만화풍 낙하 휘파람 */
 export const fallWhistle: Sound = {"vary":0.3,"layers":[{"wave":"sine","freq":2000,"to":500,"curve":0.7,"vib":[6,0.3],"a":0.02,"h":0.8,"d":0.1,"shape":1.5,"gain":0.7},{"wave":"noise","bp":2000,"bpTo":500,"q":8,"kt":0,"a":0.02,"h":0.8,"d":0.1,"gain":0.1}],"gain":0.271};
-/** Solid all-round hit: click, body, thump */
+/** 무난한 전천후 타격: 클릭, 몸통, 쿵 */
 export const hit: Sound = {"varyF":2,"varyG":1.5,"verb":[0.15,0.08],"layers":[{"wave":"noise","bp":1800,"a":0.001,"d":0.01,"shape":-5,"gain":0.8},{"wave":"pink","lp":1500,"lpTo":300,"at":0.002,"a":0.001,"d":0.09,"shape":-6,"drive":2},{"wave":"sine","freq":160,"to":70,"at":0.003,"a":0.001,"d":0.22,"shape":-5,"drive":1,"gain":0.8},{"wave":"brown","lp":250,"at":0.01,"a":0.002,"d":0.35,"shape":-5,"gain":0.25}],"limit":1,"gain":0.777};
-/** Light jab or tap */
+/** 가벼운 잽이나 톡 */
 export const hitLight: Sound = {"varyF":2,"varyG":1.5,"layers":[{"wave":"noise","bp":2200,"q":1,"a":0.001,"d":0.008,"shape":-6,"drive":2,"gain":0.6},{"wave":"pink","bp":1500,"bpTo":600,"q":0.9,"at":0.001,"a":0.001,"d":0.11,"shape":-3,"drive":3},{"wave":"triangle","freq":300,"to":150,"at":0.002,"a":0.001,"d":0.08,"shape":-4,"drive":1,"gain":0.5},{"wave":"brown","lp":300,"at":0.005,"a":0.002,"d":0.12,"shape":-5,"gain":0.15}],"limit":1,"gain":1.04};
-/** Heavy blow with crunch and low end */
+/** 우지끈하고 저역이 실린 강타 */
 export const hitHeavy: Sound = {"varyF":2,"varyG":1.5,"verb":[0.35,0.15],"layers":[{"wave":"noise","bp":1600,"q":0.8,"a":0.001,"d":0.012,"shape":-5,"gain":0.7},{"wave":"crunch","freq":2600,"to":300,"a":0.001,"d":0.18,"shape":-4,"lp":4000,"drive":1,"gain":0.8},{"wave":"pink","bp":500,"bpTo":180,"q":0.9,"at":0.002,"a":0.001,"d":0.25,"shape":-5,"drive":2.5},{"wave":"sine","freq":120,"to":55,"at":0.003,"a":0.001,"d":0.3,"shape":-5,"drive":1.5,"gain":0.7},{"wave":"brown","lp":300,"at":0.01,"a":0.002,"d":0.45,"shape":-4,"gain":0.3}],"limit":1,"gain":0.658};
-/** Cartoon punch, meaty */
+/** 만화풍 묵직한 펀치 */
 export const punch: Sound = {"varyF":2,"varyG":1.5,"verb":[0.15,0.08],"layers":[{"wave":"noise","bp":1400,"a":0.001,"d":0.012,"shape":-5,"gain":0.6},{"wave":"pink","bp":1000,"bpTo":350,"q":0.9,"at":0.002,"a":0.001,"d":0.16,"shape":-6,"drive":2},{"wave":"sine","freq":140,"to":60,"at":0.004,"a":0.001,"d":0.25,"shape":-5,"drive":1.5,"gain":0.9},{"wave":"brown","lp":250,"at":0.01,"a":0.002,"d":0.3,"shape":-5,"gain":0.25}],"limit":1,"gain":0.764};
-/** Flat slap */
+/** 납작한 따귀 */
 export const slap: Sound = {"verb":[0.15,0.12],"layers":[{"wave":"noise","bp":3000,"q":0.8,"a":0.001,"h":0.01,"d":0.05,"shape":3,"drive":4},{"wave":"pink","bp":1100,"q":0.9,"a":0.001,"d":0.08,"shape":2.5,"drive":1.5,"gain":0.5},{"wave":"sine","freq":240,"to":140,"at":0.003,"a":0.001,"d":0.05,"shape":3,"drive":1,"gain":0.3}],"gain":0.494};
-/** Player takes damage: buzzy drop */
+/** 플레이어 피격: 지직거리며 떨어짐 */
 export const hurt: Sound = {"layers":[{"wave":"square","duty":0.5,"freq":520,"to":180,"curve":1.5,"a":0.001,"h":0.03,"d":0.17,"shape":2,"lp":3000,"drive":0.8},{"wave":"crunch","freq":1600,"to":500,"a":0.001,"d":0.12,"gain":0.35,"lp":3000}],"gain":0.398};
-/** Enemy flinches: short high blip and smack */
+/** 적이 움찔: 짧은 고음 블립과 탁 */
 export const enemyHit: Sound = {"layers":[{"wave":"square","duty":0.25,"freq":900,"to":450,"a":0.001,"h":0.02,"d":0.09,"shape":2,"lp":5000,"gain":0.8},{"wave":"noise","bp":3000,"a":0.001,"d":0.05,"shape":3,"drive":2},{"wave":"sine","freq":220,"to":110,"a":0.001,"d":0.07,"shape":2.5,"drive":1,"gain":0.6}],"limit":1,"gain":0.464};
-/** Enemy defeated: falling crushed tone */
+/** 적 처치: 뭉개지며 떨어지는 톤 */
 export const enemyDie: Sound = {"rate":11025,"layers":[{"wave":"square","duty":0.5,"freq":680,"to":70,"curve":1.2,"a":0.001,"h":0.03,"d":0.34,"shape":1.5,"lp":3000},{"wave":"crunch","freq":3000,"to":200,"a":0.001,"d":0.3,"gain":0.4}],"gain":0.347};
-/** Blade hits armour */
+/** 칼날이 갑옷을 침 */
 export const swordHit: Sound = {"vary":0.8,"varyF":2,"varyG":1.5,"verb":[0.3,0.18],"layers":[{"wave":"noise","hp":2000,"a":0.001,"d":0.006,"shape":-6,"gain":0.8},{"wave":"modal","freq":1550,"modes":[1,2.76,5.4,8.93],"a":0.001,"d":0.7,"shape":-4},{"wave":"modal","freq":2300,"modes":[1,1.47,2.09,2.56],"a":0.001,"d":0.45,"shape":-4,"gain":0.7},{"wave":"noise","bp":700,"q":3,"a":0.001,"d":0.05,"shape":-6,"drive":1,"gain":0.6},{"wave":"noise","bp":5000,"bpTo":2800,"q":3,"at":0.01,"a":0.005,"d":0.25,"shape":-4,"gain":0.25}],"limit":1,"gain":0.415};
-/** Shield block: dull metal clank */
+/** 방패 막기: 묵직한 금속 캉 */
 export const block: Sound = {"verb":[0.2,0.12],"layers":[{"wave":"metal","freq":420,"bp":1600,"q":1.5,"a":0.001,"d":0.25,"shape":3,"drive":1},{"wave":"noise","lp":2000,"a":0.001,"d":0.05,"shape":3,"drive":1.5,"gain":0.6},{"wave":"sine","freq":180,"to":100,"a":0.001,"d":0.14,"drive":1,"gain":0.7}],"limit":1,"gain":0.827};
-/** Critical hit: impact plus a bright ring */
+/** 치명타: 타격에 밝은 울림 추가 */
 export const crit: Sound = {"varyF":2,"varyG":1.5,"verb":[0.25,0.15],"layers":[{"wave":"noise","bp":2200,"q":0.8,"a":0.001,"d":0.01,"shape":-5,"gain":0.7},{"wave":"pink","bp":900,"bpTo":300,"q":0.9,"at":0.002,"a":0.001,"d":0.12,"shape":-6,"drive":2},{"wave":"sine","freq":150,"to":65,"at":0.003,"a":0.001,"d":0.2,"shape":-5,"drive":1,"gain":0.6},{"wave":"square","duty":0.25,"freq":1760,"arp":[0,12],"arpRate":0.05,"at":0.02,"a":0.001,"d":0.3,"shape":-4,"lp":6000,"kt":1,"gain":0.35}],"limit":1,"gain":0.918};
-/** Wet squish for slimes */
+/** 슬라임용 질척 으깨짐 */
 export const squish: Sound = {"layers":[{"wave":"noise","lp":1400,"lpTo":300,"q":3,"a":0.004,"d":0.18,"shape":2,"drive":1.5},{"wave":"sine","freq":300,"to":110,"vib":[30,2],"a":0.003,"d":0.14,"gain":0.5}],"limit":1,"gain":0.972};
-/** Cartoon bonk on the head */
+/** 머리를 때리는 만화풍 띵 */
 export const bonk: Sound = {"layers":[{"wave":"sine","freq":920,"to":330,"curve":2,"a":0.001,"d":0.12,"shape":2},{"wave":"triangle","freq":460,"to":165,"curve":2,"a":0.001,"d":0.1,"gain":0.5},{"wave":"noise","bp":1500,"a":0.001,"d":0.02,"gain":0.4}],"limit":1,"gain":0.994};
-/** Stomp on an enemy: squashy thump that springs up */
+/** 적 밟기: 으깨졌다 튀어 오르는 쿵 */
 export const stomp: Sound = {"layers":[{"wave":"sine","freq":520,"to":140,"curve":2,"a":0.001,"d":0.08,"shape":2.5,"drive":1},{"wave":"pink","lp":1600,"lpTo":400,"a":0.001,"d":0.06,"shape":3,"drive":1.5,"gain":0.7},{"wave":"square","duty":0.25,"freq":440,"to":1100,"curve":2,"at":0.05,"a":0.002,"d":0.09,"shape":2,"lp":4000,"gain":0.35}],"limit":1,"gain":0.87};
-/** Arrow thunks into wood */
+/** 화살이 나무에 콱 박힘 */
 export const arrowHit: Sound = {"varyF":2,"varyG":1,"layers":[{"wave":"noise","bp":1800,"q":2,"a":0.001,"d":0.008,"shape":-5,"drive":2,"gain":0.6},{"wave":"modal","freq":210,"modes":[1,2.32,4.25,6.63],"at":0.002,"a":0.001,"d":0.25,"shape":-4,"drive":1.5},{"wave":"noise","bp":320,"q":3,"a":0.001,"d":0.1,"shape":-4,"drive":1,"gain":0.8},{"wave":"pluck","freq":160,"at":0.005,"a":0.001,"d":0.35,"shape":-3,"damp":0.993,"blend":0.45,"lp":1500,"gain":0.5},{"wave":"brown","lp":300,"a":0.002,"d":0.12,"shape":-5,"gain":0.3}],"limit":1,"gain":0.907};
-/** Kick: low thump with a cloth snap */
+/** 킥: 낮은 쿵과 천 스냅 */
 export const kick: Sound = {"varyF":2,"varyG":1.5,"layers":[{"wave":"noise","bp":2500,"bpTo":1200,"q":1.2,"a":0.035,"d":0.02,"shape":1,"gain":0.4},{"wave":"noise","bp":3200,"q":2,"at":0.04,"a":0.001,"d":0.01,"shape":-6,"gain":0.3},{"wave":"pink","lp":1000,"lpTo":300,"at":0.04,"a":0.001,"d":0.09,"shape":-6,"drive":2},{"wave":"sine","freq":160,"to":70,"at":0.04,"a":0.001,"d":0.16,"shape":-5,"drive":1},{"wave":"brown","lp":250,"at":0.045,"a":0.002,"d":0.22,"shape":-5,"gain":0.3}],"limit":1,"gain":0.677};
-/** Blade stab into flesh: short wet thrust */
+/** 칼날 찌르기: 짧고 축축한 찌름 */
 export const stab: Sound = {"vary":0.8,"varyF":2,"varyG":1.5,"layers":[{"wave":"noise","bp":3500,"q":2,"a":0.001,"d":0.015,"shape":-5,"gain":0.6},{"wave":"noise","lp":1500,"lpTo":400,"q":3,"a":0.002,"d":0.14,"shape":-4,"drive":1.5},{"wave":"sine","freq":180,"to":90,"a":0.001,"d":0.1,"shape":-5,"gain":0.5}],"limit":1,"gain":0.911};
-/** Two blades clash and ring */
+/** 두 칼날이 부딪혀 울림 */
 export const swordClash: Sound = {"vary":0.6,"varyF":1.5,"verb":[0.35,0.2],"layers":[{"wave":"noise","hp":2500,"lp":9000,"a":0.001,"d":0.03,"shape":-5,"drive":0.5},{"wave":"modal","freq":1450,"modes":[1,2.756,5.404],"a":0.001,"d":0.8,"shape":-3,"gain":0.6},{"wave":"metal","freq":1100,"hp":3000,"lp":8000,"a":0.001,"d":0.5,"shape":-4,"gain":0.6},{"wave":"sine","freq":3300,"fm":[1.41,2,0.15],"vib":[7,0.1],"a":0.001,"d":0.7,"shape":-3,"gain":0.2}],"limit":1,"gain":0.66};
-/** Unsheathe a sword: metallic scrape that rings out */
+/** 검 뽑기: 길게 울리는 금속 스크레이프 */
 export const swordDraw: Sound = {"vary":0.4,"verb":[0.3,0.15],"layers":[{"wave":"noise","bp":4000,"bpTo":6500,"q":4,"a":0.05,"h":0.2,"d":0.1,"shape":-3,"gain":0.7},{"wave":"metal","freq":2200,"hp":4000,"a":0.05,"h":0.2,"d":0.1,"gain":0.25},{"wave":"modal","freq":1700,"modes":[1,2.756,5.404],"at":0.3,"a":0.001,"d":0.7,"shape":-3,"gain":0.4}],"gain":0.893};
-/** Body hits the floor */
+/** 몸이 바닥에 쓰러짐 */
 export const bodyFall: Sound = {"varyF":2,"varyG":1.5,"verb":[0.25,0.1],"layers":[{"wave":"pink","lp":900,"a":0.001,"d":0.1,"shape":-5,"drive":1.5},{"wave":"sine","freq":95,"to":40,"a":0.001,"d":0.25,"shape":-4,"drive":1},{"wave":"pink","lp":700,"at":0.13,"a":0.001,"d":0.07,"shape":-5,"gain":0.5},{"wave":"noise","bp":1600,"q":1,"at":0.13,"a":0.001,"d":0.02,"shape":-5,"gain":0.3}],"limit":1,"gain":0.739};
-/** Mid-size explosion: crack, rumble, tail */
+/** 중간 크기 폭발: 파열, 울림, 여운 */
 export const explosion: Sound = {"verb":[0.45,0.22],"layers":[{"wave":"noise","hp":1500,"a":0.001,"d":0.06,"shape":3,"gain":0.6},{"wave":"brown","lp":1100,"lpTo":140,"a":0.002,"d":1.1,"shape":2.5,"drive":1.2,"gain":1.4},{"wave":"sine","freq":110,"to":36,"curve":3,"a":0.001,"d":0.5,"shape":2,"drive":1},{"wave":"crunch","freq":3000,"to":300,"a":0.001,"d":0.35,"shape":3,"lp":5000,"gain":0.4}],"gain":0.299};
-/** Small pop of an explosion, grenades, barrels */
+/** 작은 펑 폭발, 수류탄, 드럼통 */
 export const explosionSmall: Sound = {"verb":[0.3,0.15],"layers":[{"wave":"noise","hp":1200,"a":0.001,"d":0.03,"shape":3,"gain":0.35},{"wave":"brown","lp":2500,"lpTo":200,"a":0.001,"d":0.5,"shape":2.5,"drive":1.5,"gain":1.4},{"wave":"noise","lp":4000,"lpTo":500,"a":0.001,"d":0.3,"shape":3,"drive":1,"gain":0.5},{"wave":"sine","freq":150,"to":45,"curve":3,"at":0.004,"a":0.001,"d":0.3,"shape":2,"drive":1.5,"gain":0.8}],"limit":1,"gain":0.533};
-/** Huge blast with a long rolling tail */
+/** 길게 울려 퍼지는 거대 폭발 */
 export const explosionBig: Sound = {"verb":[0.75,0.3],"layers":[{"wave":"noise","hp":1000,"a":0.001,"d":0.1,"shape":3,"gain":0.5},{"wave":"brown","lp":900,"lpTo":80,"a":0.003,"h":0.1,"d":2,"shape":2.2,"drive":2,"gain":1.6},{"wave":"sine","freq":80,"to":28,"curve":3,"a":0.001,"d":0.9,"shape":1.8,"drive":1.5},{"wave":"crunch","freq":2000,"to":120,"a":0.001,"d":0.8,"shape":2.5,"lp":3000,"gain":0.5},{"wave":"pink","bp":400,"bpTo":120,"a":0.2,"d":1.4,"shape":2,"gain":0.5}],"gain":0.229};
-/** 8-bit explosion, crunchy noise falling */
+/** 8비트 폭발, 거친 노이즈가 내려감 */
 export const explosionRetro: Sound = {"rate":22050,"layers":[{"wave":"crunch","freq":1800,"to":60,"curve":1.5,"a":0.001,"h":0.05,"d":0.7,"shape":1.8}],"gain":0.567};
-/** Far-off boom, muffled */
+/** 멀리서 들리는 먹먹한 굉음 */
 export const explosionDistant: Sound = {"verb":[0.8,0.4],"layers":[{"wave":"brown","lp":380,"lpTo":90,"a":0.015,"d":1.4,"shape":2.2,"gain":1.6},{"wave":"sine","freq":60,"to":30,"a":0.01,"d":0.8,"shape":2}],"limit":1,"gain":0.742};
-/** Firework pop with crackle */
+/** 불꽃놀이의 펑과 파파박 */
 export const firework: Sound = {"verb":[0.5,0.25],"layers":[{"wave":"noise","lp":3000,"lpTo":600,"a":0.001,"d":0.25,"shape":3},{"wave":"sine","freq":120,"to":45,"a":0.001,"d":0.2,"drive":1},{"wave":"noise","hp":3000,"at":0.18,"a":0.001,"d":0.012,"shape":2,"gain":0.5},{"wave":"noise","hp":3000,"at":0.23,"a":0.001,"d":0.012,"shape":2,"gain":0.5},{"wave":"noise","hp":3000,"at":0.26,"a":0.001,"d":0.012,"shape":2,"gain":0.5},{"wave":"noise","hp":3000,"at":0.31,"a":0.001,"d":0.012,"shape":2,"gain":0.5},{"wave":"noise","hp":3000,"at":0.37,"a":0.001,"d":0.012,"shape":2,"gain":0.5},{"wave":"noise","hp":3000,"at":0.4,"a":0.001,"d":0.012,"shape":2,"gain":0.5},{"wave":"noise","hp":3000,"at":0.46,"a":0.001,"d":0.012,"shape":2,"gain":0.5},{"wave":"noise","hp":3000,"at":0.55,"a":0.001,"d":0.012,"shape":2,"gain":0.5}],"limit":1,"gain":0.668};
-/** Reverse-feel suck-in then thump */
+/** 빨려 들어가는 느낌 후 쿵 */
 export const implosion: Sound = {"verb":[0.3,0.15],"layers":[{"wave":"noise","lp":300,"lpTo":6000,"a":0.45,"d":0.03,"shape":1,"gain":0.6},{"wave":"sine","freq":40,"to":200,"a":0.45,"d":0.02,"gain":0.5},{"wave":"sine","freq":120,"to":40,"at":0.47,"a":0.001,"d":0.25,"drive":1.5}],"gain":0.539};
-/** Rubble and debris settling */
+/** 잔해와 부스러기가 가라앉음 */
 export const debris: Sound = {"layers":[{"wave":"brown","lp":1200,"lpTo":300,"a":0.002,"d":0.6,"shape":2,"drive":1,"gain":0.9},{"wave":"noise","bp":900,"q":2,"at":0,"a":0.001,"d":0.04,"shape":3,"drive":1.5,"gain":0.7},{"wave":"noise","bp":1400,"q":2,"at":0.07,"a":0.001,"d":0.04,"shape":3,"drive":1.5,"gain":0.6299999999999999},{"wave":"noise","bp":700,"q":2,"at":0.12,"a":0.001,"d":0.04,"shape":3,"drive":1.5,"gain":0.5599999999999999},{"wave":"noise","bp":1800,"q":2,"at":0.2,"a":0.001,"d":0.04,"shape":3,"drive":1.5,"gain":0.48999999999999994},{"wave":"noise","bp":1100,"q":2,"at":0.26,"a":0.001,"d":0.04,"shape":3,"drive":1.5,"gain":0.41999999999999993},{"wave":"noise","bp":600,"q":2,"at":0.35,"a":0.001,"d":0.04,"shape":3,"drive":1.5,"gain":0.3499999999999999},{"wave":"noise","bp":1300,"q":2,"at":0.47,"a":0.001,"d":0.04,"shape":3,"drive":1.5,"gain":0.2799999999999999},{"wave":"sine","freq":160,"to":70,"at":0,"a":0.001,"d":0.08,"shape":2.5,"drive":1,"gain":0.5},{"wave":"sine","freq":160,"to":70,"at":0.12,"a":0.001,"d":0.08,"shape":2.5,"drive":1,"gain":0.5},{"wave":"sine","freq":160,"to":70,"at":0.26,"a":0.001,"d":0.08,"shape":2.5,"drive":1,"gain":0.5}],"limit":1,"gain":0.968};
-/** Energy shockwave, sci-fi */
+/** 에너지 충격파, SF */
 export const shockwave: Sound = {"verb":[0.5,0.2],"layers":[{"wave":"sine","freq":70,"to":30,"a":0.002,"d":0.8,"shape":2,"drive":1},{"wave":"noise","bp":3000,"bpTo":200,"q":2,"a":0.002,"d":0.6,"shape":2},{"wave":"saw","freq":220,"to":55,"lp":1500,"lpTo":200,"a":0.002,"d":0.5,"shape":2,"gain":0.4}],"gain":0.417};
-/** Lit fuse fizzing */
+/** 불붙은 도화선이 지지직 */
 export const bombFuse: Sound = {"varyF":2,"varyG":1,"layers":[{"wave":"noise","freq":1000,"arp":[0,19,7,24,3,14,0,22],"arpRate":0.037,"loop":true,"kt":1,"lp":2600,"hp":2000,"a":0.03,"h":0.85,"d":0.12,"shape":-3,"gain":0.8},{"wave":"noise","freq":1000,"arp":[12,0,17,5,24,9],"arpRate":0.023,"loop":true,"kt":1,"lp":3000,"hp":2500,"a":0.03,"h":0.85,"d":0.12,"shape":-3,"gain":0.5},{"wave":"crunch","freq":70,"hp":3000,"a":0.03,"h":0.9,"d":0.1,"shape":-3,"gain":0.35}],"gain":0.894};
-/** Classic power-up: fast arpeggio climbing two octaves */
+/** 고전 파워업: 두 옥타브 치솟는 빠른 아르페지오 */
 export const powerup: Sound = {"layers":[{"wave":"square","duty":0.5,"freq":392,"arp":[0,4,7,12,16,19,24],"arpRate":0.045,"a":0.002,"h":0.25,"d":0.15,"shape":2,"lp":5000},{"wave":"triangle","freq":196,"arp":[0,4,7,12,16,19,24],"arpRate":0.045,"a":0.002,"h":0.25,"d":0.15,"gain":0.5}],"gain":0.184};
-/** Rising warble, 8-bit style */
+/** 올라가는 떨림, 8비트 스타일 */
 export const powerupRetro: Sound = {"bits":6,"layers":[{"wave":"square","duty":0.25,"freq":200,"to":1300,"vib":[18,1],"a":0.002,"h":0.3,"d":0.15,"shape":2}],"gain":0.201};
-/** Level up: chord, sparkle and hold */
+/** 레벨 업: 코드, 반짝임과 유지 */
 export const levelUp: Sound = {"verb":[0.45,0.25],"layers":[{"wave":"triangle","freq":523,"arp":[0,4,7,12],"arpRate":0.08,"a":0.003,"h":0.35,"d":0.45,"shape":2,"vib":[5.5,0.12]},{"wave":"square","duty":0.25,"freq":1046,"arp":[0,4,7,12],"arpRate":0.08,"a":0.003,"h":0.3,"d":0.4,"lp":4000,"gain":0.3},{"wave":"sine","freq":2093,"fm":[2,1,0.2],"at":0.32,"a":0.002,"d":0.6,"shape":3,"gain":0.35}],"gain":0.223};
-/** 1-up style six-note phrase */
+/** 1UP 스타일 여섯 음 구절 */
 export const extraLife: Sound = {"layers":[{"wave":"square","duty":0.5,"freq":659,"arp":[0,3,12,8,10,15],"arpRate":0.085,"a":0.002,"h":0.45,"d":0.1,"shape":2,"lp":5000},{"wave":"triangle","freq":330,"arp":[0,3,12,8,10,15],"arpRate":0.085,"a":0.002,"h":0.45,"d":0.1,"gain":0.4}],"gain":0.154};
-/** Energy shield raises */
+/** 에너지 방어막 전개 */
 export const shieldOn: Sound = {"verb":[0.3,0.15],"layers":[{"wave":"saw","freq":110,"to":220,"lp":300,"lpTo":4500,"q":3,"a":0.01,"h":0.15,"d":0.25,"shape":2},{"wave":"sine","freq":440,"to":880,"vib":[9,0.3],"a":0.01,"h":0.15,"d":0.25,"gain":0.5}],"gain":0.283};
-/** Shield drops or breaks down */
+/** 방어막 꺼짐 또는 붕괴 */
 export const shieldOff: Sound = {"layers":[{"wave":"saw","freq":220,"to":90,"lp":4000,"lpTo":300,"q":3,"a":0.005,"d":0.4,"shape":2},{"wave":"noise","bp":3000,"bpTo":600,"a":0.005,"d":0.3,"gain":0.3}],"limit":1,"gain":0.618};
-/** Speed boost: fast whirring rise */
+/** 스피드 부스트: 빠르게 윙 올라감 */
 export const speedUp: Sound = {"layers":[{"wave":"square","duty":0.3,"freq":300,"to":1500,"vib":[28,0.8],"a":0.003,"h":0.1,"d":0.2,"shape":2,"lp":5000},{"wave":"noise","bp":1000,"bpTo":6000,"a":0.05,"d":0.25,"gain":0.3}],"gain":0.299};
-/** Healing: soft rising chime with shimmer */
+/** 치유: 반짝임을 동반한 부드럽게 올라가는 차임 */
 export const heal: Sound = {"verb":[0.6,0.3],"layers":[{"wave":"sine","freq":523,"arp":[0,4,7,11,14],"arpRate":0.09,"a":0.01,"h":0.35,"d":0.5,"shape":2,"vib":[5,0.1]},{"wave":"sine","freq":1568,"fm":[2,1.2,0.3],"arp":[0,4,7,11,14],"arpRate":0.09,"a":0.01,"h":0.3,"d":0.4,"gain":0.3}],"gain":0.179};
-/** Charging a shot, rising tension */
+/** 샷 차징, 차오르는 긴장 */
 export const chargeUp: Sound = {"layers":[{"wave":"saw","freq":90,"to":720,"curve":0.7,"lp":400,"lpTo":6000,"q":4,"a":0.6,"h":0.3,"d":0.08,"shape":1},{"wave":"sine","freq":180,"to":1440,"curve":0.7,"vib":[12,0.3],"a":0.6,"h":0.3,"d":0.08,"gain":0.4}],"gain":0.215};
-/** Lose a power: arpeggio falling */
+/** 파워 상실: 내려가는 아르페지오 */
 export const powerDown: Sound = {"layers":[{"wave":"square","duty":0.5,"freq":784,"arp":[0,-3,-7,-12,-15,-19],"arpRate":0.055,"a":0.002,"h":0.28,"d":0.1,"shape":2,"lp":4000},{"wave":"triangle","freq":392,"arp":[0,-3,-7,-12,-15,-19],"arpRate":0.055,"a":0.002,"h":0.28,"d":0.1,"gain":0.4}],"gain":0.188};
-/** New ability unlocked */
+/** 새 능력 잠금 해제 */
 export const unlock: Sound = {"verb":[0.4,0.22],"layers":[{"wave":"metal","freq":900,"bp":3000,"a":0.001,"d":0.06,"gain":0.5},{"wave":"triangle","freq":659,"arp":[0,7,12,19],"arpRate":0.07,"at":0.05,"a":0.002,"h":0.2,"d":0.4,"shape":2},{"wave":"sine","freq":2637,"fm":[2,1,0.2],"at":0.26,"a":0.002,"d":0.5,"shape":3,"gain":0.3}],"gain":0.267};
-/** Invincibility: looping bright arpeggio */
+/** 무적: 밝은 아르페지오 루프 */
 export const invincible: Sound = {"layers":[{"wave":"square","duty":0.25,"freq":784,"arp":[0,4,7,12],"arpRate":0.035,"loop":true,"a":0.002,"h":0.6,"d":0.3,"shape":1.5,"lp":6000},{"wave":"triangle","freq":392,"arp":[0,7],"arpRate":0.07,"loop":true,"a":0.002,"h":0.6,"d":0.3,"gain":0.5}],"gain":0.159};
-/** Classic laser: fast square sweep down */
+/** 고전 레이저: 빠르게 내려가는 스퀘어 스윕 */
 export const laser: Sound = {"vary":0.8,"varyF":2,"varyG":1.5,"layers":[{"wave":"square","duty":0.5,"freq":1500,"to":220,"curve":3,"a":0.001,"d":0.2,"shape":1.8,"lp":7500,"kt":1},{"wave":"saw","freq":750,"to":110,"curve":3,"a":0.001,"d":0.17,"lp":3500,"kt":1,"gain":0.4}],"gain":0.497};
-/** Rounder laser for cute shooters */
+/** 귀여운 슈터용 둥근 레이저 */
 export const laserSoft: Sound = {"layers":[{"wave":"sine","freq":1400,"to":300,"curve":3,"a":0.001,"d":0.16,"shape":2,"fm":[0.5,1.5,0.08]}],"gain":0.79};
-/** Thick laser cannon */
+/** 묵직한 레이저 캐논 */
 export const laserHeavy: Sound = {"verb":[0.25,0.12],"echo":[0.07,0.3,0.18],"layers":[{"wave":"saw","freq":900,"to":70,"curve":2.5,"a":0.001,"d":0.4,"shape":1.8,"lp":4000,"lpTo":500,"drive":1.5},{"wave":"square","duty":0.3,"freq":450,"to":35,"curve":2.5,"a":0.001,"d":0.35,"lp":1500,"gain":0.6},{"wave":"noise","hp":2500,"a":0.001,"d":0.05,"gain":0.3}],"gain":0.319};
-/** Sci-fi blaster bolt */
+/** SF 블래스터 탄 */
 export const blaster: Sound = {"echo":[0.07,0.3,0.18],"layers":[{"wave":"square","duty":0.25,"freq":950,"to":160,"curve":2.5,"a":0.001,"d":0.14,"shape":2,"lp":5000,"kt":1},{"wave":"noise","bp":3000,"q":0.8,"a":0.001,"d":0.05,"shape":3,"gain":0.6},{"wave":"sine","freq":180,"to":60,"a":0.001,"d":0.08,"gain":0.6}],"limit":1,"gain":0.689};
-/** Electric zap */
+/** 전기 지직 */
 export const zap: Sound = {"vary":1,"varyF":2,"varyG":1.5,"layers":[{"wave":"crunch","freq":6000,"to":1500,"hp":1200,"lp":9000,"a":0.001,"d":0.15,"shape":-3,"drive":3,"gain":0.8},{"wave":"saw","freq":2600,"to":500,"vib":[60,3],"hp":400,"lp":6000,"kt":1,"a":0.001,"d":0.1,"shape":-4,"gain":0.5},{"wave":"square","duty":0.1,"freq":120,"bp":1500,"q":2,"a":0.001,"d":0.12,"shape":-4,"gain":0.5}],"limit":1,"gain":0.722};
-/** Tiny pew for bullet-hell spam */
+/** 탄막 연사용 작은 퓨 */
 export const pew: Sound = {"vary":1,"varyF":2,"varyG":1.5,"layers":[{"wave":"square","duty":0.25,"freq":2100,"to":600,"curve":4,"a":0.001,"d":0.08,"shape":2,"hp":150,"lp":7000,"kt":1}],"limit":1,"gain":0.785};
-/** Pistol shot with room tail */
+/** 방 안 여운이 있는 권총 발사 */
 export const gunshot: Sound = {"varyF":2,"varyG":1.5,"verb":[0.25,0.2],"layers":[{"wave":"noise","bp":2500,"q":0.7,"a":0.001,"d":0.02,"shape":-6,"drive":3,"gain":0.6},{"wave":"noise","bp":1100,"q":1,"a":0.001,"d":0.1,"shape":-4,"drive":3},{"wave":"noise","hp":150,"lp":7000,"lpTo":1200,"a":0.001,"d":0.18,"shape":-5,"drive":2},{"wave":"sine","freq":180,"to":80,"curve":3,"a":0.001,"d":0.1,"shape":-5,"drive":2,"gain":0.5},{"wave":"pink","bp":1400,"q":1,"a":0.001,"d":0.22,"shape":-4,"gain":0.3}],"limit":1,"gain":0.477};
-/** Shotgun blast, wide and heavy */
+/** 산탄총 발사, 넓고 묵직함 */
 export const shotgun: Sound = {"verb":[0.45,0.22],"layers":[{"wave":"noise","hp":300,"lp":8000,"lpTo":1500,"a":0.001,"d":0.4,"shape":3.5,"drive":2.5,"gain":1.2},{"wave":"sine","freq":120,"to":40,"curve":3,"a":0.001,"d":0.22,"drive":2},{"wave":"brown","lp":600,"a":0.001,"d":0.35,"gain":0.7}],"gain":0.273};
-/** 8-bit shot */
+/** 8비트 발사 */
 export const shootRetro: Sound = {"rate":16000,"layers":[{"wave":"crunch","freq":3000,"to":600,"a":0.001,"d":0.14,"shape":2,"drive":1},{"wave":"square","freq":600,"to":150,"a":0.001,"d":0.1,"drive":1,"gain":0.6}],"gain":0.428};
-/** Charge whine, then a piercing shot */
+/** 충전 윙 소리 후 꿰뚫는 발사 */
 export const railgun: Sound = {"echo":[0.09,0.3,0.15],"verb":[0.4,0.2],"layers":[{"wave":"sine","freq":600,"to":3200,"a":0.25,"d":0.02,"shape":1,"gain":0.35},{"wave":"saw","freq":3200,"to":140,"curve":3,"at":0.26,"a":0.001,"d":0.35,"shape":2,"lp":7000,"lpTo":800},{"wave":"noise","hp":2000,"at":0.26,"a":0.001,"d":0.2,"gain":0.5},{"wave":"sine","freq":100,"to":40,"at":0.26,"a":0.001,"d":0.2,"drive":1}],"gain":0.36};
-/** Warbling ray gun */
+/** 떨리는 광선총 */
 export const ray: Sound = {"layers":[{"wave":"sine","freq":900,"to":300,"fm":[0.5,6,0.3],"vib":[11,1],"a":0.004,"h":0.15,"d":0.25,"shape":2}],"gain":0.291};
-/** Plasma ball launch */
+/** 플라즈마 볼 발사 */
 export const plasma: Sound = {"layers":[{"wave":"saw","freq":300,"to":120,"lp":3000,"lpTo":600,"q":4,"vib":[25,1],"a":0.003,"d":0.3,"shape":2},{"wave":"noise","bp":2400,"bpTo":800,"q":2,"a":0.003,"d":0.2,"gain":0.4}],"limit":1,"gain":0.598};
-/** Rocket launch whoosh */
+/** 로켓 발사 휘잉 */
 export const missile: Sound = {"layers":[{"wave":"noise","bp":600,"bpTo":3500,"q":1.2,"a":0.02,"h":0.3,"d":0.4,"shape":2,"drive":0.5},{"wave":"brown","lp":400,"a":0.002,"d":0.5,"gain":0.7},{"wave":"sine","freq":300,"to":900,"a":0.05,"h":0.25,"d":0.3,"gain":0.15}],"gain":0.608};
-/** Bullet ricochet: sharp tick and a falling whine */
+/** 총알 도탄: 날카로운 틱과 떨어지는 윙 */
 export const ricochet: Sound = {"verb":[0.3,0.15],"layers":[{"wave":"noise","bp":3000,"q":1,"a":0.001,"d":0.012,"shape":3,"drive":2,"gain":0.6},{"wave":"metal","freq":1800,"hp":3000,"a":0.001,"d":0.05,"shape":3,"gain":0.35},{"wave":"sine","freq":3400,"to":1500,"curve":0.8,"vib":[28,0.25],"at":0.008,"a":0.004,"d":0.4,"shape":2},{"wave":"triangle","freq":1700,"to":750,"curve":0.8,"vib":[28,0.25],"at":0.008,"a":0.004,"d":0.3,"shape":2.5,"gain":0.25}],"gain":0.333};
-/** Empty gun: the hammer clicks, nothing fires */
+/** 빈 총: 해머만 딸깍, 발사 없음 */
 export const dryFire: Sound = {"verb":[0.15,0.1],"layers":[{"wave":"metal","freq":1200,"bp":3500,"q":2,"a":0.001,"h":0.006,"d":0.03,"shape":3,"drive":4},{"wave":"sine","freq":320,"to":200,"at":0.002,"a":0.001,"d":0.04,"shape":3,"drive":1,"gain":0.4},{"wave":"metal","freq":1500,"bp":4000,"q":2,"at":0.06,"a":0.001,"d":0.02,"shape":3,"drive":2,"gain":0.5}],"limit":1,"gain":0.987};
-/** Reload: two metal clicks */
+/** 재장전: 금속 딸깍 두 번 */
 export const reload: Sound = {"layers":[{"wave":"metal","freq":1100,"bp":3500,"q":2,"a":0.001,"d":0.06,"shape":3,"drive":2},{"wave":"noise","bp":1500,"q":2,"at":0.005,"a":0.001,"d":0.03,"gain":0.4},{"wave":"metal","freq":800,"bp":2400,"q":2,"at":0.22,"a":0.001,"d":0.09,"shape":3,"drive":2},{"wave":"noise","bp":1100,"q":2,"at":0.225,"a":0.001,"d":0.04,"gain":0.5},{"wave":"sine","freq":200,"to":140,"at":0.22,"a":0.001,"d":0.05,"gain":0.4}],"limit":1,"gain":0.829};
-/** Bowstring released */
+/** 활시위 놓기 */
 export const bowTwang: Sound = {"vary":1,"varyF":2,"layers":[{"wave":"pluck","freq":98,"a":0.001,"d":0.45,"shape":-3,"damp":0.994,"blend":0.46,"lp":2200},{"wave":"noise","bp":1500,"a":0.001,"d":0.012,"shape":-5,"gain":0.5},{"wave":"noise","bp":900,"bpTo":2600,"q":2,"at":0.02,"a":0.03,"d":0.12,"shape":-3,"gain":0.25}],"limit":1,"gain":2.14};
-/** Automatic burst, five rounds */
+/** 자동 연사, 다섯 발 */
 export const machineGun: Sound = {"vary":0.3,"varyF":1.5,"verb":[0.3,0.12],"layers":[{"wave":"noise","hp":300,"lp":6000,"lpTo":1500,"at":0,"a":0.001,"d":0.05,"shape":-5,"drive":2,"gain":0.9},{"wave":"sine","freq":150,"to":60,"at":0,"a":0.001,"d":0.06,"shape":-5,"drive":1.5,"gain":0.7},{"wave":"brown","lp":600,"at":0,"a":0.001,"d":0.08,"shape":-4,"gain":0.4},{"wave":"noise","hp":300,"lp":6000,"lpTo":1500,"at":0.075,"a":0.001,"d":0.05,"shape":-5,"drive":2,"gain":0.8},{"wave":"sine","freq":150,"to":60,"at":0.075,"a":0.001,"d":0.06,"shape":-5,"drive":1.5,"gain":0.7},{"wave":"brown","lp":600,"at":0.075,"a":0.001,"d":0.08,"shape":-4,"gain":0.4},{"wave":"noise","hp":300,"lp":6000,"lpTo":1500,"at":0.15,"a":0.001,"d":0.05,"shape":-5,"drive":2,"gain":0.9},{"wave":"sine","freq":150,"to":60,"at":0.15,"a":0.001,"d":0.06,"shape":-5,"drive":1.5,"gain":0.7},{"wave":"brown","lp":600,"at":0.15,"a":0.001,"d":0.08,"shape":-4,"gain":0.4},{"wave":"noise","hp":300,"lp":6000,"lpTo":1500,"at":0.225,"a":0.001,"d":0.05,"shape":-5,"drive":2,"gain":0.8},{"wave":"sine","freq":150,"to":60,"at":0.225,"a":0.001,"d":0.06,"shape":-5,"drive":1.5,"gain":0.7},{"wave":"brown","lp":600,"at":0.225,"a":0.001,"d":0.08,"shape":-4,"gain":0.4},{"wave":"noise","hp":300,"lp":6000,"lpTo":1500,"at":0.3,"a":0.001,"d":0.05,"shape":-5,"drive":2,"gain":0.9},{"wave":"sine","freq":150,"to":60,"at":0.3,"a":0.001,"d":0.06,"shape":-5,"drive":1.5,"gain":0.7},{"wave":"brown","lp":600,"at":0.3,"a":0.001,"d":0.08,"shape":-4,"gain":0.4}],"gain":0.534};
-/** Brass shell casings tinkle on the floor */
+/** 황동 탄피가 바닥에 찰랑거림 */
 export const shellCasing: Sound = {"vary":1,"varyF":2,"varyG":2,"layers":[{"wave":"modal","freq":3200,"modes":[1,2.756,5.404],"at":0,"a":0.001,"d":0.12,"shape":-5,"gain":1},{"wave":"modal","freq":3450,"modes":[1,2.756,5.404],"at":0.08,"a":0.001,"d":0.12,"shape":-5,"gain":0.7},{"wave":"modal","freq":3700,"modes":[1,2.756,5.404],"at":0.13,"a":0.001,"d":0.12,"shape":-5,"gain":0.4}],"gain":0.527};
-/** Flamethrower burst: roaring hiss */
+/** 화염방사: 포효하는 씽 소리 */
 export const flamethrower: Sound = {"vary":0.3,"varyF":2,"layers":[{"wave":"noise","bp":1200,"q":0.7,"a":0.05,"h":0.5,"d":0.3,"shape":-3,"drive":1.5},{"wave":"brown","lp":500,"a":0.05,"h":0.5,"d":0.3,"shape":-3,"drive":1,"gain":0.8},{"wave":"noise","bp":3000,"q":2,"at":0.06,"a":0.001,"d":0.01,"shape":-5,"gain":0.3},{"wave":"noise","bp":3000,"q":2,"at":0.15,"a":0.001,"d":0.01,"shape":-5,"gain":0.3},{"wave":"noise","bp":3000,"q":2,"at":0.24,"a":0.001,"d":0.01,"shape":-5,"gain":0.3},{"wave":"noise","bp":3000,"q":2,"at":0.33,"a":0.001,"d":0.01,"shape":-5,"gain":0.3},{"wave":"noise","bp":3000,"q":2,"at":0.42,"a":0.001,"d":0.01,"shape":-5,"gain":0.3},{"wave":"noise","bp":3000,"q":2,"at":0.51,"a":0.001,"d":0.01,"shape":-5,"gain":0.3},{"wave":"noise","bp":3000,"q":2,"at":0.6000000000000001,"a":0.001,"d":0.01,"shape":-5,"gain":0.3},{"wave":"noise","bp":3000,"q":2,"at":0.69,"a":0.001,"d":0.01,"shape":-5,"gain":0.3}],"gain":0.289};
-/** Grenade launcher: hollow thoomp */
+/** 유탄발사기: 빈 쿵 소리 */
 export const grenadeLaunch: Sound = {"vary":0.5,"varyF":1.5,"verb":[0.3,0.12],"layers":[{"wave":"sine","freq":220,"to":70,"curve":2,"a":0.001,"d":0.2,"shape":-4,"drive":1.5},{"wave":"noise","bp":700,"q":2,"a":0.001,"d":0.08,"shape":-5,"drive":1},{"wave":"noise","bp":2500,"bpTo":1000,"q":1.5,"at":0.04,"a":0.01,"d":0.25,"shape":-3,"gain":0.3}],"gain":0.601};
-/** Soft step on grass */
+/** 풀 위 부드러운 발소리 */
 export const stepGrass: Sound = {"vary":1.5,"varyF":4,"varyG":2,"layers":[{"wave":"pink","lp":450,"lpTo":225,"a":0.001,"d":0.08,"shape":-6,"drive":0.5,"gain":0.8},{"wave":"pink","bp":1100,"q":0.8,"a":0.008,"d":0.14,"shape":-4,"gain":0.55},{"wave":"pink","hp":2000,"lp":5000,"at":0.01,"a":0.01,"d":0.12,"shape":-4,"gain":0.25},{"wave":"crunch","freq":7000,"hp":3000,"at":0.012,"a":0.01,"d":0.08,"shape":-4,"gain":0.1},{"wave":"brown","lp":220,"a":0.002,"d":0.24,"shape":-4,"gain":0.3}],"limit":1,"gain":2.3};
-/** Hard sole on stone */
+/** 돌 위 딱딱한 신발 발소리 */
 export const stepStone: Sound = {"vary":1.5,"varyF":4,"varyG":2,"layers":[{"wave":"pink","lp":600,"lpTo":300,"a":0.001,"d":0.07,"shape":-6,"drive":0.5,"gain":1},{"wave":"noise","bp":1800,"q":1.2,"at":0.004,"a":0.001,"d":0.03,"shape":-5,"drive":1,"gain":0.35},{"wave":"noise","bp":520,"q":10,"a":0.001,"d":0.06,"shape":-5,"gain":0.5},{"wave":"brown","lp":220,"a":0.002,"d":0.24,"shape":-4,"gain":0.25}],"limit":1,"gain":1.76};
-/** Step on a wooden floor */
+/** 나무 바닥 발소리 */
 export const stepWood: Sound = {"vary":1.5,"varyF":3,"varyG":1.2,"layers":[{"wave":"pink","lp":500,"lpTo":250,"a":0.001,"d":0.08,"shape":-6,"drive":0.5,"gain":0.8},{"wave":"modal","freq":180,"modes":[1,2.3,4.1],"a":0.001,"d":0.16,"shape":-4,"drive":1,"gain":0.8},{"wave":"noise","bp":350,"q":2,"a":0.001,"d":0.08,"shape":-4,"drive":1,"gain":0.7},{"wave":"noise","bp":1800,"q":1.2,"at":0.006,"a":0.001,"d":0.025,"shape":-5,"gain":0.25},{"wave":"brown","lp":220,"a":0.002,"d":0.24,"shape":-4,"gain":0.2}],"limit":1,"gain":0.874};
-/** Step on a metal grate */
+/** 금속 격자 위 발소리 */
 export const stepMetal: Sound = {"vary":1.5,"varyF":4,"varyG":2,"verb":[0.2,0.15],"layers":[{"wave":"pink","lp":550,"lpTo":275,"a":0.001,"d":0.07,"shape":-6,"drive":0.5,"gain":0.8},{"wave":"modal","freq":420,"modes":[1,2.76,5.4,8.93],"a":0.001,"d":0.3,"shape":-4,"gain":0.35},{"wave":"metal","freq":600,"hp":1800,"a":0.001,"d":0.12,"shape":-5,"gain":0.35},{"wave":"noise","bp":1500,"a":0.001,"d":0.03,"shape":-5,"gain":0.4}],"limit":1,"gain":1.52};
-/** Crunchy step in snow */
+/** 눈 위 뽀득한 발소리 */
 export const stepSnow: Sound = {"vary":1.5,"varyF":4,"varyG":2,"layers":[{"wave":"pink","lp":400,"lpTo":200,"a":0.001,"d":0.08,"shape":-6,"drive":0.5,"gain":0.6},{"wave":"crunch","freq":9000,"hp":1200,"lp":7000,"a":0.02,"d":0.15,"shape":-3,"gain":0.8},{"wave":"pink","lp":1500,"a":0.02,"d":0.12,"shape":-4,"gain":0.5}],"limit":1,"gain":0.747};
-/** Step on loose gravel */
+/** 자갈 위 발소리 */
 export const stepGravel: Sound = {"vary":1.5,"varyF":4,"varyG":2,"layers":[{"wave":"pink","lp":500,"lpTo":250,"a":0.001,"d":0.08,"shape":-6,"drive":0.5,"gain":0.8},{"wave":"crunch","freq":3000,"hp":900,"lp":4500,"a":0.005,"d":0.12,"shape":-4,"drive":1,"gain":0.6},{"wave":"noise","bp":1400,"q":3,"at":0.02,"a":0.001,"d":0.02,"shape":-5,"gain":0.45},{"wave":"noise","bp":2200,"q":3,"at":0.045,"a":0.001,"d":0.02,"shape":-5,"gain":0.38},{"wave":"noise","bp":1700,"q":3,"at":0.07,"a":0.001,"d":0.02,"shape":-5,"gain":0.31},{"wave":"noise","bp":2600,"q":3,"at":0.1,"a":0.001,"d":0.02,"shape":-5,"gain":0.24},{"wave":"brown","lp":220,"a":0.002,"d":0.24,"shape":-4,"gain":0.2}],"limit":1,"gain":1.16};
-/** Splashy step in a puddle */
+/** 물웅덩이 첨벙 발소리 */
 export const stepWater: Sound = {"vary":1.5,"varyF":4,"varyG":2,"layers":[{"wave":"pink","lp":450,"lpTo":225,"a":0.001,"d":0.07,"shape":-6,"drive":0.5,"gain":0.6},{"wave":"noise","bp":1300,"bpTo":500,"q":1.5,"a":0.004,"d":0.15,"shape":-3},{"wave":"sine","freq":350,"to":900,"curve":3,"at":0.03,"a":0.002,"d":0.06,"shape":3,"gain":0.35}],"limit":1,"gain":1.78};
-/** Muffled step in sand */
+/** 모래 위 먹먹한 발소리 */
 export const stepSand: Sound = {"vary":1.5,"varyF":4,"varyG":2,"layers":[{"wave":"pink","lp":400,"lpTo":200,"a":0.001,"d":0.09,"shape":-6,"drive":0.5,"gain":0.7},{"wave":"pink","hp":400,"lp":2600,"a":0.015,"d":0.14,"shape":-3},{"wave":"noise","hp":3000,"lp":7000,"at":0.02,"a":0.02,"d":0.08,"shape":-4,"gain":0.12}],"limit":1,"gain":1.65};
-/** 8-bit footstep tick */
+/** 8비트 발소리 틱 */
 export const stepRetro: Sound = {"vary":2,"bits":4,"layers":[{"wave":"crunch","freq":4000,"a":0.001,"d":0.035,"shape":2}],"gain":0.773};
-/** Heavy creature stomp */
+/** 무거운 크리처의 쿵쿵 걸음 */
 export const stepHeavy: Sound = {"vary":1,"varyF":3,"varyG":1.5,"verb":[0.2,0.12],"layers":[{"wave":"pink","lp":700,"lpTo":300,"a":0.001,"d":0.15,"shape":-5,"drive":1.5},{"wave":"noise","bp":240,"q":2.5,"a":0.001,"d":0.14,"shape":-4,"drive":1,"gain":1.2},{"wave":"noise","bp":520,"q":2,"a":0.001,"d":0.07,"shape":-5,"gain":0.6},{"wave":"sine","freq":90,"to":45,"a":0.002,"d":0.25,"shape":-5,"drive":1,"gain":0.3},{"wave":"noise","bp":900,"a":0.001,"d":0.04,"shape":-5,"gain":0.3},{"wave":"brown","lp":220,"a":0.002,"d":0.24,"shape":-4,"gain":0.35}],"limit":1,"gain":0.973};
-/** Muffled step on carpet or rug */
+/** 카펫이나 러그 위 먹먹한 발소리 */
 export const stepCarpet: Sound = {"vary":1.5,"varyF":4,"varyG":2,"layers":[{"wave":"pink","lp":400,"lpTo":200,"a":0.004,"d":0.08,"shape":-6},{"wave":"noise","bp":1200,"q":1,"a":0.004,"d":0.04,"shape":-5,"gain":0.25},{"wave":"brown","lp":200,"a":0.004,"d":0.15,"shape":-4,"gain":0.3}],"limit":1,"gain":2.12};
-/** Squelchy step in mud */
+/** 진흙 위 질척한 발소리 */
 export const stepMud: Sound = {"vary":1.5,"varyF":2,"varyG":1.5,"layers":[{"wave":"pink","lp":500,"a":0.003,"d":0.08,"shape":-6},{"wave":"noise","lp":1200,"lpTo":300,"q":4,"a":0.01,"d":0.15,"shape":-3,"drive":1,"gain":0.6},{"wave":"sine","freq":220,"to":120,"vib":[28,2],"at":0.04,"a":0.005,"d":0.1,"shape":-3,"gain":0.3}],"gain":1.05};
-/** Twinkling sparkle */
+/** 반짝반짝 스파클 */
 export const sparkle: Sound = {"echo":[0.11,0.4,0.35],"layers":[{"wave":"sine","freq":2637,"arp":[0,7,12,19,24,19],"arpRate":0.035,"a":0.001,"h":0.18,"d":0.15,"shape":2,"fm":[1.5,0.6,0.1]},{"wave":"noise","hp":7000,"lp":12000,"a":0.01,"h":0.15,"d":0.15,"gain":0.12}],"gain":0.205};
-/** Generic spell: swell and release */
+/** 일반 주문: 부풀었다 방출 */
 export const spellCast: Sound = {"verb":[0.55,0.3],"layers":[{"wave":"saw","freq":220,"to":440,"lp":400,"lpTo":5000,"q":3,"a":0.15,"d":0.35,"shape":2,"vib":[6,0.2]},{"wave":"noise","bp":1500,"bpTo":6000,"q":2,"a":0.15,"d":0.3,"gain":0.35},{"wave":"sine","freq":1760,"fm":[2,1,0.2],"at":0.15,"a":0.002,"d":0.5,"shape":3,"gain":0.3}],"gain":0.309};
-/** Fireball whoosh with roar */
+/** 화염구 휘릭과 포효 */
 export const fireball: Sound = {"verb":[0.3,0.15],"layers":[{"wave":"noise","bp":700,"bpTo":2200,"q":0.8,"a":0.05,"h":0.1,"d":0.4,"shape":2,"drive":1.5},{"wave":"brown","lp":600,"a":0.02,"d":0.5,"gain":0.8,"drive":1},{"wave":"crunch","freq":180,"hp":2500,"a":0.05,"d":0.45,"gain":0.25}],"gain":0.465};
-/** Ice spell: crack and glassy ring */
+/** 얼음 마법: 갈라짐과 유리 같은 울림 */
 export const ice: Sound = {"verb":[0.5,0.3],"layers":[{"wave":"noise","hp":4000,"a":0.001,"d":0.04,"gain":0.6},{"wave":"sine","freq":3520,"fm":[1.41,3,0.15],"a":0.001,"d":0.6,"shape":3},{"wave":"sine","freq":4699,"fm":[1.73,2,0.1],"at":0.04,"a":0.001,"d":0.5,"shape":3,"gain":0.6},{"wave":"metal","freq":3000,"hp":6000,"a":0.001,"d":0.3,"shape":3,"gain":0.2}],"gain":0.277};
-/** Teleport: fast warble upward */
+/** 텔레포트: 빠르게 위로 떨림 */
 export const teleport: Sound = {"echo":[0.06,0.4,0.3],"layers":[{"wave":"sine","freq":220,"to":2200,"vib":[24,2],"a":0.005,"h":0.15,"d":0.15,"shape":2},{"wave":"triangle","freq":440,"to":4400,"vib":[24,2],"a":0.005,"h":0.15,"d":0.12,"gain":0.25}],"gain":0.33};
-/** Portal opens: deep swirling hum */
+/** 포탈 열림: 깊게 소용돌이치는 험 */
 export const portal: Sound = {"verb":[0.6,0.3],"layers":[{"wave":"saw","freq":55,"vib":[3,0.6],"lp":200,"lpTo":1800,"q":5,"a":0.4,"h":0.4,"d":0.6,"shape":2},{"wave":"saw","freq":55.8,"vib":[3.3,0.6],"lp":250,"lpTo":2200,"q":5,"a":0.4,"h":0.4,"d":0.6,"shape":2},{"wave":"sine","freq":880,"vib":[6,1],"a":0.3,"h":0.4,"d":0.6,"gain":0.15}],"gain":0.192};
-/** Lightning strike: crack and rumble */
+/** 번개 강타: 파열과 울림 */
 export const lightning: Sound = {"verb":[0.7,0.3],"layers":[{"wave":"crunch","freq":9000,"hp":2000,"a":0.001,"d":0.12,"shape":2},{"wave":"noise","hp":1200,"at":0.03,"a":0.001,"d":0.2,"shape":3,"gain":0.7},{"wave":"brown","lp":400,"lpTo":100,"at":0.05,"a":0.01,"d":1.4,"shape":2,"gain":1.5,"drive":1}],"gain":0.4};
-/** Dark curse: low detuned drone */
+/** 어둠의 저주: 낮은 디튠 드론 */
 export const curse: Sound = {"varyF":1,"verb":[0.6,0.3],"layers":[{"wave":"saw","freq":82,"to":70,"vib":[4,0.4],"formant":[300,870,2240],"a":0.1,"h":0.3,"d":0.6,"shape":-3},{"wave":"saw","freq":87,"to":74,"vib":[4.4,0.4],"formant":[570,840,2410],"a":0.1,"h":0.3,"d":0.6,"shape":-3,"gain":0.8},{"wave":"brown","lp":200,"a":0.2,"h":0.3,"d":0.6,"gain":0.4}],"gain":0.979};
-/** Enchant an item: bells in a row */
+/** 아이템 인챈트: 이어지는 종소리 */
 export const enchant: Sound = {"verb":[0.6,0.3],"layers":[{"wave":"sine","freq":1319,"fm":[3.5,1.5,0.15],"arp":[0,3,7,10,14],"arpRate":0.07,"a":0.002,"h":0.28,"d":0.5,"shape":2.5},{"wave":"sine","freq":659,"arp":[0,3,7,10,14],"arpRate":0.07,"a":0.002,"h":0.28,"d":0.4,"gain":0.3}],"gain":0.157};
-/** Dispel: shimmer that falls away */
+/** 디스펠: 사그라지는 반짝임 */
 export const dispel: Sound = {"verb":[0.5,0.25],"layers":[{"wave":"noise","hp":3000,"hpTo":800,"a":0.005,"d":0.45,"shape":2,"gain":0.5},{"wave":"sine","freq":2400,"to":400,"fm":[1.5,2,0.2],"a":0.005,"d":0.45,"shape":2}],"gain":0.314};
-/** Summon: rising chord from the deep */
+/** 소환: 심연에서 치솟는 코드 */
 export const summon: Sound = {"verb":[0.7,0.3],"layers":[{"wave":"triangle","freq":110,"to":220,"a":0.3,"h":0.2,"d":0.5,"shape":2},{"wave":"triangle","freq":165,"to":330,"a":0.35,"h":0.2,"d":0.5,"shape":2,"gain":0.7},{"wave":"sine","freq":880,"fm":[2,1,0.3],"at":0.5,"a":0.002,"d":0.6,"shape":3,"gain":0.4},{"wave":"noise","bp":300,"bpTo":3000,"a":0.4,"d":0.2,"gain":0.25}],"gain":0.237};
-/** Homing magic bolt */
+/** 유도 마법 탄 */
 export const magicMissile: Sound = {"echo":[0.05,0.3,0.25],"layers":[{"wave":"sine","freq":1700,"to":900,"vib":[35,1.5],"a":0.002,"d":0.22,"shape":2},{"wave":"noise","bp":4000,"q":3,"a":0.002,"d":0.15,"gain":0.25}],"gain":0.542};
-/** Harp glissando up, for wishes and revelations */
-export const harp: Sound = {"vary":0.05,"verb":[0.6,0.3],"layers":[{"wave":"pluck","freq":392,"at":0,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":440.0051229372742,"at":0.055,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":493.8890515587903,"at":0.11,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":587.3363741356592,"at":0.165,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":659.2627895589121,"at":0.22,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":784,"at":0.275,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":880.0102458745484,"at":0.33,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":987.7781031175806,"at":0.385,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8}],"gain":1.29};
-/** Two-tone alarm, loops cleanly if repeated */
+/** 하프 글리산도 상승, 소원과 계시용 */
+export const harp: Sound = {"vary":0.05,"verb":[0.6,0.3],"layers":[{"wave":"pluck","freq":392,"at":0,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":440.0051229372742,"at":0.055,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":493.8890515587903,"at":0.11,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":587.3363741356592,"at":0.165,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":659.2627895589122,"at":0.22,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":784,"at":0.275,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":880.0102458745484,"at":0.33,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8},{"wave":"pluck","freq":987.7781031175806,"at":0.385,"a":0.001,"d":1.1,"shape":-3,"damp":0.999,"blend":0.47,"lp":4000,"gain":0.8}],"gain":1.29};
+/** 두 음 경보, 반복해도 자연스럽게 이어짐 */
 export const alarm: Sound = {"vary":0.1,"layers":[{"wave":"square","duty":0.5,"freq":880,"arp":[0,-5],"arpRate":0.16,"loop":true,"a":0.005,"h":0.6,"d":0.02,"shape":1,"lp":3500}],"gain":0.132};
-/** Plain beep */
+/** 단순한 비프음 */
 export const beep: Sound = {"vary":0.1,"layers":[{"wave":"sine","freq":1000,"a":0.004,"h":0.08,"d":0.03,"shape":1}],"gain":0.371};
-/** Warning: three urgent pulses */
+/** 경고: 급박한 세 번의 펄스 */
 export const warning: Sound = {"vary":0.1,"layers":[{"wave":"saw","freq":440,"at":0,"a":0.003,"h":0.07,"d":0.03,"shape":1,"lp":2400},{"wave":"saw","freq":440,"at":0.14,"a":0.003,"h":0.07,"d":0.03,"shape":1,"lp":2400},{"wave":"saw","freq":440,"at":0.28,"a":0.003,"h":0.07,"d":0.03,"shape":1,"lp":2400}],"gain":0.306};
-/** Low health: soft double beep */
+/** 체력 부족: 부드러운 두 번의 비프 */
 export const lowHealth: Sound = {"vary":0.1,"layers":[{"wave":"triangle","freq":880,"a":0.003,"h":0.06,"d":0.04,"shape":1},{"wave":"triangle","freq":880,"at":0.16,"a":0.003,"h":0.06,"d":0.04,"shape":1}],"gain":0.364};
-/** Heartbeat: lub-dub */
+/** 심장 박동: 두근두근 */
 export const heartbeat: Sound = {"vary":0.3,"varyG":1,"layers":[{"wave":"sine","freq":70,"to":45,"a":0.004,"d":0.12,"shape":2,"drive":0.5},{"wave":"pink","bp":380,"q":1.2,"a":0.003,"d":0.05,"shape":-5,"drive":2,"gain":0.8},{"wave":"triangle","freq":140,"to":90,"a":0.004,"d":0.07,"shape":2.5,"gain":0.35},{"wave":"sine","freq":60,"to":40,"at":0.2,"a":0.004,"d":0.14,"shape":2,"gain":0.7},{"wave":"pink","bp":320,"q":1.2,"at":0.2,"a":0.003,"d":0.06,"shape":-5,"drive":2,"gain":0.55},{"wave":"triangle","freq":120,"to":80,"at":0.2,"a":0.004,"d":0.08,"shape":2.5,"gain":0.25}],"limit":1,"gain":0.703};
-/** Countdown tick: 3, 2, 1 */
+/** 카운트다운 틱: 3, 2, 1 */
 export const countdown: Sound = {"vary":0.05,"layers":[{"wave":"sine","freq":880,"fm":[2,0.6,0.05],"a":0.002,"h":0.05,"d":0.12,"shape":2}],"gain":0.369};
-/** Countdown end: GO! */
+/** 카운트다운 종료: 출발! */
 export const countdownGo: Sound = {"vary":0.05,"layers":[{"wave":"sine","freq":1760,"fm":[2,0.6,0.1],"a":0.002,"h":0.25,"d":0.25,"shape":2},{"wave":"square","duty":0.25,"freq":880,"a":0.002,"h":0.25,"d":0.2,"lp":3000,"gain":0.25}],"gain":0.137};
-/** Siren sweep */
+/** 사이렌 스윕 */
 export const siren: Sound = {"vary":0.1,"layers":[{"wave":"saw","freq":700,"vib":[1.6,5],"a":0.05,"h":1.1,"d":0.15,"shape":1,"lp":3000}],"gain":0.23};
-/** Sonar ping */
+/** 소나 핑 */
 export const radarPing: Sound = {"vary":0.1,"echo":[0.32,0.4,0.35],"verb":[0.4,0.2],"layers":[{"wave":"sine","freq":1500,"a":0.002,"d":0.35,"shape":3}],"gain":0.391};
-/** New quest or objective */
+/** 새 퀘스트 또는 목표 */
 export const questNew: Sound = {"verb":[0.45,0.25],"layers":[{"wave":"triangle","freq":587,"arp":[0,5,7],"arpRate":0.11,"a":0.003,"h":0.3,"d":0.3,"shape":2},{"wave":"sine","freq":1175,"fm":[2,0.7,0.2],"arp":[0,5,7],"arpRate":0.11,"a":0.003,"h":0.3,"d":0.3,"gain":0.35}],"gain":0.195};
-/** Quiz-show wrong-answer buzzer */
+/** 퀴즈쇼 오답 버저 */
 export const buzzerWrong: Sound = {"vary":0.05,"layers":[{"wave":"saw","freq":110,"a":0.005,"h":0.45,"d":0.08,"shape":1,"lp":2000,"drive":1.5},{"wave":"square","freq":111.5,"a":0.005,"h":0.45,"d":0.08,"shape":1,"lp":1200,"gain":0.6}],"gain":0.133};
-/** Quiz-show correct-answer ding-ding */
+/** 퀴즈쇼 정답 딩동 */
 export const dingCorrect: Sound = {"vary":0.05,"verb":[0.3,0.18],"layers":[{"wave":"sine","freq":1760,"fm":[3.5,1.4,0.1],"at":0,"a":0.002,"d":0.5,"shape":-4},{"wave":"sine","freq":1760,"fm":[3.5,1.4,0.1],"at":0.16,"a":0.002,"d":0.5,"shape":-4}],"gain":0.216};
-/** Kitchen timer done: rapid bell trill */
+/** 주방 타이머 종료: 빠른 종소리 트릴 */
 export const timerDone: Sound = {"vary":0.05,"layers":[{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0.05,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0.1,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0.15000000000000002,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0.2,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0.25,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0.30000000000000004,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0.35000000000000003,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0.4,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"metal","freq":2600,"bp":3500,"q":2,"at":0.45,"a":0.001,"d":0.045,"shape":-4,"gain":0.6},{"wave":"sine","freq":3500,"a":0.002,"h":0.45,"d":0.1,"gain":0.15}],"gain":0.765};
-/** Victory fanfare */
+/** 승리 팡파레 */
 export const victory: Sound = {"vary":0.05,"verb":[0.45,0.2],"layers":[{"wave":"square","duty":0.5,"freq":523,"arp":[0,0,0,4,7,7,12,12],"arpRate":0.1,"a":0.003,"h":0.75,"d":0.35,"shape":2,"lp":4000},{"wave":"triangle","freq":262,"arp":[0,0,0,4,7,7,12,12],"arpRate":0.1,"a":0.003,"h":0.75,"d":0.35,"gain":0.6}],"gain":0.104};
-/** Level complete: rising run and a held chord */
+/** 레벨 클리어: 올라가는 런과 길게 누르는 코드 */
 export const levelComplete: Sound = {"vary":0.05,"verb":[0.5,0.25],"layers":[{"wave":"square","duty":0.25,"freq":392,"arp":[0,4,7,12,16,19],"arpRate":0.07,"a":0.003,"h":0.6,"d":0.5,"shape":2,"lp":4500},{"wave":"triangle","freq":196,"arp":[0,0,7,7,12,12],"arpRate":0.07,"a":0.003,"h":0.6,"d":0.5,"gain":0.6},{"wave":"sine","freq":1568,"fm":[2,1,0.3],"at":0.42,"a":0.003,"d":0.8,"gain":0.3}],"gain":0.129};
-/** Game over: slow sad descent */
+/** 게임 오버: 느리고 슬픈 하강 */
 export const gameOver: Sound = {"vary":0.05,"verb":[0.5,0.25],"layers":[{"wave":"triangle","freq":392,"arp":[0,-1,-2,-3],"arpRate":0.28,"a":0.01,"h":1,"d":0.5,"shape":2,"vib":[5,0.25]},{"wave":"square","duty":0.5,"freq":196,"arp":[0,-1,-2,-3],"arpRate":0.28,"a":0.01,"h":1,"d":0.5,"lp":1200,"gain":0.35}],"gain":0.2};
-/** Lost a round: wah-wah */
+/** 라운드 패배: 와와 */
 export const lose: Sound = {"vary":0.05,"layers":[{"wave":"saw","freq":330,"arp":[0,-1,-2],"arpRate":0.22,"lp":600,"lpTo":2500,"q":3,"a":0.01,"h":0.5,"d":0.3,"shape":2,"vib":[6,0.3]}],"gain":0.188};
-/** Secret found: rising mystery arpeggio */
+/** 비밀 발견: 올라가는 미스터리 아르페지오 */
 export const secretFound: Sound = {"vary":0.05,"verb":[0.4,0.2],"layers":[{"wave":"square","duty":0.25,"freq":784,"arp":[0,-1,-9,-14,-13,-5,-1,4],"arpRate":0.075,"a":0.002,"h":0.55,"d":0.25,"shape":2,"lp":5000},{"wave":"sine","freq":1568,"arp":[0,-1,-9,-14,-13,-5,-1,4],"arpRate":0.075,"a":0.002,"h":0.55,"d":0.2,"gain":0.25}],"gain":0.137};
-/** Achievement unlocked */
+/** 업적 달성 */
 export const achievement: Sound = {"vary":0.05,"verb":[0.5,0.25],"layers":[{"wave":"noise","bp":2500,"q":1.5,"a":0.001,"d":0.006,"shape":-6,"gain":0.3},{"wave":"pluck","freq":523,"at":0,"a":0.001,"d":0.6,"shape":-3,"damp":0.998,"blend":0.48,"lp":5000,"gain":0.6},{"wave":"pluck","freq":784,"at":0.08,"a":0.001,"d":0.6,"shape":-3,"damp":0.998,"blend":0.48,"lp":5000,"gain":0.6},{"wave":"pluck","freq":1047,"at":0.16,"a":0.001,"d":0.6,"shape":-3,"damp":0.998,"blend":0.48,"lp":5000,"gain":0.6},{"wave":"modal","freq":523,"modes":[1,2,2.4,3,4],"at":0.24,"a":0.001,"d":1,"shape":-3,"gain":0.8},{"wave":"noise","hp":7000,"lp":12000,"at":0.24,"a":0.002,"d":0.4,"shape":-4,"gain":0.06}],"gain":0.347};
-/** Puzzle solved: clear 'ta-da' */
+/** 퍼즐 해결: 명쾌한 '짜잔' */
 export const puzzleSolved: Sound = {"vary":0.05,"verb":[0.45,0.22],"layers":[{"wave":"triangle","freq":659,"arp":[0,5,9,12],"arpRate":0.06,"a":0.002,"h":0.3,"d":0.45,"shape":2},{"wave":"sine","freq":1319,"arp":[0,5,9,12],"arpRate":0.06,"fm":[2,0.8,0.2],"a":0.002,"h":0.3,"d":0.4,"gain":0.4}],"gain":0.188};
-/** Checkpoint reached: three quick mallet notes and a bell */
+/** 체크포인트 도달: 빠른 말렛 세 음과 종 */
 export const checkpoint: Sound = {"vary":0.05,"verb":[0.4,0.2],"layers":[{"wave":"sine","freq":784,"fm":[4,1.5,0.03],"at":0,"a":0.001,"d":0.25,"shape":3,"gain":0.8},{"wave":"sine","freq":1047,"fm":[4,1.5,0.03],"at":0.07,"a":0.001,"d":0.25,"shape":3,"gain":0.8},{"wave":"sine","freq":1319,"fm":[4,1.5,0.03],"at":0.14,"a":0.001,"d":0.25,"shape":3,"gain":0.8},{"wave":"sine","freq":1568,"fm":[3.5,1.2,0.15],"at":0.21,"a":0.002,"d":0.9,"shape":2.5},{"wave":"triangle","freq":523,"at":0.21,"a":0.003,"h":0.1,"d":0.5,"gain":0.35}],"gain":0.244};
-/** Round start stinger */
+/** 라운드 시작 스팅어 */
 export const roundStart: Sound = {"vary":0.05,"layers":[{"wave":"square","duty":0.5,"freq":440,"arp":[0,0,12],"arpRate":0.12,"a":0.003,"h":0.3,"d":0.2,"shape":2,"lp":3500},{"wave":"sine","freq":110,"arp":[0,0,12],"arpRate":0.12,"a":0.003,"h":0.3,"d":0.2,"gain":0.6}],"gain":0.151};
-/** New high score: excited climbing fanfare */
+/** 신기록: 신나게 치솟는 팡파레 */
 export const highscore: Sound = {"vary":0.05,"verb":[0.35,0.2],"layers":[{"wave":"square","duty":0.25,"freq":523,"arp":[0,4,7,12,7,12,16,19,24],"arpRate":0.08,"a":0.002,"h":0.75,"d":0.4,"shape":2,"lp":5000,"gain":0.6},{"wave":"triangle","freq":262,"arp":[0,0,7,7,5,5,7,7,12],"arpRate":0.08,"a":0.002,"h":0.75,"d":0.4,"shape":2}],"gain":0.165};
-/** Boss appears: ominous low brass hits */
+/** 보스 등장: 불길한 저음 금관 타격 */
 export const bossIntro: Sound = {"vary":0.05,"verb":[0.7,0.3],"layers":[{"wave":"saw","freq":73.4,"lp":1200,"lpTo":400,"at":0,"a":0.01,"h":0.15,"d":0.3,"shape":-3,"drive":1.5},{"wave":"saw","freq":110,"lp":1500,"lpTo":500,"at":0,"a":0.01,"h":0.15,"d":0.3,"shape":-3,"gain":0.6},{"wave":"brown","lp":200,"at":0,"a":0.001,"d":0.4,"shape":-4,"gain":0.6},{"wave":"saw","freq":69.3,"lp":1200,"lpTo":400,"at":0.35,"a":0.01,"h":0.15,"d":0.3,"shape":-3,"drive":1.5},{"wave":"saw","freq":103.8,"lp":1500,"lpTo":500,"at":0.35,"a":0.01,"h":0.15,"d":0.3,"shape":-3,"gain":0.6},{"wave":"brown","lp":200,"at":0.35,"a":0.001,"d":0.4,"shape":-4,"gain":0.6},{"wave":"saw","freq":65.4,"lp":1200,"lpTo":400,"at":0.7,"a":0.01,"h":0.4,"d":0.3,"shape":-3,"drive":1.5},{"wave":"saw","freq":98,"lp":1500,"lpTo":500,"at":0.7,"a":0.01,"h":0.4,"d":0.3,"shape":-3,"gain":0.6},{"wave":"brown","lp":200,"at":0.7,"a":0.001,"d":0.4,"shape":-4,"gain":0.6}],"gain":0.146};
-/** Creaky wooden door opening */
+/** 삐걱대는 나무 문 열기 */
 export const doorOpen: Sound = {"vary":1.5,"varyF":2,"varyG":1.5,"verb":[0.4,0.2],"layers":[{"wave":"noise","bp":2500,"q":2,"a":0.001,"d":0.008,"shape":-6,"gain":0.3},{"wave":"modal","freq":1700,"modes":[1,2.76,5.4],"a":0.001,"d":0.06,"shape":-5,"gain":0.15},{"wave":"saw","freq":26,"to":40,"vib":[2.3,4],"formant":[620,1150,2300],"at":0.05,"a":0.12,"h":0.35,"d":0.3,"shape":-3},{"wave":"saw","freq":33,"to":24,"vib":[3.7,5],"formant":[450,900,1750],"at":0.12,"a":0.1,"h":0.25,"d":0.3,"shape":-3,"gain":0.6}],"limit":1,"gain":1.82};
-/** Door shuts with a thud */
+/** 쿵 소리 내며 문 닫힘 */
 export const doorClose: Sound = {"varyF":2,"varyG":1,"verb":[0.35,0.18],"layers":[{"wave":"noise","bp":1500,"q":1.5,"a":0.001,"d":0.012,"shape":-5,"gain":0.35},{"wave":"pink","lp":700,"lpTo":200,"a":0.001,"d":0.14,"shape":-4,"drive":2,"gain":1.2},{"wave":"noise","bp":220,"q":4,"a":0.001,"d":0.15,"shape":-4,"drive":1,"gain":1.2},{"wave":"noise","bp":480,"q":3,"a":0.001,"d":0.08,"shape":-4,"drive":1,"gain":0.9},{"wave":"modal","freq":160,"modes":[1,2.32,4.25],"a":0.001,"d":0.2,"shape":-5,"gain":0.5},{"wave":"modal","freq":1500,"modes":[1,2.76,5.4],"at":0.04,"a":0.001,"d":0.05,"shape":-5,"gain":0.25}],"limit":1,"gain":0.842};
-/** Heavy dungeon door slams */
+/** 무거운 던전 문이 쾅 */
 export const doorHeavy: Sound = {"varyF":2,"varyG":1,"verb":[0.7,0.3],"layers":[{"wave":"saw","freq":22,"to":34,"vib":[2.1,4],"formant":[300,700,1400],"a":0.1,"h":0.3,"d":0.15,"shape":-3,"gain":0.8},{"wave":"noise","bp":1200,"at":0.55,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"noise","bp":160,"q":5,"at":0.55,"a":0.001,"d":0.4,"shape":-5,"gain":1.3},{"wave":"noise","bp":340,"q":4,"at":0.55,"a":0.001,"d":0.25,"shape":-5,"gain":0.8},{"wave":"modal","freq":95,"modes":[1,2.32,4.25,6.63],"at":0.55,"a":0.001,"d":0.5,"shape":-4,"gain":0.6},{"wave":"sine","freq":60,"to":35,"at":0.55,"a":0.001,"d":0.5,"shape":-5,"gain":0.4},{"wave":"brown","lp":300,"at":0.56,"a":0.002,"d":0.6,"shape":-4,"gain":0.4},{"wave":"modal","freq":1300,"modes":[1,2.76,5.4],"at":0.6,"a":0.001,"d":0.08,"shape":-5,"gain":0.15}],"limit":1,"gain":1.07};
-/** Lock clicks open */
+/** 딸깍하며 자물쇠 열림 */
 export const lockOpen: Sound = {"layers":[{"wave":"metal","freq":1300,"bp":3500,"q":2,"a":0.001,"d":0.03,"shape":3},{"wave":"metal","freq":900,"bp":2500,"q":2,"at":0.09,"a":0.001,"d":0.06,"shape":3},{"wave":"noise","bp":1500,"q":1.5,"at":0.09,"a":0.001,"d":0.03,"gain":0.5},{"wave":"sine","freq":220,"to":140,"at":0.09,"a":0.001,"d":0.05,"shape":2.5,"drive":1,"gain":0.5}],"limit":1,"gain":1.29};
-/** Door is locked: rattle */
+/** 문이 잠김: 덜컹거림 */
 export const locked: Sound = {"layers":[{"wave":"metal","freq":700,"bp":2200,"q":2,"at":0,"a":0.001,"d":0.05,"shape":3,"gain":1},{"wave":"pink","lp":600,"at":0,"a":0.001,"d":0.04,"shape":3,"drive":1,"gain":0.4},{"wave":"metal","freq":760,"bp":2200,"q":2,"at":0.06,"a":0.001,"d":0.05,"shape":3,"gain":0.85},{"wave":"pink","lp":600,"at":0.06,"a":0.001,"d":0.04,"shape":3,"drive":1,"gain":0.33},{"wave":"metal","freq":820,"bp":2200,"q":2,"at":0.12,"a":0.001,"d":0.05,"shape":3,"gain":0.7},{"wave":"pink","lp":600,"at":0.12,"a":0.001,"d":0.04,"shape":3,"drive":1,"gain":0.26},{"wave":"metal","freq":880,"bp":2200,"q":2,"at":0.2,"a":0.001,"d":0.05,"shape":3,"gain":0.55},{"wave":"pink","lp":600,"at":0.2,"a":0.001,"d":0.04,"shape":3,"drive":1,"gain":0.19}],"limit":1,"gain":1.98};
-/** Treasure chest creaks open */
+/** 보물상자가 삐걱하며 열림 */
 export const chestOpen: Sound = {"vary":1,"varyF":2,"varyG":1.5,"verb":[0.35,0.18],"layers":[{"wave":"saw","freq":30,"to":48,"vib":[3.1,4],"formant":[520,1300,2600],"a":0.05,"h":0.25,"d":0.15,"shape":-3},{"wave":"saw","freq":41,"to":33,"vib":[4.6,3],"formant":[380,980],"at":0.08,"a":0.05,"h":0.15,"d":0.15,"shape":-3,"gain":0.5},{"wave":"noise","bp":900,"q":2,"at":0.42,"a":0.001,"d":0.05,"shape":-5,"gain":0.6},{"wave":"modal","freq":200,"modes":[1,2.32,4.25],"at":0.42,"a":0.001,"d":0.12,"shape":-5,"gain":0.5},{"wave":"sine","freq":2093,"fm":[3.01,1.5,0.2],"at":0.45,"a":0.002,"d":0.6,"shape":-4,"gain":0.35}],"gain":0.887};
-/** Pull a lever: clunk */
+/** 레버 당기기: 쿵 */
 export const lever: Sound = {"verb":[0.3,0.15],"layers":[{"wave":"noise","bp":700,"q":1.5,"a":0.02,"d":0.08,"gain":0.5},{"wave":"metal","freq":380,"bp":1400,"q":2,"at":0.09,"a":0.001,"d":0.15,"shape":3},{"wave":"sine","freq":120,"to":70,"at":0.09,"a":0.001,"d":0.12,"gain":0.8}],"limit":1,"gain":1.13};
-/** Press a mechanical floor button */
+/** 기계식 바닥 버튼 누르기 */
 export const button: Sound = {"varyF":1.5,"varyG":1,"layers":[{"wave":"noise","bp":2000,"q":2,"a":0.001,"d":0.008,"shape":-5,"gain":0.4},{"wave":"modal","freq":240,"modes":[1,2.32,4.25],"a":0.001,"d":0.12,"shape":-4,"drive":1,"gain":1.2},{"wave":"pink","lp":1200,"lpTo":300,"a":0.001,"d":0.07,"shape":-5,"drive":1.5},{"wave":"noise","bp":2600,"q":3,"at":0.06,"a":0.001,"d":0.006,"shape":-6,"gain":0.4},{"wave":"modal","freq":900,"modes":[1,2.32],"at":0.06,"a":0.001,"d":0.03,"shape":-5,"gain":0.3}],"limit":1,"gain":0.688};
-/** Gear or crank turning */
+/** 기어나 크랭크 돌아감 */
 export const ratchet: Sound = {"varyF":1.5,"varyG":2,"layers":[{"wave":"noise","bp":3200,"q":3,"at":0,"a":0.001,"d":0.02,"shape":-5,"drive":1},{"wave":"noise","bp":900,"q":2,"at":0,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"modal","freq":2600,"modes":[1,2.76,5.4],"at":0,"a":0.001,"d":0.03,"shape":-5,"gain":0.3},{"wave":"noise","bp":2400,"q":3,"at":0.045,"a":0.001,"d":0.02,"shape":-5,"drive":1},{"wave":"noise","bp":900,"q":2,"at":0.045,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"modal","freq":2600,"modes":[1,2.76,5.4],"at":0.045,"a":0.001,"d":0.03,"shape":-5,"gain":0.3},{"wave":"noise","bp":3200,"q":3,"at":0.09,"a":0.001,"d":0.02,"shape":-5,"drive":1},{"wave":"noise","bp":900,"q":2,"at":0.09,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"modal","freq":2600,"modes":[1,2.76,5.4],"at":0.09,"a":0.001,"d":0.03,"shape":-5,"gain":0.3},{"wave":"noise","bp":2400,"q":3,"at":0.135,"a":0.001,"d":0.02,"shape":-5,"drive":1},{"wave":"noise","bp":900,"q":2,"at":0.135,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"modal","freq":2600,"modes":[1,2.76,5.4],"at":0.135,"a":0.001,"d":0.03,"shape":-5,"gain":0.3},{"wave":"noise","bp":3200,"q":3,"at":0.18,"a":0.001,"d":0.02,"shape":-5,"drive":1},{"wave":"noise","bp":900,"q":2,"at":0.18,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"modal","freq":2600,"modes":[1,2.76,5.4],"at":0.18,"a":0.001,"d":0.03,"shape":-5,"gain":0.3},{"wave":"noise","bp":2400,"q":3,"at":0.225,"a":0.001,"d":0.02,"shape":-5,"drive":1},{"wave":"noise","bp":900,"q":2,"at":0.225,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"modal","freq":2600,"modes":[1,2.76,5.4],"at":0.225,"a":0.001,"d":0.03,"shape":-5,"gain":0.3},{"wave":"noise","bp":3200,"q":3,"at":0.27,"a":0.001,"d":0.02,"shape":-5,"drive":1},{"wave":"noise","bp":900,"q":2,"at":0.27,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"modal","freq":2600,"modes":[1,2.76,5.4],"at":0.27,"a":0.001,"d":0.03,"shape":-5,"gain":0.3}],"gain":0.882};
-/** Machine starts up and hums */
+/** 기계가 켜지며 웅웅 */
 export const machine: Sound = {"vary":0.6,"varyF":2,"varyG":1,"layers":[{"wave":"saw","freq":30,"to":110,"curve":0.6,"lp":600,"a":0.2,"h":0.6,"d":0.3,"shape":2},{"wave":"square","duty":0.2,"freq":60,"to":220,"curve":0.6,"bp":900,"q":3,"kt":0.5,"a":0.25,"h":0.55,"d":0.3,"shape":2,"gain":1},{"wave":"sine","freq":240,"to":880,"curve":0.6,"a":0.3,"h":0.5,"d":0.3,"gain":0.2},{"wave":"crunch","freq":400,"to":1500,"curve":0.6,"hp":1500,"lp":5000,"a":0.3,"h":0.5,"d":0.3,"gain":0.08}],"gain":0.339};
-/** Engine idling, seamless loop (play with rate for revs) */
+/** 엔진 아이들링, 끊김 없는 루프 (rate로 회전수 조절) */
 export const engineIdle: Sound = {"loop":true,"vary":0,"varyF":1.5,"varyG":0.8,"layers":[{"wave":"square","freq":31,"duty":0.3,"lp":240,"drive":1.5,"vib":[2,0.25],"a":0.02,"h":3.48,"d":0},{"wave":"saw","freq":62,"lp":420,"vib":[2,0.25],"a":0.02,"h":3.48,"d":0,"gain":0.45},{"wave":"crunch","freq":124,"lp":1400,"hp":300,"a":0.02,"h":3.48,"d":0,"gain":0.12},{"wave":"brown","lp":160,"a":0.02,"h":3.48,"d":0,"gain":0.5}],"gain":0.347};
-/** Force field or reactor hum, seamless loop */
+/** 포스 필드나 원자로 험, 끊김 없는 루프 */
 export const forceField: Sound = {"loop":true,"vary":0,"varyF":1.5,"varyG":0.8,"layers":[{"wave":"sine","freq":60,"drive":0.6,"a":0.02,"h":3.48,"d":0},{"wave":"saw","freq":120,"lp":900,"vib":[1,0.04],"a":0.02,"h":3.48,"d":0,"gain":0.3},{"wave":"triangle","freq":180,"vib":[3,0.03],"a":0.02,"h":3.48,"d":0,"gain":0.25},{"wave":"noise","bp":3200,"q":3,"a":0.02,"h":3.48,"d":0,"gain":0.05}],"gain":0.234};
-/** Medium whoosh for dashes and swings */
+/** 대시와 스윙용 중간 휙 */
 export const whoosh: Sound = {"varyF":3,"varyG":1.5,"layers":[{"wave":"pink","bp":450,"bpTo":1800,"q":1.6,"a":0.13,"d":0.02,"shape":1},{"wave":"pink","bp":1800,"bpTo":500,"q":1.6,"at":0.13,"a":0.01,"d":0.3,"shape":-4},{"wave":"noise","bp":3000,"bpTo":6000,"a":0.12,"d":0.12,"gain":0.2},{"wave":"brown","lp":300,"a":0.12,"d":0.15,"gain":0.3}],"limit":1,"gain":1.84};
-/** Sword or stick swing */
+/** 검이나 막대 휘두르기 */
 export const swing: Sound = {"vary":1,"varyF":3,"varyG":1.5,"layers":[{"wave":"noise","bp":900,"bpTo":3500,"q":2.5,"a":0.06,"d":0.1,"shape":2},{"wave":"noise","bp":3000,"bpTo":900,"q":2,"at":0.08,"a":0.02,"d":0.22,"shape":-4,"gain":0.45}],"limit":1,"gain":2.76};
-/** Quick dash with a burst */
+/** 짧은 버스트와 함께 빠른 대시 */
 export const dash: Sound = {"layers":[{"wave":"noise","bp":1200,"bpTo":5000,"q":1.2,"a":0.01,"d":0.18,"shape":2},{"wave":"sine","freq":200,"to":600,"a":0.005,"d":0.1,"gain":0.3}],"limit":1,"gain":1.79};
-/** Something falls in water */
+/** 무언가 물에 빠짐 */
 export const splash: Sound = {"verb":[0.25,0.12],"layers":[{"wave":"noise","lp":4000,"lpTo":800,"a":0.003,"d":0.4,"shape":2.5},{"wave":"sine","freq":220,"to":70,"a":0.002,"d":0.1,"gain":0.6},{"wave":"sine","freq":600,"to":1400,"curve":3,"at":0.12,"a":0.002,"d":0.05,"gain":0.3},{"wave":"sine","freq":800,"to":1800,"curve":3,"at":0.2,"a":0.002,"d":0.04,"gain":0.2}],"limit":1,"gain":0.917};
-/** Single water drop */
+/** 물방울 한 방울 */
 export const waterDrop: Sound = {"verb":[0.4,0.2],"vary":1,"layers":[{"wave":"sine","freq":900,"to":2100,"curve":4,"sweep":0.06,"a":0.001,"d":0.1,"shape":3}],"gain":0.836};
-/** Bubbles rising */
+/** 올라오는 거품 */
 export const bubble: Sound = {"vary":1,"layers":[{"wave":"sine","freq":400,"to":900,"curve":3,"at":0,"a":0.002,"d":0.05,"shape":3,"gain":1},{"wave":"sine","freq":520,"to":1200,"curve":3,"at":0.07,"a":0.002,"d":0.05,"shape":3,"gain":0.88},{"wave":"sine","freq":460,"to":1000,"curve":3,"at":0.11,"a":0.002,"d":0.05,"shape":3,"gain":0.76},{"wave":"sine","freq":600,"to":1400,"curve":3,"at":0.19,"a":0.002,"d":0.05,"shape":3,"gain":0.64},{"wave":"sine","freq":700,"to":1600,"curve":3,"at":0.24,"a":0.002,"d":0.05,"shape":3,"gain":0.52}],"gain":0.864};
-/** Gust of wind */
+/** 한 번의 돌풍 */
 export const wind: Sound = {"layers":[{"wave":"pink","bp":350,"bpTo":1100,"q":2.5,"a":0.5,"d":0.25,"shape":1.5},{"wave":"pink","bp":1100,"bpTo":450,"q":2.5,"at":0.55,"a":0.05,"d":0.9,"shape":2},{"wave":"noise","bp":2500,"bpTo":4000,"q":4,"a":0.45,"d":0.6,"shape":2,"gain":0.12},{"wave":"brown","lp":250,"a":0.4,"h":0.3,"d":0.7,"gain":0.3}],"gain":1.44};
-/** Glass shatters */
+/** 유리가 산산조각 */
 export const glassBreak: Sound = {"vary":0.8,"varyF":2,"varyG":3,"verb":[0.35,0.2],"layers":[{"wave":"noise","hp":2500,"lp":11000,"a":0.001,"d":0.03,"shape":-6},{"wave":"noise","bp":1800,"q":0.8,"a":0.001,"d":0.03,"shape":-6,"drive":1,"gain":0.6},{"wave":"noise","bp":600,"q":1.5,"a":0.001,"d":0.04,"shape":-5,"gain":0.3},{"wave":"modal","freq":2900,"modes":[1,1.59,2.14,2.65],"at":0.01,"a":0.001,"d":0.15,"shape":-5,"gain":0.5},{"wave":"modal","freq":3700,"modes":[1,1.59,2.14,2.65],"at":0.04,"a":0.001,"d":0.12,"shape":-5,"gain":0.46},{"wave":"modal","freq":4400,"modes":[1,1.59,2.14,2.65],"at":0.07,"a":0.001,"d":0.1,"shape":-5,"gain":0.42},{"wave":"modal","freq":3300,"modes":[1,1.59,2.14,2.65],"at":0.11,"a":0.001,"d":0.13,"shape":-5,"gain":0.38},{"wave":"modal","freq":5200,"modes":[1,1.59,2.14,2.65],"at":0.16,"a":0.001,"d":0.09,"shape":-5,"gain":0.33999999999999997},{"wave":"modal","freq":4100,"modes":[1,1.59,2.14,2.65],"at":0.22,"a":0.001,"d":0.11,"shape":-5,"gain":0.3},{"wave":"modal","freq":6100,"modes":[1,1.59,2.14,2.65],"at":0.3,"a":0.001,"d":0.08,"shape":-5,"gain":0.26},{"wave":"noise","hp":4000,"lp":11000,"a":0.002,"d":0.35,"shape":-4,"gain":0.25}],"gain":0.689};
-/** Generic body or crate falling */
+/** 몸이나 상자가 떨어지는 일반 쿵 */
 export const thud: Sound = {"vary":0.8,"varyF":2,"varyG":1,"layers":[{"wave":"noise","bp":1200,"q":1,"a":0.001,"d":0.008,"shape":-6,"gain":0.3},{"wave":"pink","lp":900,"lpTo":250,"a":0.001,"d":0.18,"shape":-3,"drive":3},{"wave":"modal","freq":140,"modes":[1,2.32,4.25,6.63],"a":0.001,"d":0.25,"shape":-4,"drive":1,"gain":0.9},{"wave":"noise","bp":380,"q":3,"a":0.001,"d":0.1,"shape":-4,"drive":1,"gain":0.9},{"wave":"sine","freq":90,"to":50,"a":0.001,"d":0.18,"shape":-4,"drive":1,"gain":0.5},{"wave":"pink","lp":1100,"lpTo":300,"at":0.09,"a":0.001,"d":0.06,"shape":-5,"drive":2,"gain":0.45},{"wave":"modal","freq":150,"modes":[1,2.32,4.25,6.63],"at":0.09,"a":0.001,"d":0.12,"shape":-5,"gain":0.4}],"limit":1,"gain":0.518};
-/** Throw something */
+/** 무언가 던지기 */
 export const toss: Sound = {"vary":1,"varyF":3,"varyG":1.5,"layers":[{"wave":"noise","bp":500,"bpTo":1400,"q":1.5,"a":0.06,"d":0.03,"shape":1,"drive":1},{"wave":"noise","bp":1400,"bpTo":500,"q":1.5,"at":0.06,"a":0.01,"d":0.25,"shape":-4,"drive":1}],"limit":1,"gain":1.23};
-/** Campfire crackle */
+/** 모닥불 탁탁 */
 export const fireCrackle: Sound = {"layers":[{"wave":"brown","lp":800,"a":0.1,"h":0.6,"d":0.3,"gain":0.5},{"wave":"noise","bp":2500,"q":2,"at":0.05,"a":0.001,"d":0.012,"shape":2,"gain":0.8},{"wave":"noise","bp":2800,"q":2,"at":0.13,"a":0.001,"d":0.012,"shape":2,"gain":0.8},{"wave":"noise","bp":3100,"q":2,"at":0.17,"a":0.001,"d":0.012,"shape":2,"gain":0.8},{"wave":"noise","bp":3400,"q":2,"at":0.3,"a":0.001,"d":0.012,"shape":2,"gain":0.8},{"wave":"noise","bp":3700,"q":2,"at":0.42,"a":0.001,"d":0.012,"shape":2,"gain":0.8},{"wave":"noise","bp":4000,"q":2,"at":0.48,"a":0.001,"d":0.012,"shape":2,"gain":0.8},{"wave":"noise","bp":4300,"q":2,"at":0.61,"a":0.001,"d":0.012,"shape":2,"gain":0.8},{"wave":"noise","bp":4600,"q":2,"at":0.74,"a":0.001,"d":0.012,"shape":2,"gain":0.8},{"wave":"noise","bp":4900,"q":2,"at":0.8,"a":0.001,"d":0.012,"shape":2,"gain":0.8}],"limit":1,"gain":1.76};
-/** Wooden crate smashes into planks */
+/** 나무 상자가 판자로 박살 */
 export const crateBreak: Sound = {"varyF":2,"varyG":1.5,"verb":[0.25,0.12],"layers":[{"wave":"noise","bp":1800,"q":1,"a":0.001,"d":0.02,"shape":-5,"drive":2},{"wave":"modal","freq":240,"modes":[1,2.32,4.25,6.63],"at":0,"a":0.001,"d":0.12,"shape":-5,"gain":1},{"wave":"modal","freq":295,"modes":[1,2.32,4.25,6.63],"at":0.03,"a":0.001,"d":0.12,"shape":-5,"gain":0.85},{"wave":"modal","freq":350,"modes":[1,2.32,4.25,6.63],"at":0.07,"a":0.001,"d":0.12,"shape":-5,"gain":0.7},{"wave":"modal","freq":405,"modes":[1,2.32,4.25,6.63],"at":0.12,"a":0.001,"d":0.12,"shape":-5,"gain":0.55},{"wave":"modal","freq":460,"modes":[1,2.32,4.25,6.63],"at":0.18,"a":0.001,"d":0.12,"shape":-5,"gain":0.4},{"wave":"sine","freq":110,"to":50,"a":0.001,"d":0.15,"shape":-5,"gain":0.6},{"wave":"pink","lp":1500,"a":0.001,"d":0.25,"shape":-4,"gain":0.4}],"limit":1,"gain":0.555};
-/** Clay pot shatters (Zelda pots) */
+/** 토기 항아리 깨짐 (젤다 항아리) */
 export const potBreak: Sound = {"varyF":2,"varyG":1.5,"verb":[0.25,0.12],"layers":[{"wave":"noise","bp":2500,"q":0.8,"a":0.001,"d":0.06,"shape":-4,"drive":1.5},{"wave":"modal","freq":650,"modes":[1,2.1,3.4,5.2],"a":0.001,"d":0.1,"shape":-5},{"wave":"modal","freq":1200,"modes":[1,2.1,3.4],"at":0.04,"a":0.001,"d":0.06,"shape":-5,"gain":0.5},{"wave":"modal","freq":1430,"modes":[1,2.1,3.4],"at":0.08,"a":0.001,"d":0.06,"shape":-5,"gain":0.5},{"wave":"modal","freq":1660,"modes":[1,2.1,3.4],"at":0.13,"a":0.001,"d":0.06,"shape":-5,"gain":0.5},{"wave":"modal","freq":1890,"modes":[1,2.1,3.4],"at":0.19,"a":0.001,"d":0.06,"shape":-5,"gain":0.5}],"limit":1,"gain":0.574};
-/** Metal object or pipe hits the floor */
+/** 금속 물체나 파이프가 바닥에 캉 */
 export const metalClang: Sound = {"vary":0.8,"varyF":1.5,"varyG":1,"verb":[0.35,0.18],"layers":[{"wave":"noise","bp":3000,"q":1,"a":0.001,"d":0.015,"shape":-5,"gain":0.6},{"wave":"modal","freq":620,"modes":[1,2.756,5.404,8.933],"a":0.001,"d":0.7,"shape":-3},{"wave":"metal","freq":500,"bp":2000,"q":1.5,"a":0.001,"d":0.3,"shape":-4,"gain":0.4},{"wave":"modal","freq":640,"modes":[1,2.756,5.404],"at":0.15,"a":0.001,"d":0.4,"shape":-4,"gain":0.35}],"limit":1,"gain":0.487};
-/** Rocks and rubble crumble down */
+/** 바위와 잔해가 무너짐 */
 export const rockCrumble: Sound = {"varyF":2,"varyG":1.5,"verb":[0.4,0.18],"layers":[{"wave":"brown","lp":700,"lpTo":200,"a":0.01,"h":0.2,"d":0.6,"shape":-3,"drive":1},{"wave":"modal","freq":300,"modes":[1,2.6,4.9],"at":0,"a":0.002,"d":0.06,"shape":-6,"gain":0.8},{"wave":"modal","freq":473,"modes":[1,2.6,4.9],"at":0.072,"a":0.002,"d":0.06,"shape":-6,"gain":0.75},{"wave":"modal","freq":646,"modes":[1,2.6,4.9],"at":0.144,"a":0.002,"d":0.06,"shape":-6,"gain":0.7000000000000001},{"wave":"modal","freq":319,"modes":[1,2.6,4.9],"at":0.18,"a":0.002,"d":0.06,"shape":-6,"gain":0.65},{"wave":"modal","freq":492,"modes":[1,2.6,4.9],"at":0.252,"a":0.002,"d":0.06,"shape":-6,"gain":0.6000000000000001},{"wave":"modal","freq":665,"modes":[1,2.6,4.9],"at":0.324,"a":0.002,"d":0.06,"shape":-6,"gain":0.55},{"wave":"modal","freq":338,"modes":[1,2.6,4.9],"at":0.36,"a":0.002,"d":0.06,"shape":-6,"gain":0.5},{"wave":"modal","freq":511,"modes":[1,2.6,4.9],"at":0.432,"a":0.002,"d":0.06,"shape":-6,"gain":0.45},{"wave":"modal","freq":684,"modes":[1,2.6,4.9],"at":0.504,"a":0.002,"d":0.06,"shape":-6,"gain":0.4},{"wave":"modal","freq":357,"modes":[1,2.6,4.9],"at":0.54,"a":0.002,"d":0.06,"shape":-6,"gain":0.35000000000000003}],"gain":0.585};
-/** Torch or fire ignites: whoomph */
+/** 횃불이나 불 점화: 훙 */
 export const ignite: Sound = {"vary":0.5,"varyF":2,"layers":[{"wave":"pink","bp":400,"bpTo":1500,"q":1,"a":0.04,"d":0.4,"shape":-3,"drive":1},{"wave":"brown","lp":400,"a":0.03,"h":0.15,"d":0.5,"shape":-3,"gain":0.8},{"wave":"sine","freq":90,"to":50,"a":0.02,"d":0.2,"shape":-4,"gain":0.5},{"wave":"noise","bp":2500,"q":3,"at":0.08,"a":0.001,"d":0.008,"shape":-5,"gain":0.45},{"wave":"noise","bp":3400,"q":3,"at":0.15,"a":0.001,"d":0.008,"shape":-5,"gain":0.42000000000000004},{"wave":"noise","bp":4300,"q":3,"at":0.21,"a":0.001,"d":0.008,"shape":-5,"gain":0.39},{"wave":"noise","bp":2500,"q":3,"at":0.3,"a":0.001,"d":0.008,"shape":-5,"gain":0.36},{"wave":"noise","bp":3400,"q":3,"at":0.36,"a":0.001,"d":0.008,"shape":-5,"gain":0.33},{"wave":"noise","bp":4300,"q":3,"at":0.45,"a":0.001,"d":0.008,"shape":-5,"gain":0.30000000000000004},{"wave":"noise","bp":2500,"q":3,"at":0.52,"a":0.001,"d":0.008,"shape":-5,"gain":0.27},{"wave":"noise","bp":3400,"q":3,"at":0.6,"a":0.001,"d":0.008,"shape":-5,"gain":0.24000000000000002}],"limit":1,"gain":0.833};
-/** Wings flapping past */
+/** 지나가는 날갯짓 */
 export const batFlap: Sound = {"vary":1,"varyF":3,"varyG":1.5,"layers":[{"wave":"pink","bp":900,"q":1.5,"at":0,"a":0.006,"d":0.04,"shape":-4,"gain":1},{"wave":"pink","bp":960,"q":1.5,"at":0.05,"a":0.006,"d":0.04,"shape":-4,"gain":0.85},{"wave":"pink","bp":1020,"q":1.5,"at":0.1,"a":0.006,"d":0.04,"shape":-4,"gain":0.7},{"wave":"pink","bp":1080,"q":1.5,"at":0.15,"a":0.006,"d":0.04,"shape":-4,"gain":0.55},{"wave":"pink","bp":1140,"q":1.5,"at":0.2,"a":0.006,"d":0.04,"shape":-4,"gain":0.4}],"limit":1,"gain":3.87};
-/** Slime squelches and wobbles */
+/** 슬라임이 질척이며 흔들림 */
 export const slimeBlob: Sound = {"varyF":2,"layers":[{"wave":"sine","freq":180,"to":90,"vib":[11,3],"a":0.004,"d":0.28,"shape":-3},{"wave":"noise","lp":1100,"lpTo":250,"q":4,"a":0.003,"d":0.2,"shape":-4,"drive":1,"gain":0.5}],"gain":0.616};
-/** Small critter chirp */
+/** 작은 동물의 지저귐 */
 export const chirp: Sound = {"vary":1.5,"layers":[{"wave":"sine","freq":2600,"to":3800,"fm":[2,0.5,0.03],"a":0.002,"d":0.05,"shape":-3},{"wave":"sine","freq":2900,"to":4200,"fm":[2,0.5,0.03],"at":0.08,"a":0.002,"d":0.06,"shape":-3,"gain":0.8}],"gain":0.632};
-/** Low growl of a small monster */
+/** 작은 몬스터의 낮은 으르렁 */
 export const growlSmall: Sound = {"vary":1,"varyF":2,"layers":[{"wave":"saw","freq":95,"to":80,"vib":[7,0.8],"formant":[570,840,2410],"a":0.06,"h":0.25,"d":0.3,"shape":-3,"drive":1.5},{"wave":"brown","lp":400,"a":0.08,"h":0.2,"d":0.3,"gain":0.4}],"gain":0.64};
-/** Ghostly 'oooh' */
+/** 유령의 '우우~' 신음 */
 export const ghostMoan: Sound = {"vary":0.25,"verb":[0.75,0.35],"layers":[{"wave":"sine","freq":290,"to":250,"vib":[5,0.7],"formant":[300,870,2240],"a":0.4,"h":0.4,"d":0.8,"shape":-3},{"wave":"triangle","freq":290,"to":250,"vib":[5,0.7],"formant":[300,870,2240],"a":0.4,"h":0.4,"d":0.8,"shape":-3,"gain":0.6}],"gain":0.15};
-/** Buzzing insect flying by */
+/** 지나가는 곤충의 윙윙 소리 */
 export const beeBuzz: Sound = {"vary":0.8,"layers":[{"wave":"saw","freq":210,"to":240,"vib":[6,0.5],"bp":900,"bpTo":1300,"q":2,"a":0.15,"h":0.4,"d":0.3,"shape":-3},{"wave":"saw","freq":212,"to":243,"vib":[6.6,0.5],"bp":2400,"q":3,"a":0.15,"h":0.4,"d":0.3,"shape":-3,"gain":0.4}],"gain":0.761};
-/** Creature yelps when hit */
+/** 맞았을 때 크리처의 비명 */
 export const creatureHurt: Sound = {"vary":1.5,"layers":[{"wave":"saw","freq":420,"to":250,"curve":2,"formant":[730,1090,2440],"kt":1,"a":0.005,"h":0.04,"d":0.2,"shape":-3,"drive":1},{"wave":"noise","bp":2000,"a":0.001,"d":0.02,"shape":-5,"gain":0.4}],"gain":1.07};
-/** Creature's last cry, falling away */
+/** 크리처의 마지막 울음, 멀어짐 */
 export const creatureDie: Sound = {"vary":1,"verb":[0.4,0.2],"layers":[{"wave":"saw","freq":330,"to":80,"curve":0.8,"vib":[9,0.6],"formant":[730,1090,2440],"kt":1,"a":0.01,"h":0.1,"d":0.6,"shape":-2.5,"drive":0.8}],"gain":0.57};
-/** Gibberish dialogue blips, like a character talking */
+/** 캐릭터 말소리 같은 알 수 없는 대사 블립 */
 export const voiceBabble: Sound = {"vary":2,"layers":[{"wave":"square","duty":0.3,"freq":280,"arp":[0,4,-2,7,2,5],"arpRate":0.07,"formant":[270,2290,3010],"a":0.005,"h":0.36,"d":0.06,"shape":-3}],"gain":0.384};
-/** Zombie groan */
+/** 좀비 신음 */
 export const zombieGroan: Sound = {"vary":1.2,"varyF":2,"verb":[0.35,0.15],"layers":[{"wave":"saw","freq":110,"to":85,"vib":[5,1.2],"formant":[570,840,2410],"kt":1,"a":0.1,"h":0.4,"d":0.4,"shape":-3,"drive":2},{"wave":"saw","freq":111,"to":84,"vib":[4,1],"formant":[730,1090,2440],"kt":1,"a":0.15,"h":0.3,"d":0.4,"shape":-3,"gain":0.5},{"wave":"noise","formant":[730,1090,2440],"a":0.1,"h":0.4,"d":0.3,"shape":-3,"gain":0.2}],"gain":0.444};
-/** Big monster roar */
+/** 거대 몬스터의 포효 */
 export const roar: Sound = {"vary":0.8,"varyF":2,"verb":[0.6,0.25],"layers":[{"wave":"saw","freq":90,"to":70,"vib":[9,1.5],"formant":[730,1090,2440],"kt":1,"a":0.08,"h":0.6,"d":0.5,"shape":-3,"drive":3},{"wave":"saw","freq":45,"to":36,"vib":[7,1],"lp":400,"a":0.08,"h":0.6,"d":0.5,"shape":-3,"drive":2},{"wave":"noise","bp":1200,"q":0.8,"a":0.05,"h":0.6,"d":0.4,"shape":-3,"drive":1.5,"gain":0.35}],"gain":0.185};
-/** Dog barks twice */
+/** 개가 두 번 짖음 */
 export const dogBark: Sound = {"vary":1.5,"varyF":2,"verb":[0.25,0.1],"layers":[{"wave":"saw","freq":520,"to":320,"curve":2,"formant":[730,1090,2440],"kt":1,"at":0,"a":0.004,"d":0.12,"shape":-4,"drive":2},{"wave":"noise","bp":1500,"q":1,"at":0,"a":0.002,"d":0.06,"shape":-4,"gain":0.3},{"wave":"saw","freq":520,"to":320,"curve":2,"formant":[730,1090,2440],"kt":1,"at":0.22,"a":0.004,"d":0.12,"shape":-4,"drive":2},{"wave":"noise","bp":1500,"q":1,"at":0.22,"a":0.002,"d":0.06,"shape":-4,"gain":0.3}],"gain":0.822};
-/** Cat meows */
+/** 고양이 울음 */
 export const catMeow: Sound = {"vary":1.5,"layers":[{"wave":"saw","freq":600,"to":900,"sweep":0.2,"curve":0.8,"vib":[5,0.3],"formant":[270,2290,3010],"kt":1,"a":0.04,"h":0.1,"d":0.3,"shape":-3},{"wave":"saw","freq":900,"to":550,"at":0.25,"sweep":0.3,"formant":[300,870,2240],"kt":1,"a":0.04,"d":0.3,"shape":-3,"gain":0.7}],"gain":0.867};
-/** Steady rain, seamless loop */
+/** 꾸준한 빗소리, 끊김 없는 루프 */
 export const rainLoop: Sound = {"loop":true,"vary":0.6,"varyF":2,"layers":[{"wave":"pink","hp":500,"lp":7000,"a":0.02,"h":3.48,"d":0,"gain":0.7},{"wave":"noise","bp":4200,"q":0.7,"a":0.02,"h":3.48,"d":0,"gain":0.22},{"wave":"brown","lp":350,"a":0.02,"h":3.48,"d":0,"gain":0.35},{"wave":"noise","bp":2600,"q":1.5,"at":0.07,"a":0.001,"d":0.012,"shape":-5,"gain":0.55},{"wave":"noise","bp":3200,"q":1.5,"at":0.31,"a":0.001,"d":0.012,"shape":-5,"gain":0.7000000000000001},{"wave":"noise","bp":3800,"q":1.5,"at":0.46,"a":0.001,"d":0.012,"shape":-5,"gain":0.8500000000000001},{"wave":"noise","bp":4400,"q":1.5,"at":0.62,"a":0.001,"d":0.012,"shape":-5,"gain":0.55},{"wave":"noise","bp":2600,"q":1.5,"at":0.9,"a":0.001,"d":0.012,"shape":-5,"gain":0.7000000000000001},{"wave":"noise","bp":3200,"q":1.5,"at":1.13,"a":0.001,"d":0.012,"shape":-5,"gain":0.8500000000000001},{"wave":"noise","bp":3800,"q":1.5,"at":1.27,"a":0.001,"d":0.012,"shape":-5,"gain":0.55},{"wave":"noise","bp":4400,"q":1.5,"at":1.55,"a":0.001,"d":0.012,"shape":-5,"gain":0.7000000000000001},{"wave":"noise","bp":2600,"q":1.5,"at":1.71,"a":0.001,"d":0.012,"shape":-5,"gain":0.8500000000000001},{"wave":"noise","bp":3200,"q":1.5,"at":1.98,"a":0.001,"d":0.012,"shape":-5,"gain":0.55},{"wave":"noise","bp":3800,"q":1.5,"at":2.2,"a":0.001,"d":0.012,"shape":-5,"gain":0.7000000000000001},{"wave":"noise","bp":4400,"q":1.5,"at":2.36,"a":0.001,"d":0.012,"shape":-5,"gain":0.8500000000000001},{"wave":"noise","bp":2600,"q":1.5,"at":2.61,"a":0.001,"d":0.012,"shape":-5,"gain":0.55},{"wave":"noise","bp":3200,"q":1.5,"at":2.83,"a":0.001,"d":0.012,"shape":-5,"gain":0.7000000000000001},{"wave":"noise","bp":3800,"q":1.5,"at":3.05,"a":0.001,"d":0.012,"shape":-5,"gain":0.8500000000000001}],"gain":0.53};
-/** Wind blowing with slow gusts, seamless loop */
+/** 느린 돌풍이 섞인 바람, 끊김 없는 루프 */
 export const windLoop: Sound = {"loop":true,"vary":0.5,"varyF":2,"layers":[{"wave":"pink","bp":520,"q":1.2,"a":0.02,"h":3.48,"d":0,"gain":0.8},{"wave":"brown","lp":220,"a":0.02,"h":3.48,"d":0,"gain":0.45},{"wave":"pink","bp":600,"bpTo":1400,"q":2.5,"at":0.15,"a":0.9,"d":1,"shape":1.5,"gain":0.7},{"wave":"pink","bp":1300,"bpTo":650,"q":2.5,"at":1.6,"a":0.7,"d":1.1,"shape":1.5,"gain":0.6},{"wave":"noise","bp":2300,"bpTo":2900,"q":7,"at":0.5,"a":1,"d":1.2,"shape":2,"gain":0.1}],"gain":0.913};
-/** Distant thunder rolling in */
+/** 멀리서 구르는 천둥 */
 export const thunderFar: Sound = {"vary":0.5,"varyF":3,"varyG":1.5,"verb":[0.7,0.4],"layers":[{"wave":"brown","lp":320,"lpTo":90,"a":0.25,"h":0.25,"d":1.5,"shape":-3,"gain":1.6,"drive":0.8},{"wave":"brown","lp":900,"lpTo":300,"at":0.1,"a":0.01,"d":0.35,"shape":-4,"gain":0.7},{"wave":"brown","lp":900,"lpTo":300,"at":0.22,"a":0.01,"d":0.35,"shape":-4,"gain":0.5499999999999999},{"wave":"brown","lp":900,"lpTo":300,"at":0.4,"a":0.01,"d":0.35,"shape":-4,"gain":0.39999999999999997}],"gain":0.332};
-/** A raindrop on a leaf */
+/** 잎사귀에 떨어지는 빗방울 */
 export const rainDrop: Sound = {"vary":2,"varyF":2,"layers":[{"wave":"noise","hp":3000,"a":0.001,"d":0.008,"shape":-5,"gain":0.6},{"wave":"sine","freq":1400,"to":2600,"curve":4,"sweep":0.03,"at":0.002,"a":0.001,"d":0.05,"shape":-4}],"gain":0.778};
-/** Songbird, three quick chirps */
+/** 새의 빠른 세 번 지저귐 */
 export const birdChirp: Sound = {"vary":1.5,"verb":[0.3,0.15],"layers":[{"wave":"sine","freq":3200,"to":4400,"fm":[2,0.4,0.02],"vib":[40,0.6],"at":0,"a":0.003,"d":0.06,"shape":-3,"gain":1},{"wave":"sine","freq":3500,"to":4700,"fm":[2,0.4,0.02],"vib":[40,0.6],"at":0.09,"a":0.003,"d":0.06,"shape":-3,"gain":0.9},{"wave":"sine","freq":3000,"to":3900,"fm":[2,0.4,0.02],"vib":[40,0.6],"at":0.17,"a":0.003,"d":0.06,"shape":-3,"gain":0.8}],"gain":0.43};
-/** Frog croak */
+/** 개구리 울음 */
 export const frogCroak: Sound = {"vary":1,"layers":[{"wave":"saw","freq":120,"formant":[400,1200],"at":0,"a":0.004,"d":0.04,"shape":-3,"drive":1,"gain":1},{"wave":"saw","freq":120,"formant":[400,1200],"at":0.045,"a":0.004,"d":0.04,"shape":-3,"drive":1,"gain":0.88},{"wave":"saw","freq":120,"formant":[400,1200],"at":0.09,"a":0.004,"d":0.04,"shape":-3,"drive":1,"gain":0.76},{"wave":"saw","freq":120,"formant":[400,1200],"at":0.135,"a":0.004,"d":0.04,"shape":-3,"drive":1,"gain":0.64}],"limit":1,"gain":2.81};
-/** Leaves rustling in a bush */
+/** 덤불 속 나뭇잎 부스럭 */
 export const leafRustle: Sound = {"varyF":3,"varyG":1.5,"layers":[{"wave":"pink","bp":3000,"q":0.8,"a":0.05,"h":0.1,"d":0.25,"shape":-3,"gain":0.6},{"wave":"noise","bp":3500,"q":2,"at":0.02,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"noise","bp":4200,"q":2,"at":0.06,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"noise","bp":4900,"q":2,"at":0.09,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"noise","bp":3500,"q":2,"at":0.15,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"noise","bp":4200,"q":2,"at":0.19,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"noise","bp":4900,"q":2,"at":0.26,"a":0.001,"d":0.015,"shape":-5,"gain":0.5},{"wave":"noise","bp":3500,"q":2,"at":0.31,"a":0.001,"d":0.015,"shape":-5,"gain":0.5}],"gain":1.43};
-/** Pebble drops and bounces once */
+/** 자갈이 떨어져 한 번 튐 */
 export const stoneDrop: Sound = {"vary":1.5,"varyF":2,"varyG":1.5,"layers":[{"wave":"noise","bp":2500,"a":0.001,"d":0.006,"shape":-5,"gain":0.4},{"wave":"pink","bp":700,"q":1.5,"a":0.001,"d":0.03,"shape":-6,"gain":0.5},{"wave":"modal","freq":1100,"modes":[1,2.6,4.9,7.3],"a":0.001,"d":0.15,"shape":-4,"drive":1},{"wave":"noise","bp":2800,"at":0.16,"a":0.001,"d":0.005,"shape":-5,"gain":0.4},{"wave":"pink","bp":750,"q":1.5,"at":0.16,"a":0.001,"d":0.02,"shape":-6,"gain":0.3},{"wave":"modal","freq":1150,"modes":[1,2.6,4.9,7.3],"at":0.16,"a":0.001,"d":0.08,"shape":-5,"gain":0.5}],"gain":0.655};
-/** Close lightning: sharp crack into a rolling boom */
+/** 가까운 낙뢰: 날카로운 파열 후 구르는 굉음 */
 export const thunderCrack: Sound = {"vary":0.5,"varyF":2,"verb":[0.7,0.3],"layers":[{"wave":"noise","hp":1500,"a":0.001,"d":0.12,"shape":-4,"drive":2},{"wave":"brown","lp":1200,"lpTo":150,"a":0.005,"h":0.2,"d":1.6,"shape":-3,"drive":1.5,"gain":1.2},{"wave":"sine","freq":60,"to":30,"a":0.01,"d":1,"shape":-3,"drive":1},{"wave":"brown","lp":400,"at":0.3,"a":0.02,"d":0.4,"shape":-3,"gain":0.5},{"wave":"brown","lp":400,"at":0.55,"a":0.02,"d":0.4,"shape":-3,"gain":0.38},{"wave":"brown","lp":400,"at":0.8,"a":0.02,"d":0.4,"shape":-3,"gain":0.26}],"gain":0.207};
-/** A wave rolls in and washes back */
+/** 파도가 밀려왔다 빠짐 */
 export const oceanWave: Sound = {"vary":0.3,"varyF":2,"layers":[{"wave":"pink","lp":600,"lpTo":3000,"a":0.7,"d":0.2,"shape":1.5},{"wave":"noise","bp":3000,"q":0.7,"at":0.65,"a":0.05,"d":1.2,"shape":-3,"gain":0.5},{"wave":"brown","lp":300,"a":0.6,"h":0.3,"d":0.9,"gain":0.5}],"gain":0.56};
-/** Short rain shower patter (layer or loop it) */
+/** 짧은 소나기 파바박 (겹치거나 루프 가능) */
 export const rainBurst: Sound = {"vary":0.2,"varyF":2,"layers":[{"wave":"pink","bp":2500,"q":0.6,"a":0.2,"h":0.8,"d":0.4,"gain":0.6},{"wave":"noise","bp":2000,"q":3,"at":0.05,"a":0.001,"d":0.012,"shape":-5,"gain":0.3},{"wave":"noise","bp":2397,"q":3,"at":0.113,"a":0.001,"d":0.012,"shape":-5,"gain":0.4},{"wave":"noise","bp":2794,"q":3,"at":0.17600000000000002,"a":0.001,"d":0.012,"shape":-5,"gain":0.5},{"wave":"noise","bp":3191,"q":3,"at":0.2,"a":0.001,"d":0.012,"shape":-5,"gain":0.6000000000000001},{"wave":"noise","bp":3588,"q":3,"at":0.263,"a":0.001,"d":0.012,"shape":-5,"gain":0.3},{"wave":"noise","bp":3985,"q":3,"at":0.326,"a":0.001,"d":0.012,"shape":-5,"gain":0.4},{"wave":"noise","bp":4382,"q":3,"at":0.35000000000000003,"a":0.001,"d":0.012,"shape":-5,"gain":0.5},{"wave":"noise","bp":4779,"q":3,"at":0.41300000000000003,"a":0.001,"d":0.012,"shape":-5,"gain":0.6000000000000001},{"wave":"noise","bp":2176,"q":3,"at":0.47600000000000003,"a":0.001,"d":0.012,"shape":-5,"gain":0.3},{"wave":"noise","bp":2573,"q":3,"at":0.5,"a":0.001,"d":0.012,"shape":-5,"gain":0.4},{"wave":"noise","bp":2970,"q":3,"at":0.5630000000000001,"a":0.001,"d":0.012,"shape":-5,"gain":0.5},{"wave":"noise","bp":3367,"q":3,"at":0.6260000000000001,"a":0.001,"d":0.012,"shape":-5,"gain":0.6000000000000001},{"wave":"noise","bp":3764,"q":3,"at":0.6500000000000001,"a":0.001,"d":0.012,"shape":-5,"gain":0.3},{"wave":"noise","bp":4161,"q":3,"at":0.7130000000000001,"a":0.001,"d":0.012,"shape":-5,"gain":0.4},{"wave":"noise","bp":4558,"q":3,"at":0.7760000000000001,"a":0.001,"d":0.012,"shape":-5,"gain":0.5},{"wave":"noise","bp":4955,"q":3,"at":0.8,"a":0.001,"d":0.012,"shape":-5,"gain":0.6000000000000001},{"wave":"noise","bp":2352,"q":3,"at":0.8630000000000001,"a":0.001,"d":0.012,"shape":-5,"gain":0.3},{"wave":"noise","bp":2749,"q":3,"at":0.9260000000000002,"a":0.001,"d":0.012,"shape":-5,"gain":0.4},{"wave":"noise","bp":3146,"q":3,"at":0.9500000000000001,"a":0.001,"d":0.012,"shape":-5,"gain":0.5},{"wave":"noise","bp":3543,"q":3,"at":1.013,"a":0.001,"d":0.012,"shape":-5,"gain":0.6000000000000001},{"wave":"noise","bp":3940,"q":3,"at":1.076,"a":0.001,"d":0.012,"shape":-5,"gain":0.3},{"wave":"noise","bp":4337,"q":3,"at":1.1,"a":0.001,"d":0.012,"shape":-5,"gain":0.4},{"wave":"noise","bp":4734,"q":3,"at":1.163,"a":0.001,"d":0.012,"shape":-5,"gain":0.5},{"wave":"noise","bp":2131,"q":3,"at":1.2260000000000002,"a":0.001,"d":0.012,"shape":-5,"gain":0.6000000000000001}],"gain":0.831};
-/** Dive into deep water: plunge and bubbles */
+/** 깊은 물에 다이빙: 첨벙과 거품 */
 export const diveSplash: Sound = {"varyF":2,"verb":[0.3,0.12],"layers":[{"wave":"noise","lp":5000,"lpTo":600,"a":0.002,"d":0.5,"shape":-3,"drive":1},{"wave":"sine","freq":150,"to":50,"a":0.002,"d":0.25,"shape":-4,"drive":1},{"wave":"sine","freq":350,"to":900,"curve":3,"at":0.25,"a":0.002,"d":0.05,"shape":3,"lp":1800,"gain":0.4},{"wave":"sine","freq":410,"to":1000,"curve":3,"at":0.32,"a":0.002,"d":0.05,"shape":3,"lp":1800,"gain":0.4},{"wave":"sine","freq":470,"to":1100,"curve":3,"at":0.4,"a":0.002,"d":0.05,"shape":3,"lp":1800,"gain":0.4},{"wave":"sine","freq":530,"to":1200,"curve":3,"at":0.46,"a":0.002,"d":0.05,"shape":3,"lp":1800,"gain":0.4},{"wave":"sine","freq":590,"to":1300,"curve":3,"at":0.55,"a":0.002,"d":0.05,"shape":3,"lp":1800,"gain":0.4}],"gain":0.345};
-/** Flip a card face up: quick papery snap */
+/** 카드 뒤집기: 빠른 종이 스냅 */
 export const cardFlip: Sound = {"vary":1,"varyF":3,"varyG":1.5,"layers":[{"wave":"noise","bp":2600,"bpTo":4200,"q":1.2,"a":0.012,"d":0.035,"shape":-4,"gain":0.7},{"wave":"noise","bp":3800,"q":2.5,"at":0.045,"a":0.002,"d":0.012,"shape":-6,"gain":0.6},{"wave":"pink","bp":900,"q":1.5,"at":0.046,"a":0.001,"d":0.03,"shape":-5,"gain":0.4}],"limit":1,"gain":2.82};
-/** Deal a card across the table: swish and slap */
+/** 테이블 위로 카드 딜링: 휙-탁 */
 export const cardDeal: Sound = {"vary":1,"varyF":3,"varyG":1.5,"layers":[{"wave":"noise","bp":1800,"bpTo":4500,"q":1.4,"a":0.05,"d":0.03,"shape":1},{"wave":"noise","bp":3000,"q":1.5,"at":0.08,"a":0.002,"d":0.02,"shape":-6,"gain":0.7},{"wave":"pink","lp":1200,"at":0.08,"a":0.001,"d":0.04,"shape":-5,"gain":0.5}],"limit":1,"gain":1.72};
-/** Lay a card down on felt */
+/** 펠트 위에 카드 내려놓기 */
 export const cardPlace: Sound = {"vary":0.8,"varyF":2,"varyG":1,"layers":[{"wave":"pink","bp":1400,"q":1,"a":0.002,"d":0.09,"shape":-5},{"wave":"noise","bp":3500,"q":2,"a":0.001,"d":0.008,"shape":-6,"gain":0.25},{"wave":"pink","lp":600,"a":0.002,"d":0.12,"shape":-4,"gain":0.5}],"limit":1,"gain":2.52};
-/** Riffle shuffle: a fast burst of card ticks */
+/** 리플 셔플: 빠른 카드 틱 연발 */
 export const cardShuffle: Sound = {"vary":0.5,"varyF":2,"layers":[{"wave":"noise","bp":2800,"q":2,"at":0,"a":0.001,"d":0.012,"shape":-5,"gain":0.5},{"wave":"noise","bp":3300,"q":2,"at":0.026,"a":0.001,"d":0.012,"shape":-5,"gain":0.5794677323180245},{"wave":"noise","bp":3800,"q":2,"at":0.044,"a":0.001,"d":0.012,"shape":-5,"gain":0.6557673369234602},{"wave":"noise","bp":2800,"q":2,"at":0.07,"a":0.001,"d":0.012,"shape":-5,"gain":0.7258569893580141},{"wave":"noise","bp":3300,"q":2,"at":0.088,"a":0.001,"d":0.012,"shape":-5,"gain":0.7869424363598092},{"wave":"noise","bp":3800,"q":2,"at":0.11399999999999999,"a":0.001,"d":0.012,"shape":-5,"gain":0.8365883939231586},{"wave":"noise","bp":2800,"q":2,"at":0.132,"a":0.001,"d":0.012,"shape":-5,"gain":0.8728156343868905},{"wave":"noise","bp":3300,"q":2,"at":0.158,"a":0.001,"d":0.012,"shape":-5,"gain":0.8941798919953841},{"wave":"noise","bp":3800,"q":2,"at":0.176,"a":0.001,"d":0.012,"shape":-5,"gain":0.8998294412166021},{"wave":"noise","bp":2800,"q":2,"at":0.20199999999999999,"a":0.001,"d":0.012,"shape":-5,"gain":0.8895390523512781},{"wave":"noise","bp":3300,"q":2,"at":0.21999999999999997,"a":0.001,"d":0.012,"shape":-5,"gain":0.8637189707302727},{"wave":"noise","bp":3800,"q":2,"at":0.246,"a":0.001,"d":0.012,"shape":-5,"gain":0.8233985615278361},{"wave":"noise","bp":2800,"q":2,"at":0.264,"a":0.001,"d":0.012,"shape":-5,"gain":0.7701852722204604},{"wave":"noise","bp":3300,"q":2,"at":0.29,"a":0.001,"d":0.012,"shape":-5,"gain":0.7062005487285856},{"wave":"noise","bp":3800,"q":2,"at":0.308,"a":0.001,"d":0.012,"shape":-5,"gain":0.6339952600623621},{"wave":"noise","bp":2800,"q":2,"at":0.33399999999999996,"a":0.001,"d":0.012,"shape":-5,"gain":0.5564480032239469},{"wave":"pink","bp":2000,"q":0.8,"a":0.05,"h":0.2,"d":0.12,"gain":0.25}],"limit":1,"gain":1.91};
-/** Poker chips clack onto a stack */
+/** 포커 칩이 쌓이며 달각거림 */
 export const chipStack: Sound = {"vary":0.6,"varyF":2,"varyG":1.5,"layers":[{"wave":"modal","freq":1900,"modes":[1,1.59,2.14,2.65],"at":0,"a":0.001,"d":0.06,"shape":-6,"gain":1},{"wave":"noise","bp":4500,"q":2,"at":0,"a":0.001,"d":0.006,"shape":-6,"gain":0.5},{"wave":"modal","freq":2020,"modes":[1,1.59,2.14,2.65],"at":0.035,"a":0.001,"d":0.06,"shape":-6,"gain":0.8},{"wave":"noise","bp":4500,"q":2,"at":0.035,"a":0.001,"d":0.006,"shape":-6,"gain":0.5},{"wave":"modal","freq":2140,"modes":[1,1.59,2.14,2.65],"at":0.06,"a":0.001,"d":0.06,"shape":-6,"gain":0.6},{"wave":"noise","bp":4500,"q":2,"at":0.06,"a":0.001,"d":0.006,"shape":-6,"gain":0.5}],"limit":1,"gain":0.794};
-/** Dice tumble across a table and settle */
+/** 주사위가 테이블 위를 굴러 멈춤 */
 export const diceRoll: Sound = {"vary":0.8,"varyF":2,"varyG":2,"layers":[{"wave":"modal","freq":900,"modes":[1,2.32,4.25,6.63],"at":0,"a":0.001,"d":0.05,"shape":-6,"gain":1},{"wave":"noise","bp":3000,"q":2,"at":0,"a":0.001,"d":0.006,"shape":-6,"gain":0.4},{"wave":"modal","freq":1080,"modes":[1,2.32,4.25,6.63],"at":0.07,"a":0.001,"d":0.05,"shape":-6,"gain":0.9},{"wave":"noise","bp":3000,"q":2,"at":0.07,"a":0.001,"d":0.006,"shape":-6,"gain":0.36000000000000004},{"wave":"modal","freq":1260,"modes":[1,2.32,4.25,6.63],"at":0.13,"a":0.001,"d":0.05,"shape":-6,"gain":0.8},{"wave":"noise","bp":3000,"q":2,"at":0.13,"a":0.001,"d":0.006,"shape":-6,"gain":0.32},{"wave":"modal","freq":900,"modes":[1,2.32,4.25,6.63],"at":0.2,"a":0.001,"d":0.05,"shape":-6,"gain":0.7},{"wave":"noise","bp":3000,"q":2,"at":0.2,"a":0.001,"d":0.006,"shape":-6,"gain":0.28},{"wave":"modal","freq":1080,"modes":[1,2.32,4.25,6.63],"at":0.25,"a":0.001,"d":0.05,"shape":-6,"gain":0.6},{"wave":"noise","bp":3000,"q":2,"at":0.25,"a":0.001,"d":0.006,"shape":-6,"gain":0.24000000000000002},{"wave":"modal","freq":1260,"modes":[1,2.32,4.25,6.63],"at":0.31,"a":0.001,"d":0.05,"shape":-6,"gain":0.5},{"wave":"noise","bp":3000,"q":2,"at":0.31,"a":0.001,"d":0.006,"shape":-6,"gain":0.2},{"wave":"modal","freq":900,"modes":[1,2.32,4.25,6.63],"at":0.36,"a":0.001,"d":0.05,"shape":-6,"gain":0.3999999999999999},{"wave":"noise","bp":3000,"q":2,"at":0.36,"a":0.001,"d":0.006,"shape":-6,"gain":0.16000000000000003},{"wave":"modal","freq":1080,"modes":[1,2.32,4.25,6.63],"at":0.4,"a":0.001,"d":0.05,"shape":-6,"gain":0.29999999999999993},{"wave":"noise","bp":3000,"q":2,"at":0.4,"a":0.001,"d":0.006,"shape":-6,"gain":0.12}],"limit":1,"gain":1.01};
-/** Slot reels spinning: fast ratchet ticks */
+/** 슬롯 릴 회전: 빠른 라쳇 틱 */
 export const slotSpin: Sound = {"vary":0.4,"varyF":1.5,"layers":[{"wave":"square","duty":0.25,"freq":1400,"at":0,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.04,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.08,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.12,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.16,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.2,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.24,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.28,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.32,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.36,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.4,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.44,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.48,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.52,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.56,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.6,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.64,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"square","duty":0.25,"freq":1400,"at":0.68,"a":0.001,"d":0.02,"shape":3,"lp":4000,"gain":0.5},{"wave":"noise","bp":2500,"q":1,"a":0.05,"h":0.6,"d":0.1,"gain":0.08}],"gain":0.904};
-/** A reel locks into place: clunk and ding */
+/** 릴이 제자리에 잠김: 쿵-딩 */
 export const slotStop: Sound = {"vary":0.2,"verb":[0.25,0.12],"layers":[{"wave":"noise","bp":1200,"q":1.5,"a":0.001,"d":0.02,"shape":-5,"drive":1},{"wave":"sine","freq":150,"to":90,"a":0.001,"d":0.08,"shape":-5,"gain":0.7},{"wave":"sine","freq":1568,"fm":[3.5,1.4,0.1],"at":0.04,"a":0.002,"d":0.4,"shape":-4,"gain":0.4}],"limit":1,"gain":0.852};
-/** Jackpot: bell flurry over a rising arpeggio */
+/** 잭팟: 상승 아르페지오 위 종소리 세례 */
 export const jackpot: Sound = {"vary":0.05,"verb":[0.4,0.2],"echo":[0.08,0.3,0.2],"layers":[{"wave":"square","duty":0.25,"freq":784,"arp":[0,4,7,12,16,19,24,19,24],"arpRate":0.07,"a":0.002,"h":0.55,"d":0.4,"shape":2,"lp":5000,"gain":0.5},{"wave":"sine","freq":2093,"fm":[3.5,1.6,0.1],"at":0.1,"a":0.002,"d":0.35,"shape":-4,"gain":0.3},{"wave":"sine","freq":2637,"fm":[3.5,1.6,0.1],"at":0.25,"a":0.002,"d":0.35,"shape":-4,"gain":0.3},{"wave":"sine","freq":2093,"fm":[3.5,1.6,0.1],"at":0.4,"a":0.002,"d":0.35,"shape":-4,"gain":0.3},{"wave":"sine","freq":2637,"fm":[3.5,1.6,0.1],"at":0.55,"a":0.002,"d":0.35,"shape":-4,"gain":0.3},{"wave":"sine","freq":2093,"fm":[3.5,1.6,0.1],"at":0.7,"a":0.002,"d":0.35,"shape":-4,"gain":0.3},{"wave":"sine","freq":2637,"fm":[3.5,1.6,0.1],"at":0.85,"a":0.002,"d":0.35,"shape":-4,"gain":0.3},{"wave":"metal","freq":5000,"hp":7000,"a":0.01,"h":0.8,"d":0.4,"gain":0.06}],"gain":0.23};
-/** Engine cranks, catches and idles */
+/** 엔진 시동이 걸리고 아이들링 */
 export const engineStart: Sound = {"vary":0.3,"layers":[{"wave":"saw","freq":40,"to":30,"lp":500,"at":0,"a":0.01,"d":0.09,"shape":-3,"drive":1.5,"gain":0.6},{"wave":"saw","freq":40,"to":30,"lp":500,"at":0.12,"a":0.01,"d":0.09,"shape":-3,"drive":1.5,"gain":0.6},{"wave":"saw","freq":40,"to":30,"lp":500,"at":0.24,"a":0.01,"d":0.09,"shape":-3,"drive":1.5,"gain":0.6},{"wave":"saw","freq":30,"to":70,"curve":3,"vib":[14,1],"lp":900,"at":0.36,"a":0.01,"h":0.5,"d":0.4,"shape":-3,"drive":2},{"wave":"square","freq":35,"to":72,"curve":3,"lp":400,"at":0.36,"a":0.01,"h":0.5,"d":0.4,"shape":-3,"gain":0.5},{"wave":"brown","lp":400,"at":0.36,"a":0.02,"h":0.5,"d":0.4,"gain":0.3}],"gain":0.256};
-/** Throttle blip: engine revs up and falls back */
+/** 스로틀 블립: 엔진이 치솟았다 가라앉음 */
 export const engineRev: Sound = {"vary":0.5,"layers":[{"wave":"saw","freq":60,"to":210,"curve":0.7,"sweep":0.35,"lp":1500,"kt":0.5,"a":0.02,"h":0.3,"d":0.5,"shape":-3,"drive":2},{"wave":"saw","freq":121,"to":425,"curve":0.7,"sweep":0.35,"bp":1800,"q":2,"kt":1,"a":0.02,"h":0.3,"d":0.4,"shape":-3,"gain":0.3},{"wave":"brown","lp":500,"a":0.02,"h":0.3,"d":0.5,"gain":0.3}],"gain":0.241};
-/** Tyres squeal on a hard turn or brake */
+/** 급커브나 급제동에 타이어 끼익 */
 export const tireScreech: Sound = {"vary":0.6,"varyF":2,"layers":[{"wave":"noise","bp":2400,"bpTo":2100,"q":12,"a":0.04,"h":0.45,"d":0.25,"shape":-3,"gain":1.2},{"wave":"saw","freq":1150,"to":1000,"vib":[18,0.4],"bp":2300,"q":6,"a":0.04,"h":0.45,"d":0.25,"shape":-3,"gain":0.25},{"wave":"pink","lp":800,"a":0.04,"h":0.4,"d":0.2,"gain":0.2}],"gain":1.21};
-/** Car crash: metal crunch, glass and debris */
+/** 자동차 충돌: 금속 으깨짐, 유리와 잔해 */
 export const carCrash: Sound = {"varyF":2,"varyG":1.5,"verb":[0.35,0.15],"layers":[{"wave":"noise","hp":1500,"a":0.001,"d":0.05,"shape":-4,"drive":2},{"wave":"metal","freq":380,"bp":1500,"q":1.2,"a":0.001,"d":0.5,"shape":-4,"drive":2},{"wave":"sine","freq":95,"to":35,"curve":2,"a":0.001,"d":0.35,"shape":-4,"drive":2},{"wave":"brown","lp":900,"lpTo":200,"a":0.001,"d":0.6,"shape":-4,"drive":1,"gain":0.8},{"wave":"metal","freq":1400,"hp":3500,"at":0.12,"a":0.001,"d":0.08,"shape":-5,"gain":0.3},{"wave":"metal","freq":1700,"hp":3500,"at":0.2,"a":0.001,"d":0.08,"shape":-5,"gain":0.3},{"wave":"metal","freq":2000,"hp":3500,"at":0.31,"a":0.001,"d":0.08,"shape":-5,"gain":0.3},{"wave":"metal","freq":2300,"hp":3500,"at":0.42,"a":0.001,"d":0.08,"shape":-5,"gain":0.3}],"gain":0.223};
-/** Two-tone car horn honk */
+/** 두 음 자동차 경적 빵빵 */
 export const carHorn: Sound = {"vary":0.15,"layers":[{"wave":"square","freq":415,"a":0.01,"h":0.3,"d":0.08,"shape":-3,"bp":1200,"q":1.2,"drive":1.5},{"wave":"square","freq":523,"a":0.01,"h":0.3,"d":0.08,"shape":-3,"bp":1500,"q":1.2,"drive":1.5,"gain":0.8}],"gain":0.225};
-/** Nitro / turbo boost: whoosh with a rising jet whine */
+/** 니트로/터보 부스트: 치솟는 제트 윙과 함께 휙 */
 export const boost: Sound = {"vary":0.4,"varyF":2,"layers":[{"wave":"noise","bp":800,"bpTo":3500,"q":1,"a":0.03,"h":0.3,"d":0.4,"shape":-3},{"wave":"saw","freq":300,"to":1200,"curve":0.8,"bp":2000,"q":3,"kt":1,"a":0.05,"h":0.3,"d":0.3,"shape":-3,"gain":0.25},{"wave":"brown","lp":300,"a":0.01,"d":0.4,"shape":-3,"drive":1,"gain":0.6},{"wave":"sine","freq":90,"to":45,"a":0.001,"d":0.2,"shape":-5,"gain":0.6}],"gain":0.763};
-/** Start-light beep (ready, set): play three times then countdown-go */
+/** 출발 신호등 비프 (준비): 세 번 재생 후 countdown-go */
 export const raceLight: Sound = {"vary":0.02,"layers":[{"wave":"square","duty":0.5,"freq":880,"a":0.002,"h":0.18,"d":0.05,"shape":1,"lp":3500},{"wave":"sine","freq":1760,"a":0.002,"h":0.18,"d":0.05,"shape":1,"gain":0.3}],"gain":0.226};
-/** Jump scare: screeching sting with a sub hit */
+/** 점프 스케어: 비명 같은 스팅과 서브 타격 */
 export const jumpscare: Sound = {"vary":0.3,"verb":[0.6,0.3],"layers":[{"wave":"saw","freq":1200,"to":900,"vib":[11,1.5],"formant":[270,2290,3010],"a":0.002,"h":0.25,"d":0.5,"shape":-3,"drive":2},{"wave":"saw","freq":1265,"to":950,"vib":[13,1.5],"bp":3000,"q":3,"a":0.002,"h":0.25,"d":0.5,"shape":-3,"gain":0.5},{"wave":"noise","hp":2000,"a":0.001,"d":0.15,"shape":-4,"gain":0.6},{"wave":"sine","freq":70,"to":30,"curve":2,"a":0.001,"d":0.6,"shape":-3,"drive":2}],"gain":0.17};
-/** Rising dread: detuned low drone that swells */
+/** 차오르는 공포: 디튠된 저음 드론이 부풂 */
 export const dreadDrone: Sound = {"vary":0.2,"verb":[0.65,0.3],"layers":[{"wave":"saw","freq":55,"to":58,"lp":400,"lpTo":1200,"a":0.9,"h":0.25,"d":0.5,"shape":-3},{"wave":"saw","freq":55.8,"to":61,"lp":400,"lpTo":1200,"a":0.9,"h":0.25,"d":0.5,"shape":-3},{"wave":"sine","freq":880,"to":932,"vib":[5,0.3],"a":1,"h":0.2,"d":0.45,"shape":-3,"gain":0.08},{"wave":"brown","lp":200,"a":0.8,"h":0.3,"d":0.5,"shape":-3,"gain":0.4}],"gain":0.247};
-/** Breathy unintelligible whisper */
+/** 숨소리 같은 알 수 없는 속삭임 */
 export const whisper: Sound = {"vary":1,"varyF":2,"verb":[0.5,0.25],"layers":[{"wave":"noise","formant":[730,1090,2440],"a":0.06,"h":0.12,"d":0.15,"shape":-3,"gain":0.8},{"wave":"noise","formant":[270,2290,3010],"at":0.28,"a":0.04,"h":0.1,"d":0.12,"shape":-3,"gain":0.7},{"wave":"noise","formant":[300,870,2240],"at":0.5,"a":0.05,"h":0.08,"d":0.2,"shape":-3,"gain":0.6},{"wave":"noise","bp":6000,"q":2,"at":0.2,"a":0.01,"d":0.05,"shape":-4,"gain":0.3}],"gain":1.35};
-/** Dissonant orchestral-style stab for a reveal */
+/** 반전용 불협화음 오케스트라풍 스탭 */
 export const horrorSting: Sound = {"vary":0.1,"verb":[0.75,0.35],"layers":[{"wave":"saw","freq":220,"lp":2500,"lpTo":600,"a":0.005,"h":0.05,"d":1.2,"shape":-3,"drive":1},{"wave":"saw","freq":233,"lp":2500,"lpTo":600,"a":0.005,"h":0.05,"d":1.2,"shape":-3,"drive":1},{"wave":"saw","freq":311,"lp":2500,"lpTo":600,"a":0.005,"h":0.05,"d":1.2,"shape":-3,"gain":0.7},{"wave":"brown","lp":300,"a":0.001,"d":0.8,"shape":-4,"gain":0.7},{"wave":"metal","freq":600,"hp":3000,"a":0.001,"d":1,"shape":-3,"gain":0.15}],"gain":0.154};
-/** Chains clink and drag */
+/** 쇠사슬이 달그락거리며 끌림 */
 export const chainsRattle: Sound = {"vary":0.6,"varyF":2,"varyG":2,"verb":[0.5,0.2],"layers":[{"wave":"metal","freq":900,"hp":2200,"at":0,"a":0.001,"d":0.06,"shape":-5,"gain":0.7},{"wave":"noise","bp":4000,"q":2,"at":0,"a":0.001,"d":0.01,"shape":-6,"gain":0.3},{"wave":"metal","freq":1130,"hp":2200,"at":0.05,"a":0.001,"d":0.06,"shape":-5,"gain":0.7},{"wave":"noise","bp":4000,"q":2,"at":0.05,"a":0.001,"d":0.01,"shape":-6,"gain":0.3},{"wave":"metal","freq":1360,"hp":2200,"at":0.09,"a":0.001,"d":0.06,"shape":-5,"gain":0.7},{"wave":"noise","bp":4000,"q":2,"at":0.09,"a":0.001,"d":0.01,"shape":-6,"gain":0.3},{"wave":"metal","freq":900,"hp":2200,"at":0.16,"a":0.001,"d":0.06,"shape":-5,"gain":0.7},{"wave":"noise","bp":4000,"q":2,"at":0.16,"a":0.001,"d":0.01,"shape":-6,"gain":0.3},{"wave":"metal","freq":1130,"hp":2200,"at":0.21,"a":0.001,"d":0.06,"shape":-5,"gain":0.7},{"wave":"noise","bp":4000,"q":2,"at":0.21,"a":0.001,"d":0.01,"shape":-6,"gain":0.3},{"wave":"metal","freq":1360,"hp":2200,"at":0.27,"a":0.001,"d":0.06,"shape":-5,"gain":0.7},{"wave":"noise","bp":4000,"q":2,"at":0.27,"a":0.001,"d":0.01,"shape":-6,"gain":0.3},{"wave":"metal","freq":900,"hp":2200,"at":0.34,"a":0.001,"d":0.06,"shape":-5,"gain":0.7},{"wave":"noise","bp":4000,"q":2,"at":0.34,"a":0.001,"d":0.01,"shape":-6,"gain":0.3},{"wave":"metal","freq":1130,"hp":2200,"at":0.38,"a":0.001,"d":0.06,"shape":-5,"gain":0.7},{"wave":"noise","bp":4000,"q":2,"at":0.38,"a":0.001,"d":0.01,"shape":-6,"gain":0.3}],"gain":1.05};
-/** TV / radio static burst, for haunted screens */
+/** TV/라디오 지직 소리, 빙의된 화면용 */
 export const staticBurst: Sound = {"vary":0.5,"varyF":3,"bits":6,"layers":[{"wave":"noise","hp":400,"lp":8000,"a":0.005,"h":0.25,"d":0.08,"shape":1},{"wave":"crunch","freq":6000,"bp":2500,"q":1,"a":0.005,"h":0.25,"d":0.08,"shape":1,"gain":0.6},{"wave":"square","freq":60,"lp":300,"a":0.005,"h":0.25,"d":0.08,"shape":1,"gain":0.3}],"gain":0.291};
-/** Creepy music-box phrase, slightly detuned */
+/** 소름 돋는 오르골 구절, 살짝 디튠 */
 export const musicBox: Sound = {"vary":0.05,"verb":[0.6,0.3],"layers":[{"wave":"modal","freq":1568,"modes":[1,3.9,8.1],"at":0,"a":0.001,"d":0.5,"shape":-3,"gain":1},{"wave":"sine","freq":3136,"at":0,"a":0.001,"d":0.15,"shape":-5,"gain":0.12},{"wave":"modal","freq":1385.7537565236994,"modes":[1,3.9,8.1],"at":0.28,"a":0.001,"d":0.5,"shape":-3,"gain":0.94},{"wave":"sine","freq":2793.858380088104,"at":0.28,"a":0.001,"d":0.15,"shape":-5,"gain":0.12},{"wave":"modal","freq":1174.6727482713184,"modes":[1,3.9,8.1],"at":0.56,"a":0.001,"d":0.5,"shape":-3,"gain":0.88},{"wave":"sine","freq":2349.3454965426367,"at":0.56,"a":0.001,"d":0.15,"shape":-5,"gain":0.12},{"wave":"modal","freq":924.8796711368362,"modes":[1,3.9,8.1],"at":0.8400000000000001,"a":0.001,"d":0.5,"shape":-3,"gain":0.8200000000000001},{"wave":"sine","freq":1864.6767563242665,"at":0.8400000000000001,"a":0.001,"d":0.15,"shape":-5,"gain":0.12},{"wave":"modal","freq":1046.514445669307,"modes":[1,3.9,8.1],"at":1.12,"a":0.001,"d":0.5,"shape":-3,"gain":0.76},{"wave":"sine","freq":2093.028891338614,"at":1.12,"a":0.001,"d":0.15,"shape":-5,"gain":0.12},{"wave":"modal","freq":777.728,"modes":[1,3.9,8.1],"at":1.4000000000000001,"a":0.001,"d":0.7,"shape":-3,"gain":0.7},{"wave":"sine","freq":1568,"at":1.4000000000000001,"a":0.001,"d":0.15,"shape":-5,"gain":0.12}],"gain":0.375};
-/** Axe bites into a log */
+/** 도끼가 통나무를 내리찍음 */
 export const axeChop: Sound = {"vary":0.8,"varyF":2,"varyG":1.5,"verb":[0.2,0.1],"layers":[{"wave":"noise","bp":2200,"q":1.5,"a":0.001,"d":0.012,"shape":-5,"drive":2},{"wave":"modal","freq":190,"modes":[1,2.32,4.25,6.63],"a":0.001,"d":0.2,"shape":-5,"drive":1},{"wave":"pink","lp":1200,"a":0.001,"d":0.08,"shape":-6,"drive":1.5,"gain":0.7},{"wave":"sine","freq":120,"to":60,"a":0.001,"d":0.12,"shape":-5,"gain":0.5}],"limit":1,"gain":0.68};
-/** Tree creaks, topples and crashes down */
+/** 나무가 삐걱거리며 쓰러져 쾅 */
 export const treeFall: Sound = {"vary":0.4,"verb":[0.5,0.25],"layers":[{"wave":"saw","freq":40,"to":70,"vib":[3,3],"bp":900,"q":5,"a":0.03,"h":0.65,"d":0.2,"shape":1.5,"gain":0.6},{"wave":"pink","bp":2000,"q":0.8,"at":0.9,"a":0.01,"d":0.6,"shape":-3,"gain":0.6},{"wave":"brown","lp":400,"at":0.95,"a":0.001,"d":0.8,"shape":-4,"drive":1.5,"gain":1.4},{"wave":"sine","freq":70,"to":30,"at":0.95,"a":0.001,"d":0.5,"shape":-4,"drive":1.5}],"gain":0.339};
-/** Pickaxe strikes rock */
+/** 곡괭이가 바위를 침 */
 export const pickaxeMine: Sound = {"vary":0.8,"varyF":2,"varyG":1.5,"verb":[0.25,0.12],"layers":[{"wave":"metal","freq":1200,"hp":2500,"a":0.001,"d":0.3,"shape":-5,"gain":0.5},{"wave":"noise","bp":2600,"q":1,"a":0.001,"d":0.03,"shape":-5,"drive":1,"gain":0.7},{"wave":"modal","freq":700,"modes":[1,2.6,4.9,7.3],"a":0.001,"d":0.25,"shape":-5},{"wave":"pink","lp":900,"a":0.001,"d":0.1,"shape":-5,"gain":0.5},{"wave":"noise","bp":3500,"q":3,"at":0.05,"a":0.001,"d":0.008,"shape":-6,"gain":0.3},{"wave":"noise","bp":3500,"q":3,"at":0.09,"a":0.001,"d":0.008,"shape":-6,"gain":0.3},{"wave":"noise","bp":3500,"q":3,"at":0.14,"a":0.001,"d":0.008,"shape":-6,"gain":0.3}],"limit":1,"gain":0.636};
-/** Shovel into soil */
+/** 삽으로 흙을 팜 */
 export const dig: Sound = {"vary":0.8,"varyF":3,"varyG":2,"layers":[{"wave":"noise","bp":1500,"bpTo":600,"q":0.8,"a":0.01,"d":0.18,"shape":-4,"drive":1},{"wave":"brown","lp":400,"a":0.005,"d":0.2,"shape":-4,"gain":0.7},{"wave":"pink","bp":2000,"q":2,"at":0.12,"a":0.001,"d":0.02,"shape":-5,"gain":0.3},{"wave":"pink","bp":2000,"q":2,"at":0.17,"a":0.001,"d":0.02,"shape":-5,"gain":0.3},{"wave":"pink","bp":2000,"q":2,"at":0.22,"a":0.001,"d":0.02,"shape":-5,"gain":0.3}],"limit":1,"gain":1.33};
-/** Pop a seed into the ground: soft pat and sprout chime */
+/** 땅에 씨앗 심기: 부드러운 톡과 싹틈 차임 */
 export const plantSeed: Sound = {"vary":0.8,"layers":[{"wave":"pink","lp":900,"a":0.001,"d":0.06,"shape":-5},{"wave":"sine","freq":600,"to":1200,"curve":2,"at":0.06,"a":0.002,"d":0.08,"shape":-4,"gain":0.4},{"wave":"sine","freq":1760,"fm":[3.5,1,0.08],"at":0.1,"a":0.002,"d":0.25,"shape":-4,"gain":0.2}],"limit":1,"gain":1.92};
-/** Watering can pours over the soil */
+/** 물뿌리개가 흙 위로 물을 부음 */
 export const wateringCan: Sound = {"vary":0.4,"varyF":2,"layers":[{"wave":"noise","bp":2500,"q":0.9,"a":0.1,"h":0.5,"d":0.25,"shape":-3,"gain":0.6},{"wave":"sine","freq":700,"to":1600,"curve":3,"at":0.08,"a":0.001,"d":0.03,"shape":3,"gain":0.25},{"wave":"sine","freq":837,"to":1811,"curve":3,"at":0.15000000000000002,"a":0.001,"d":0.03,"shape":3,"gain":0.25},{"wave":"sine","freq":974,"to":2022,"curve":3,"at":0.22000000000000003,"a":0.001,"d":0.03,"shape":3,"gain":0.25},{"wave":"sine","freq":1111,"to":2233,"curve":3,"at":0.29000000000000004,"a":0.001,"d":0.03,"shape":3,"gain":0.25},{"wave":"sine","freq":1248,"to":1644,"curve":3,"at":0.36000000000000004,"a":0.001,"d":0.03,"shape":3,"gain":0.25},{"wave":"sine","freq":785,"to":1855,"curve":3,"at":0.43000000000000005,"a":0.001,"d":0.03,"shape":3,"gain":0.25},{"wave":"sine","freq":922,"to":2066,"curve":3,"at":0.5,"a":0.001,"d":0.03,"shape":3,"gain":0.25},{"wave":"sine","freq":1059,"to":2277,"curve":3,"at":0.5700000000000001,"a":0.001,"d":0.03,"shape":3,"gain":0.25},{"wave":"sine","freq":1196,"to":1688,"curve":3,"at":0.64,"a":0.001,"d":0.03,"shape":3,"gain":0.25},{"wave":"sine","freq":733,"to":1899,"curve":3,"at":0.7100000000000001,"a":0.001,"d":0.03,"shape":3,"gain":0.25}],"gain":0.709};
-/** Pull up a crop: rustle, pluck and a happy pop */
+/** 작물 뽑기: 부스럭, 뽑는 소리와 경쾌한 팝 */
 export const harvest: Sound = {"vary":0.6,"varyF":2,"layers":[{"wave":"noise","bp":3000,"q":1,"a":0.02,"d":0.1,"shape":-4,"gain":0.4},{"wave":"sine","freq":220,"to":660,"curve":2,"at":0.08,"a":0.002,"d":0.08,"shape":-4,"gain":0.7},{"wave":"triangle","freq":1047,"arp":[0,7],"arpRate":0.05,"at":0.14,"a":0.002,"d":0.15,"shape":-3,"gain":0.4}],"limit":1,"gain":1.47};
-/** Cast a line: rod whip, reel whirr and a plop */
+/** 낚싯줄 던지기: 채찍질, 릴 감기와 첨벙 */
 export const fishingCast: Sound = {"vary":0.5,"layers":[{"wave":"noise","bp":1500,"bpTo":5000,"q":2,"a":0.08,"d":0.05,"shape":1,"gain":0.7},{"wave":"noise","bp":4200,"q":4,"at":0.1,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"noise","bp":4200,"q":4,"at":0.13,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"noise","bp":4200,"q":4,"at":0.16,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"noise","bp":4200,"q":4,"at":0.19,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"noise","bp":4200,"q":4,"at":0.22,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"noise","bp":4200,"q":4,"at":0.25,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"noise","bp":4200,"q":4,"at":0.28,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"noise","bp":4200,"q":4,"at":0.31,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"noise","bp":4200,"q":4,"at":0.33999999999999997,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"noise","bp":4200,"q":4,"at":0.37,"a":0.001,"d":0.01,"shape":-5,"gain":0.25},{"wave":"sine","freq":500,"to":1300,"curve":3,"at":0.5,"a":0.002,"d":0.06,"shape":3,"gain":0.6},{"wave":"noise","lp":2000,"at":0.5,"a":0.002,"d":0.12,"shape":-4,"gain":0.3}],"limit":1,"gain":1.93};
-/** Bobber dips: something is biting! */
+/** 찌가 잠김: 입질이 왔다! */
 export const fishBite: Sound = {"vary":0.3,"layers":[{"wave":"sine","freq":700,"to":300,"curve":2,"a":0.002,"d":0.08,"shape":-4},{"wave":"noise","lp":1500,"a":0.002,"d":0.08,"shape":-4,"gain":0.4},{"wave":"square","duty":0.25,"freq":1319,"arp":[0,5],"arpRate":0.09,"at":0.08,"a":0.002,"h":0.12,"d":0.06,"shape":2,"lp":4000,"gain":0.35}],"gain":0.648};
-/** Terminal data chirps: a burst of random blips */
+/** 터미널 데이터 소리: 무작위 블립 연발 */
 export const computerBeep: Sound = {"vary":2,"layers":[{"wave":"square","duty":0.25,"freq":1400,"arp":[0,7,3,12,5,10,0,15],"arpRate":0.035,"a":0.002,"h":0.26,"d":0.03,"shape":2,"lp":5000,"gain":0.6}],"gain":0.266};
-/** Scanner sweep: rising filtered tone with a ping */
+/** 스캐너 스윕: 핑과 함께 올라가는 필터 톤 */
 export const scan: Sound = {"vary":0.3,"echo":[0.12,0.3,0.25],"layers":[{"wave":"saw","freq":300,"to":1200,"curve":0.8,"bp":800,"bpTo":4000,"q":6,"a":0.05,"h":0.4,"d":0.1,"shape":1.5,"gain":0.4},{"wave":"sine","freq":2400,"at":0.55,"a":0.002,"d":0.3,"shape":-4,"gain":0.5}],"gain":0.817};
-/** Keycard accepted: two bright beeps */
+/** 키카드 승인: 밝은 비프 두 번 */
 export const accessGranted: Sound = {"vary":0.05,"layers":[{"wave":"sine","freq":1320,"arp":[0,5],"arpRate":0.09,"a":0.002,"h":0.14,"d":0.06,"shape":1.5},{"wave":"square","duty":0.25,"freq":2640,"arp":[0,5],"arpRate":0.09,"a":0.002,"h":0.14,"d":0.06,"shape":1.5,"lp":5000,"gain":0.15}],"gain":0.24};
-/** Keycard rejected: low double buzz with a crackle */
+/** 키카드 거부: 지직거리는 낮은 더블 버즈 */
 export const accessDenied: Sound = {"vary":0.1,"layers":[{"wave":"square","freq":220,"a":0.003,"h":0.08,"d":0.03,"shape":1,"lp":1500,"drive":1},{"wave":"square","freq":220,"at":0.14,"a":0.003,"h":0.12,"d":0.08,"shape":-3,"lp":1500,"drive":1},{"wave":"crunch","freq":4000,"at":0.14,"a":0.003,"d":0.1,"shape":-4,"gain":0.15}],"gain":0.18};
-/** Sci-fi door slides open with a hiss */
+/** SF 문이 쓱 미끄러져 열림 */
 export const doorSlide: Sound = {"vary":0.3,"varyF":2,"verb":[0.3,0.12],"layers":[{"wave":"noise","bp":4000,"bpTo":2000,"q":1.2,"a":0.01,"d":0.35,"shape":-3,"gain":0.6},{"wave":"saw","freq":80,"to":140,"lp":600,"a":0.02,"h":0.2,"d":0.15,"shape":-3,"gain":0.5},{"wave":"noise","bp":900,"q":2,"at":0.33,"a":0.001,"d":0.04,"shape":-5,"gain":0.6},{"wave":"sine","freq":110,"to":60,"at":0.33,"a":0.001,"d":0.1,"shape":-5,"gain":0.5}],"gain":0.649};
-/** Cute robot beeps and boops */
+/** 귀여운 로봇의 삑삑 뽑뽑 */
 export const robotChatter: Sound = {"vary":2,"layers":[{"wave":"sine","freq":900,"arp":[0,9,4,14,-3,7],"arpRate":0.06,"vib":[24,1.5],"a":0.003,"h":0.33,"d":0.05,"shape":2},{"wave":"square","duty":0.3,"freq":450,"arp":[0,9,4,14,-3,7],"arpRate":0.06,"lp":2500,"a":0.003,"h":0.33,"d":0.05,"shape":2,"gain":0.25}],"gain":0.169};
-/** System shutdown: whine falls and cuts */
+/** 시스템 종료: 윙 소리가 떨어지며 끊김 */
 export const shutdown: Sound = {"vary":0.2,"layers":[{"wave":"saw","freq":900,"to":40,"curve":0.7,"lp":3000,"kt":1,"a":0.005,"h":0.1,"d":0.7,"shape":1.5,"gain":0.7},{"wave":"sine","freq":450,"to":20,"curve":0.7,"a":0.005,"h":0.1,"d":0.7,"shape":1.5,"gain":0.5},{"wave":"noise","bp":1200,"at":0.8,"a":0.001,"d":0.02,"shape":-5,"gain":0.4}],"gain":0.325};
-/** Digital glitch: stuttering crushed burst */
+/** 디지털 글리치: 뭉개진 소리가 뚝뚝 끊김 */
 export const glitch: Sound = {"vary":2,"varyF":3,"rate":8000,"bits":5,"layers":[{"wave":"square","freq":300,"arp":[0,17,-5,24,3,12],"arpRate":0.025,"a":0.001,"h":0.13,"d":0.03,"shape":1,"gain":0.5},{"wave":"crunch","freq":2000,"to":9000,"a":0.001,"h":0.1,"d":0.04,"shape":1,"gain":0.5}],"gain":0.367};
-/** Swap two tiles: quick two-way swish */
+/** 두 타일 교환: 빠른 양방향 휙 */
 export const swap: Sound = {"vary":0.5,"varyF":2,"layers":[{"wave":"sine","freq":600,"to":900,"a":0.002,"d":0.06,"shape":-4,"gain":0.5},{"wave":"sine","freq":900,"to":600,"at":0.05,"a":0.002,"d":0.06,"shape":-4,"gain":0.5},{"wave":"noise","bp":2500,"bpTo":4000,"q":1.5,"a":0.03,"d":0.06,"shape":-3,"gain":0.25}],"limit":1,"gain":2.31};
-/** Three in a row: bright glassy pop */
+/** 3매치: 밝고 유리 같은 팝 */
 export const match: Sound = {"vary":0.3,"verb":[0.25,0.15],"layers":[{"wave":"sine","freq":1047,"fm":[2,1.2,0.05],"arp":[0,7,12],"arpRate":0.035,"a":0.001,"d":0.25,"shape":-4},{"wave":"noise","bp":5000,"q":2,"a":0.001,"d":0.03,"shape":-5,"gain":0.3},{"wave":"metal","freq":3000,"hp":6000,"at":0.05,"a":0.002,"d":0.2,"shape":-4,"gain":0.1}],"gain":0.505};
-/** Cascade combo: each step a little higher (pitch it per chain) */
+/** 연쇄 콤보: 단계마다 조금씩 높게 (체인별 피치 조절) */
 export const comboChain: Sound = {"vary":0.05,"echo":[0.07,0.3,0.25],"layers":[{"wave":"triangle","freq":784,"arp":[0,4,7,12],"arpRate":0.04,"a":0.002,"h":0.1,"d":0.25,"shape":-3},{"wave":"sine","freq":1568,"fm":[3.5,1.2,0.1],"arp":[0,4,7,12],"arpRate":0.04,"a":0.002,"h":0.1,"d":0.25,"shape":-3,"gain":0.35}],"gain":0.333};
-/** Clear a row: zipper sweep and a chime */
+/** 한 줄 지우기: 지퍼 스윕과 차임 */
 export const lineClear: Sound = {"vary":0.1,"verb":[0.3,0.15],"layers":[{"wave":"square","duty":0.25,"freq":400,"to":1600,"curve":0.8,"lp":5000,"a":0.002,"h":0.12,"d":0.08,"shape":2,"gain":0.45},{"wave":"noise","bp":2000,"bpTo":7000,"q":1.5,"a":0.01,"d":0.2,"shape":-3,"gain":0.3},{"wave":"sine","freq":2093,"fm":[3.5,1.5,0.1],"at":0.18,"a":0.002,"d":0.45,"shape":-4,"gain":0.45}],"gain":0.488};
-/** Falling piece locks in place: tight thunk */
+/** 떨어지는 조각이 제자리에 콱 */
 export const pieceLock: Sound = {"vary":0.4,"varyF":1.5,"varyG":1,"layers":[{"wave":"noise","bp":2500,"q":2,"a":0.001,"d":0.006,"shape":-6,"gain":0.6},{"wave":"square","freq":180,"to":110,"lp":900,"a":0.001,"d":0.06,"shape":-5,"drive":1},{"wave":"sine","freq":120,"to":70,"a":0.001,"d":0.08,"shape":-5,"gain":0.6},{"wave":"brown","lp":300,"a":0.002,"d":0.12,"shape":-5,"gain":0.3}],"limit":1,"gain":0.897};
-/** Two items merge into a bigger one: whoomp and sparkle */
+/** 두 아이템이 더 큰 것으로 합체: 쿵과 반짝임 */
 export const merge: Sound = {"vary":0.4,"verb":[0.3,0.15],"layers":[{"wave":"sine","freq":180,"to":520,"curve":2,"a":0.003,"d":0.12,"shape":-4,"drive":0.5},{"wave":"pink","bp":600,"bpTo":2400,"q":1.5,"a":0.02,"d":0.1,"shape":-3,"gain":0.3},{"wave":"sine","freq":1568,"fm":[3.5,1.3,0.1],"arp":[0,7],"arpRate":0.05,"at":0.1,"a":0.002,"d":0.3,"shape":-4,"gain":0.4}],"gain":0.665};
 
 /** Every sound name. */
